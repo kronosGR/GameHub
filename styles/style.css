@@ -10,7 +10,7 @@
     --font-size-game-link-15: 1.5rem;
     --font-size-game-text-1: 1rem;
     --font-size-question-12: 1.2rem;
-    --font-size-game-requirements: 0.8rem;
+    --font-size-game-requirements-08: 0.8rem;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,500;0,800;1,500&display=swap');
@@ -127,6 +127,40 @@ input{
 
 .main-content-overflow{
     overflow: auto;
+}
+
+
+.tooltip-holder{
+    position: relative;
+}
+
+.tooltip{ 
+    visibility: hidden;
+    width: 150px;
+    background-color: var(--black);
+    color: var(--orange);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: var(--font-size-game-requirements);
+    position: absolute;
+    z-index: 2;
+}
+
+.tooltip-holder:hover + .tooltip{    
+    visibility: visible;
+}
+
+.error{
+    color: red;
+    font-style: italic;
+    font-size: var(--font-size-game-requirements-08);
+}
+
+.confirmation{
+    color: green;
+    font-style: italic;
+    font-size: var(--font-size-game-requirements-08);
 }
 
 /*********** index.html **********/
@@ -601,8 +635,79 @@ footer{
     margin-top: 5px;
     margin-left: 10px;
     font-size: var(--font-size-question-12);
+    word-wrap: break-word;
+    
 }
 
 /*********** End About.html *************/
+/************ Contact.html****************/
+.contact-container{
+    width: 30%;
+    min-width: 450px ;
+    margin: 0 auto;
+    color: var(--black);
+    text-align: left;
+}
 
+.contact--title{
+    text-align: left;
+}
+
+.contact-main-content{
+    width: 90%;
+    background-color: var(--gray);
+    margin:0 auto;
+}
+
+.contact-main-content{
+    width: 90%;
+}
+
+.contact-main-content form{
+    margin: 50px;
+    padding: 50px;
+}
+
+.contact-main-content label{
+    margin-top: 20px;
+    margin-left: 10px;
+    display: block;
+}
+
+.contact-main-content input{
+    display: block;
+    width: 100%;
+}
+
+.contact-main-content textarea{
+    width: 100%;
+}
+
+.contact-main-content button{
+    display: block;
+    background-color: var(--gray);
+    border: none;
+    margin: 20px auto;
+}
+
+.contact-main-content .cta{
+    margin-top: 0px;
+}
+
+.contact-main-content .confirmation{
+    margin-top: -70px;
+    text-align: center;
+}
+
+.confirmation ~ p{
+    text-align: center;
+    margin:20px auto;
+    padding:30px;  
+    line-height: var(--font-size-question-12) ;
+    vertical-align: middle;
+}
+
+
+
+/************ End Contact.html****************/
 
