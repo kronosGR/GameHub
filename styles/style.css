@@ -778,17 +778,19 @@ footer{
 
 #black-container-label-terms{
     font-size: var(--font-size-game-text-1);
-    display: block;
+    display: inline-block;
     position: relative;
     padding-left: 50px;
+    line-height: var(--font-size-game-link-15);
+    vertical-align: middle;
 }
 
 #accept-terms{
     position: absolute;
     left: 0px;
-    top: 0px;
-    width: 30px;
-    height: 30px;
+    top: -5px;
+    width: 25px;
+    height: 25px;
 }
 
 .black-main-content button{
