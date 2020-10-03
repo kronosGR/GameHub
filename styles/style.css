@@ -134,6 +134,11 @@ input{
     position: relative;
 }
 
+
+.tooltip-holder-gray{
+    position: relative;
+}
+
 .tooltip{ 
     visibility: hidden;
     width: 150px;
@@ -145,9 +150,28 @@ input{
     font-size: var(--font-size-game-requirements);
     position: absolute;
     z-index: 2;
+    border: var(--orange) 1px solid;
+}
+
+.tooltip-gray{ 
+    visibility: hidden;
+    width: 150px;
+    background-color: var(--gray);
+    color: var(--orange);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: var(--font-size-game-requirements);
+    position: absolute;
+    z-index: 2;
+    border: var(--orange) 1px solid;
 }
 
 .tooltip-holder:hover + .tooltip{    
+    visibility: visible;
+}
+
+.tooltip-holder-gray:hover + .tooltip-gray{    
     visibility: visible;
 }
 
@@ -659,10 +683,6 @@ footer{
     margin:0 auto;
 }
 
-.contact-main-content{
-    width: 90%;
-}
-
 .contact-main-content form{
     margin: 50px;
     padding: 50px;
@@ -706,8 +726,87 @@ footer{
     line-height: var(--font-size-question-12) ;
     vertical-align: middle;
 }
-
-
-
 /************ End Contact.html****************/
+/*************create-account.html*************/
+.blur-logo-container{
+    width: 600px;
+    height: 230px;
+    margin: 100px auto;
+    background-color: white;
+    border-radius: 40%;
+    filter: blur(50px);
+}
+
+.blur-logo-img {
+    position: relative;
+    width: 338px;
+    height: 213px;
+    margin: 0 auto;
+    top: -330px;
+    z-index: 2;
+}
+
+.black-container{
+    width: 40%;
+    min-width: 450px ;
+    margin: 0 auto;
+    color: var(--gray);
+    text-align: left;
+}
+
+.black-main-content{
+    width: 90%;
+    margin:0 auto;
+}
+.black-main-content form{
+    margin: 50px 50px 0px 50px;
+    padding: 50px 50px 0px 50px;
+}
+
+.black-main-content label{
+    margin-top: 20px;
+    margin-left: 10px;
+    display: block;
+    font-size: var(--font-size-game-link-15);
+}
+
+.black-main-content input{
+    display: block;
+    width: 100%;
+    font-size: var(--font-size-question-12);
+}
+
+#black-container-label-terms{
+    font-size: var(--font-size-game-text-1);
+    display: block;
+    position: relative;
+    padding-left: 50px;
+}
+
+#accept-terms{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+}
+
+.black-main-content button{
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin: 0 auto;
+}
+
+.black-container p{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin:0px auto;
+    padding:30px 0;  
+}
+
+/*************END create-account.html*************/
+
+
 
