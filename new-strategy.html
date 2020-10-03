@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <title>Game Hub - New Games | Strategy</title>
+        <meta name="description" content="The universe of games. Buy or sell your games. Pre-order new games.">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/styles/style.css" rel="stylesheet">
+    </head>
+    <body>    
+        <!------------- HEADER ------------------------------->           
+        <header>
+            <div class="blur-logo-container"></div>
+            <a href="index.html"><img src="images/logo.png" alt="Game Hub logo" class="blur-logo-img"></a>
+            <div id="utilities">
+                <form id="search-form" action="search.html" method="POST">
+                    <label for="show-details" id="search"></label>
+                    <input type="checkbox" id="show-details">
+                    <input type="text" name="seachfor" id="searchfor" value="">
+                   <!-- <button type="submit" id="search-button"><span id="search"></span></button> -->
+                </form>
+
+                <a href="create-account.html">CREATE ACOUNT</a>
+                <a href="login.html">LOG IN</a>
+                <a href="shopping-cart.html">
+                    <span id="shopping-cart"></span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="new-games.html" class="nav-selected">NEW GAMES</a></li>
+                    <li><a href="pre-order-games.html">PRE-ORDER</a></li>
+                    <li><a href="used-games.html">USED GAMES</a></li>
+                    <li><a href="sell-games-html">SELL GAMES</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!------------- MAIN ------------------------------->
+        <main>
+            <section class="preview-container">
+                <section class="preview--title">
+                    <h1 class="title">NEW GAMES &gt; Strategy</h1>
+                </section>
+                <hr>
+
+                <section class="main-content game-list-grid">
+                    <section class="game-list-grid-item1">
+                        <h2>Categories</h2>
+                        <a href="new-action.html" class="a-black">Action</a><br>
+                        <a href="new-adventure.html" class="a-black">Adventure</a><br>
+                        <a href="new-casual.html" class="a-black">Casual</a><br>
+                        <a href="new-indie.html" class="a-black">Indie</a><br>
+                        <a href="new-multiplayer.html" class="a-black">Multiplayer</a><br>
+                        <a href="new-racing.html" class="a-black">Racing</a><br>
+                        <a href="new-rpg.html" class="a-black">RPG</a><br>
+                        <a href="new-simulation.html" class="a-black">Simulation</a><br>
+                        <a href="new-sports.html" class="a-black">Sports</a><br>
+                        <a href="new-strategy.html" class="a-black nav-selected">Strategy</a><br>
+                        <hr>
+                        <h2>Price</h2>
+                        <input type="number" id="price-from" class="tooltip-holder">
+                        <div class="tooltip ">Enter price From</div>
+                        - <input type="number" id="price-to" class="tooltip-holder">
+                        <div class="tooltip">Enter price To</div>                 
+                    </section>                    
+                    <section class="game-grid-item2">
+                        <div class="preview-list-item">
+                            <a href="game-death_stranding.html">
+                                <img src="images/deathStranding.png" alt="Death Stranding"/>
+                            </a>
+                            <div class="preview-list-item--info">
+                                <span class="game-title">Death Stranding</span>
+                                <p>
+                                    Walking simulator, Sci-fi, third-person, adventure
+                                </p>
+                                <div class="preview-list-item--bottom">
+                                    <img src="images/pegi18.png" alt="pegi 18">
+                                    <div class="price-circle">
+                                        $20
+                                    </div>
+                                    <a href="game-death_stranding.html" class="link-whitbg">Read More...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-list-item">                        
+                            <a href="game-farming_simulator.html">
+                                <img src="images/farmingSimulator.png" alt="Farming Simulator 19"/>
+                            </a>
+                            <div class="preview-list-item--info">
+                                <span class="game-title">Farming Simulator 19</span>
+                                <p>
+                                   Simulation
+                                </p>
+                                <div class="preview-list-item--bottom">
+                                    <img src="images/pegi3.png" alt="pegi 3">
+                                    <div class="price-circle">
+                                        $11
+                                    </div>
+                                    <a href="game-farming_simulator.html" class="link-whitbg">Read More...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-list-item">
+                            <a href="game-microsoft_flight_simulator.html">
+                                <img src="images/FlightSimulator.png" alt="Microsoft Flight Simulator"/>
+                            </a>
+                            <div class="preview-list-item--info">
+                                <span class="game-title">Microsoft Flight Simulator</span>
+                                <p>
+                                    Simulation
+                                </p>
+                                <div class="preview-list-item--bottom">
+                                    <img src="images/pegi3.png" alt="Pegi 3">
+                                    <div class="price-circle">
+                                        $25
+                                    </div>
+                                    <a href="game-microsoft_flight_simulator.html" class="link-whitbg">Read More...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-list-item">
+                            <a href="game-football_manager.html">
+                                <img src="images/footballManager.png" alt="Football Manager 2020"/>
+                            </a>
+                            <div class="preview-list-item--info">
+                                <span class="game-title">Football Manager 2020</span>
+                                <p>
+                                    Simulation, Sports
+                                </p>
+                                <div class="preview-list-item--bottom">
+                                    <img src="images/pegi3.png" alt="pegi 3">
+                                    <div class="price-circle">
+                                        $20
+                                    </div>
+                                    <a href="game-football_manager.html" class="link-whitbg">Read More...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-list-item">
+                            <a href="game-hunting_simulator_2.html">
+                                <img src="images/huntingSimulator2.png" alt="Hunting Simulator 2"/>
+                            </a>
+                            <div class="preview-list-item--info">
+                                <span class="game-title">Hunting Simulator 2</span>
+                                <p>
+                                    Action, Adventure, Simulation, Sports, Strategy
+                                </p>
+                                <div class="preview-list-item--bottom">
+                                    <img src="images/pegi16.png" alt="pegi 16">
+                                    <div class="price-circle">
+                                        $19
+                                    </div>
+                                    <a href="game-hunting_simulator_2.html" class="link-whitbg">Read More...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-list-item">
+                            <a href="game-pro_cycling_manager.html">
+                                <img src="images/proCyclingManager.png" alt="Pro Cycling Manager 2020"/>
+                            </a>
+                            <div class="preview-list-item--info">
+                                <span class="game-title">Pro Cycling Manager 2020</span>
+                                <p>
+                                    Simulation, Sports, Strategy
+                                </p>
+                                <div class="preview-list-item--bottom">
+                                    <img src="images/pegi3.png" alt="pegi 3">
+                                    <div class="price-circle">
+                                        $19
+                                    </div>
+                                    <a href="game-pro_cycling_manager.html" class="link-whitbg">Read More...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+            </section>
+        </main>
+         <!------------- FOOTER ------------------------------->
+        <footer>
+            <section id="social-payment-info">
+                <div>
+                    <a href="http://www.facebook.com" target="_blank">
+                        <img src="images/fb-btn.png" alt="Our Facebook Page"/>
+                    </a>
+                    <a href="http://www.twitter.com" target="_blank">
+                        <img src="images/twitter-btn.png" alt="Our Twitter Page"/>
+                    </a>                    
+                    <a href="http://www.youtube.com" target="_blank">
+                        <img src="images/youtube-btn.png" alt="Our Youtube Channel"/>
+                    </a>                    
+                    <a href="http://www.instagram.com" target="_blank">
+                        <img src="images/instagram.png" alt="Our Instagram Page"/>
+                    </a>
+                    <a href="http://www.linkedin.com" target="_blank">
+                        <img src="images/linkedin-btn.png" alt="Our LinkedIn Page"/>
+                    </a>                    
+                </div>
+                <div>
+                    <img src="images/visa.png" alt="We accept visa card"/>                    
+                    <img src="images/mastercard.png" alt="We accept mastercard"/>                    
+                    <img src="images/paypal.png" alt="We accept paypal"/>
+                    
+                </div>
+            </section>
+            <section id="footer-links">
+                <div id="footer-links-gamehub">
+                    <h2 class="title">GAME HUB</h2>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div id="footer-links-support">
+                    <h2 class="title">SUPPORT</h2>
+                    <ul>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        <li><a href="privacy.html">Privacy &amp; Policies</a></li>
+                    </ul>                    
+                </div>
+                <div id="footer-links-services">
+                    <h2 class="title">OUR SERVICES</h2>
+                    <ul>
+                        <li><a href="new-games.html">New Games</a></li>
+                        <li><a href="used-games.html">Used Games</a></li>
+                        <li><a href="pre-order-games.html">Pre-order Games</a></li>
+                        <li><a href="sell-games.html">Sell your Games</a></li>
+                    </ul>                    
+                </div>
+            </section>
+        </footer>               
+    </body>
+</html>
