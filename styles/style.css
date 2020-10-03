@@ -50,6 +50,16 @@ a{
     font-style: italic;
 }
 
+.a-black{
+    color: var(--black);
+    font-size: var(--font-size-CTA-14);
+    font-style: normal;
+}
+.a-black:hover{
+    color: var(--orange);
+    font-style: italic;
+}
+
 .invisible{
     display: none;
 }
@@ -186,6 +196,11 @@ input{
     font-style: italic;
     font-size: var(--font-size-game-requirements-08);
 }
+
+.nav-selected{
+    color: var(--orange)
+}
+
 
 /*********** index.html **********/
 /*------------------- header-------------------*/
@@ -809,6 +824,34 @@ footer{
 }
 
 /*************END create-account.html*************/
+/*************new|used|preorder-games.html*****/
+
+.game-list-grid{
+    display: grid;
+    grid-column-gap: 5px;
+    text-align: left;
+}
+
+.game-list-grid-item1{
+    grid-column: 1;
+    border-right: var(--black) 1px solid;
+    padding-right: 20px;
+}
+
+.game-list-grid-item2{
+    grid-column: 2;
+}
+
+.game-list-grid-item1 input{
+    width: 70px;
+    font-size: var(--font-size-question-12);
+    font-style: italic;
+}
+
+.game-grid-item2 .preview-list-item{
+    width: 100%;
+    border-bottom: lightgrey 1px solid;
+}
 
 
-
+/*************END new|used|preorder-games.html*****/
