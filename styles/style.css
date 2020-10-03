@@ -201,6 +201,26 @@ input{
     color: var(--orange)
 }
 
+.blur-logo-container{
+    display: inline-block;
+    position: absolute;
+    top:60px;
+    left:105px;
+    width: 400px;
+    height: 154px;
+    background-color: white;
+    border-radius: 40%;
+    filter: blur(60px);
+}
+
+.blur-logo-img {
+    top:50px;
+    left:185px;
+    position: absolute;
+    width: 250px;
+    height: 158px;
+    z-index: 2;
+}
 
 /*********** index.html **********/
 /*------------------- header-------------------*/
@@ -219,7 +239,10 @@ header{
 #utilities{
     position: absolute;
     right: 5%;
-    height: 190px;  
+    height: 190px;
+    line-height: 190px;
+    vertical-align: middle;
+
 }
 
 #utilities a{
@@ -284,7 +307,7 @@ header{
 
 nav {
     position: relative;
-    top:200px;
+    top:220px;
     width: 90%;
     margin: auto;
     border-top: var(--gray) 2px solid;
@@ -743,7 +766,7 @@ footer{
 }
 /************ End Contact.html****************/
 /*************create-account.html*************/
-.blur-logo-container{
+.blur-logo-container-big{
     width: 600px;
     height: 230px;
     margin: 100px auto;
@@ -752,7 +775,7 @@ footer{
     filter: blur(50px);
 }
 
-.blur-logo-img {
+.blur-logo-img-big {
     position: relative;
     width: 338px;
     height: 213px;

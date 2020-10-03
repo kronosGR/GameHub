@@ -10,9 +10,8 @@
     <body>    
         <!------------- HEADER ------------------------------->           
         <header>
-            <div id="logo">                
-                <a href="index.html"><img src="images/logoBlur.png" alt="Game hub logo" /></a>
-            </div>
+            <div class="blur-logo-container"></div>
+            <a href="index.html"><img src="images/logo.png" alt="Game Hub logo" class="blur-logo-img"></a>
             <div id="utilities">
                 <form id="search-form" action="search.html" method="POST">
                     <label for="show-details" id="search"></label>
@@ -40,13 +39,13 @@
         <!------------- MAIN ------------------------------->
         <main>
             <section class="preview-container">
-                <div class="preview--title">
+                <section class="preview--title">
                     <h1 class="title">NEW GAMES</h1>
-                </div>
+                </section>
                 <hr>
 
                 <section class="main-content game-list-grid">
-                    <div class="game-list-grid-item1">
+                    <section class="game-list-grid-item1">
                         <h2>Categories</h2>
                         <a href="new-action.html" class="a-black">Action</a><br>
                         <a href="new-adventure.html" class="a-black">Adventure</a><br>
@@ -55,6 +54,7 @@
                         <a href="new-multiplayer.html" class="a-black">Multiplayer</a><br>
                         <a href="new-racing.html" class="a-black">Racing</a><br>
                         <a href="new-rpg.html" class="a-black">RPG</a><br>
+                        <a href="new-simulation.html" class="a-black">Simulation</a><br>
                         <a href="new-sports.html" class="a-black">Sports</a><br>
                         <a href="new-strategy.html" class="a-black">Strategy</a><br>
                         <hr>
@@ -63,8 +63,8 @@
                         <div class="tooltip ">Enter price From</div>
                         - <input type="number" id="price-to" class="tooltip-holder">
                         <div class="tooltip">Enter price To</div>                 
-                    </div>                    
-                    <div class="game-grid-item2">
+                    </section>                    
+                    <section class="game-grid-item2">
                         <div class="preview-list-item">
                             <a href="game-death_stranding.html">
                                 <img src="images/deathStranding.png" alt="Death Stranding"/>
@@ -173,7 +173,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </section>
 
             </section>
