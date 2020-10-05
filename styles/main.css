@@ -1,0 +1,207 @@
+
+html{
+    background:var(--black) url("../images/background.png") repeat top center;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: var(--gray);
+    min-width: 1300px;
+    width: 100%;
+    text-align: center;    
+}
+
+
+h1{
+    font-family: 'Bebas Neue', cursive;
+    color: var(--gray);
+    font-size: var(--font-size-h1-2r);
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+h2{
+    font-family: 'Bebas Neue', cursive;
+    color: var(--black);
+    font-size: var(--font-size-nav-17);
+    margin-bottom: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--orange);
+    font-style: italic;
+}
+
+.a-black{
+    color: var(--black);
+    font-size: var(--font-size-CTA-14);
+    font-style: normal;
+}
+.a-black:hover{
+    color: var(--orange);
+    font-style: italic;
+}
+
+.invisible{
+    display: none;
+}
+
+.cta{
+    width: 200px;
+    background-color: var(--black);
+    color: var(--orange);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Bebas Neue", cursive;
+    font-size: var(--font-size-CTA-14);
+    border: var(--orange) solid 1px;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-style: normal;  
+}
+
+.cta:hover{
+    background-color: var(--gray);
+}
+
+input{    
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title{
+    font-family: "Bebas Neue", cursive;
+    font-size: var(--font-size-h1-2r);
+    color: var(--gray);
+    font-style: none;
+}
+
+.link{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: var(--orange);
+    font-style: italic;
+    font-size: var(--font-size-link-1);
+}
+
+.game-title{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--black);
+    font-size: var(--font-size-game-link-15) ;
+    font-weight: bolder;
+}
+
+.price-circle{
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    line-height: 50px;
+    border: var(--orange) solid 1px;
+    color: white;
+    font-weight: bolder;
+    background-color: var(--orange);
+    border-radius: 50%;
+    vertical-align: middle;
+    font-size: var(--font-size-game-link-15);
+}
+
+.main-content{
+    width: 90%;
+    background-color: var(--gray);
+    color: var(--black);
+    text-align: left;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+
+.main-content-overflow{
+    overflow: auto;
+}
+
+
+.tooltip-holder{
+    position: relative;
+}
+
+
+.tooltip-holder-gray{
+    position: relative;
+}
+
+.tooltip{ 
+    visibility: hidden;
+    width: 150px;
+    background-color: var(--black);
+    color: var(--orange);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: var(--font-size-game-requirements);
+    position: absolute;
+    z-index: 2;
+    border: var(--orange) 1px solid;
+}
+
+.tooltip-gray{ 
+    visibility: hidden;
+    width: 150px;
+    background-color: var(--gray);
+    color: var(--orange);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: var(--font-size-game-requirements);
+    position: absolute;
+    z-index: 2;
+    border: var(--orange) 1px solid;
+}
+
+.tooltip-holder:hover + .tooltip{    
+    visibility: visible;
+}
+
+.tooltip-holder-gray:hover + .tooltip-gray{    
+    visibility: visible;
+}
+
+.error{
+    color: red;
+    font-style: italic;
+    font-size: var(--font-size-game-requirements-08);
+}
+
+.confirmation{
+    color: green;
+    font-style: italic;
+    font-size: var(--font-size-game-requirements-08);
+}
+
+.nav-selected{
+    color: var(--orange)
+}
+
+.blur-logo-container{
+    display: inline-block;
+    position: absolute;
+    top:60px;
+    left:105px;
+    width: 400px;
+    height: 154px;
+    background-color: white;
+    border-radius: 40%;
+    filter: blur(60px);
+}
+
+.blur-logo-img {
+    top:50px;
+    left:185px;
+    position: absolute;
+    width: 250px;
+    height: 158px;
+    z-index: 2;
+}
