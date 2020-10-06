@@ -1,6 +1,7 @@
 /* header
 -------------------------*/
 header{
+    position: relative;
     height: 300px;
     width: 100%;
 }
@@ -14,7 +15,7 @@ header{
 
 #utilities{
     position: absolute;
-    right: 5%;
+    right: 1%;
     height: 190px;
     line-height: 190px;
     vertical-align: middle;
@@ -84,7 +85,7 @@ header{
 nav {
     position: relative;
     top:220px;
-    width: 90%;
+    width: 97%;
     margin: auto;
     border-top: var(--gray) 2px solid;
     border-bottom: var(--gray) 2px solid;
@@ -107,6 +108,7 @@ nav a {
     padding: 10px 20px 10px 20px; 
     border-left: var(--gray) 2px solid;
     font-style: normal;  
+    padding-bottom: 4px;
 }
 
 nav ul li a:first {
@@ -126,30 +128,31 @@ nav a:hover{
 main{
     margin-top: 60px;
     text-align: center;
+    padding: 0px 20px;
 }
     
     /* Info Container
     ------------------------------------*/
 #info{
-    width: 1100px;
-    max-width: 1100px;
+    max-width: 1300px;
     background-color: var(--gray);
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 40px;
+    padding: 0px 40px 40px 40px;
 }
 
 .info-item img{
     height: 100px;
-    margin-bottom: 20px;
 }
 
-.info-item{
-    width: 20%;
+.info-item{   
+    flex-basis: 20%;
     color: var(--black);
     border-right: var(--black) 1px solid;
     padding-right: 30px;
+    margin-top: 40px;
 }
 
 .info-item:nth-last-child(1){
@@ -164,7 +167,7 @@ main{
 .preview-container{
     margin: 0 auto;
     margin-top: 50px;
-    width: 65%;
+    width: 85%;
 }
 
 .preview--title{  
