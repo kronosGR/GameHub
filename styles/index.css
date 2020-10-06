@@ -156,7 +156,8 @@ main{
 }
 
 .info-item:nth-last-child(1){
-    border-right: var(--black) 0px solid;
+    border-right: none;
+    padding-right: 0px;
 }
 
 .info-item p{
