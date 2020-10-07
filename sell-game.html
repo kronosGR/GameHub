@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Game Hub - Search Results - Simulation</title>
+        <title>Game Hub - Search Results - Sell Game</title>
         <meta name="description" content="The universe of games. Buy or sell your games. Pre-order new games">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,119 +40,51 @@
         <main>
             <section class="preview-container">
                 <section class="preview--title">
-                    <h1 class="title">Search Results - Simulation</h1>
+                    <h1 class="title">Sell Game</h1>
                 </section>
                 <hr>
 
                 <section class="main-content ">                                    
                     <section >
-                        <div class="preview-list-item long">
-                            <a href="game-death_stranding.html">
-                                <img src="images/games/deathStranding.png" alt="Death Stranding"/>
-                            </a>
-                            <div class="preview-list-item--info">
-                                <span class="game-title">Death Stranding</span>
-                                <p>
-                                    Walking simulator, Sci-fi, third-person, adventure
-                                </p>
-                                <div class="preview-list-item--bottom">
-                                    <img src="images/pegi18.png" alt="pegi 18">
-                                    <div class="price-circle">
-                                        $20
-                                    </div>
-                                    <a href="game-death_stranding.html" class="link-whitbg">Read More...</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="preview-list-item long">                        
-                            <a href="game-farming_simulator.html">
-                                <img src="images/games/farmingSimulator.png" alt="Farming Simulator 19"/>
-                            </a>
-                            <div class="preview-list-item--info">
-                                <span class="game-title">Farming Simulator 19</span>
-                                <p>
-                                   Simulation
-                                </p>
-                                <div class="preview-list-item--bottom">
-                                    <img src="images/pegi3.png" alt="pegi 3">
-                                    <div class="price-circle">
-                                        $11
-                                    </div>
-                                    <a href="game-farming_simulator.html" class="link-whitbg">Read More...</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="preview-list-item long">
-                            <a href="game-microsoft_flight_simulator.html">
-                                <img src="images/games/flightSimulator.png" alt="Microsoft Flight Simulator"/>
-                            </a>
-                            <div class="preview-list-item--info">
-                                <span class="game-title">Microsoft Flight Simulator</span>
-                                <p>
-                                    Simulation
-                                </p>
-                                <div class="preview-list-item--bottom">
-                                    <img src="images/pegi3.png" alt="Pegi 3">
-                                    <div class="price-circle">
-                                        $25
-                                    </div>
-                                    <a href="game-microsoft_flight_simulator.html" class="link-whitbg">Read More...</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="preview-list-item long">
-                            <a href="game-football_manager.html">
-                                <img src="images/games/footballManager.png" alt="Football Manager 2020"/>
-                            </a>
-                            <div class="preview-list-item--info">
-                                <span class="game-title">Football Manager 2020</span>
-                                <p>
-                                    Simulation, Sports
-                                </p>
-                                <div class="preview-list-item--bottom">
-                                    <img src="images/pegi3.png" alt="pegi 3">
-                                    <div class="price-circle">
-                                        $20
-                                    </div>
-                                    <a href="game-football_manager.html" class="link-whitbg">Read More...</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="preview-list-item long">
-                            <a href="game-hunting_simulator_2.html">
-                                <img src="images/games/huntingSimulator2.png" alt="Hunting Simulator 2"/>
-                            </a>
-                            <div class="preview-list-item--info">
-                                <span class="game-title">Hunting Simulator 2</span>
-                                <p>
-                                    Action, Adventure, Simulation, Sports, Strategy
-                                </p>
-                                <div class="preview-list-item--bottom">
-                                    <img src="images/pegi16.png" alt="pegi 16">
-                                    <div class="price-circle">
-                                        $19
-                                    </div>
-                                    <a href="game-hunting_simulator_2.html" class="link-whitbg">Read More...</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="preview-list-item long">
-                            <a href="game-pro_cycling_manager.html">
-                                <img src="images/games/procyclingManager.png" alt="Pro Cycling Manager 2020"/>
-                            </a>
-                            <div class="preview-list-item--info">
-                                <span class="game-title">Pro Cycling Manager 2020</span>
-                                <p>
-                                    Simulation, Sports, Strategy
-                                </p>
-                                <div class="preview-list-item--bottom">
-                                    <img src="images/pegi3.png" alt="pegi 3">
-                                    <div class="price-circle">
-                                        $19
-                                    </div>
-                                    <a href="game-pro_cycling_manager.html" class="link-whitbg">Read More...</a>
-                                </div>
-                            </div>
+                        <div class="preview-list">
+                           <form action="account-sells.html" method="POST" class="game-grid">
+                               <div class="game-grid-item1">
+                                    <label for="game-title" class="block">Game Title</label>
+                               </div>
+                               <div class="game-grid-item2 full-line">                                    
+                                    <input type="text" name="game-title" id="game-title" class="min-width-400 block tooltip-holder full-line">
+                                    <div class="tooltip">Enter game title</div>                        
+                                    <span class="error">Please enter a valid game title</span>
+                               </div>
+                               <div class="game-grid-item1">                                   
+                                    <label for="purchase-date" class="block">Purchase Date</label>
+                               </div>
+                               <div class="game-grid-item2">                                    
+                                    <input type="date" name="purchase-date" id="purchase-date" class="min-width-400 block tooltip-holder full-line">
+                                    <div class="tooltip">Choose purchase date</div>                        
+                                    <span class="error">Please choose purchase date</span>
+                               </div>
+                               <div class="game-grid-item1">                                   
+                                    <label for="upload-photo" class="block">Upload Photo</label>
+                               </div>
+                               <div class="game-grid-item2">                                    
+                                    <input type="file" name="upload-photo" id="upload-photo" class="min-width-400 block tooltip-holder full-line">
+                                    <div class="tooltip">Choose game photo</div>                        
+                                    <span class="error">Please choose a game photo</span>
+                               </div>
+                               <div class="game-grid-item1">                                   
+                                    <label for="imp-info" class="block">Important Information</label>
+                               </div>
+                               <div class="game-grid-item2 bottom-margin-40">                                    
+                                    <textarea name="game-grid-item2" id="game-grid-item2" class="min-width-400 full-line" rows="20">
+                                    </textarea>
+                               </div>
+                               <div class="game-grid-item3 ">
+                                    <button type="submit" class="button-grayBG">
+                                        <div class="cta">SELL</div>
+                                    </button>
+                               </div>
+                           </form>
                         </div>
                     </section>
                 </section>

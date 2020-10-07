@@ -1,6 +1,6 @@
 {
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 300,
+    "files.autoSaveDelay": 500,
     "liveServer.settings.fullReload": true,
     "liveServer.settings.wait": 1000
 }

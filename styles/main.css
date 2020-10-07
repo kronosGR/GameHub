@@ -59,7 +59,6 @@ a{
     border: var(--orange) solid 1px;
     border-radius: 15px;
     margin: 0 auto;
-    margin-top: 50px;
     font-style: normal;  
 }
 
@@ -204,4 +203,34 @@ input{
     width: 250px;
     height: 158px;
     z-index: 2;
+}
+
+
+.long {
+    width:90%;
+}
+
+.block{
+    display: block;
+}
+
+.full-line{
+    width: 100%;
+}
+
+.min-width-400{
+    min-width: 400px;
+}
+
+.button-grayBG{
+    background-color: var(--gray);
+    border: none;
+}
+
+.bottom-margin-40{
+    margin-bottom: 40px;
+}
+
+.top-margin-40{
+    margin-top: 40px;
 }

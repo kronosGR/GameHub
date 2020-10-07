@@ -213,9 +213,15 @@ main{
     font-size: var(--font-size-game-text-1);
 }
 
-.long {
-    width:90%;
+.preview-list > form {
+    width: 70%;
+    margin: 0 auto;
 }
+
+form > .game-grid-item1{    
+    font-weight: normal;
+}
+
 
 .preview-list-item > a > img {
     margin: 10px;
