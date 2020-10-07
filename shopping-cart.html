@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game Hub - Shopping Cart</title>
+        <meta name="description" content="The universe of games. Buy or sell your games. Pre-order new games">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/styles/style.css" rel="stylesheet">
+    </head>
+    <body>    
+        <!------------- HEADER ------------------------------->           
+        <header>
+            <div class="blur-logo-container"></div>
+            <a href="index.html"><img src="images/logo.png" alt="Game Hub logo" class="blur-logo-img"></a>
+            <div id="utilities">
+                <form id="search-form" action="search.html" method="POST">
+                    <label for="show-details" id="search"></label>
+                    <input type="checkbox" id="show-details">
+                    <input type="text" name="seachfor" id="searchfor" value="">
+                   <!-- <button type="submit" id="search-button"><span id="search"></span></button> -->
+                </form>
+
+                <a href="create-account.html">CREATE ACOUNT</a>
+                <a href="login.html">LOG IN</a>
+                <a href="shopping-cart.html">
+                    <span id="shopping-cart"></span>
+                </a>
+            </div>
+            <nav role="navigation">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="new-games.html">NEW GAMES</a></li>
+                    <li><a href="pre-order-games.html">PRE-ORDER</a></li>
+                    <li><a href="used-games.html">USED GAMES</a></li>
+                    <li><a href="sell-game.html">SELL GAMES</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!------------- MAIN ------------------------------->
+        <main>
+            <section class="preview-container">
+                <section class="preview--title">
+                    <h1 class="title">Shopping Cart</h1>
+                </section>
+                <hr>
+                <section class="main-content">       
+                    <hr>                                 
+                    <section class="shoping-cart-heads">
+                        <div class="flex-basis-55">
+                            Products
+                        </div>
+                        <div class="flex-basis-15 text-align-right">
+                            Amount
+                        </div>
+                        <div class="flex-basis-15 text-align-right">
+                            Price
+                        </div>
+                        <div class="flex-basis-15 text-align-right">
+                            Total
+                        </div>     
+                    </section>                   
+                    <hr>
+                    <section class="container-white">
+                        <div class="shopping-cart-item-container full-line border-bottom">
+                            <div class="flex-basis-55 flex"> 
+                                <img src="images/games/deathStranding.png" alt="Death Stranding" class="thumbnail"/>
+                                <div class="margin-10 flex flex-direction-col flex-content-center">
+                                    <span class="bold italics block">Death Stranding</span>
+                                    <span class="block">Product Number: 121241234</span>
+                                </div>                                
+                            </div>
+                            <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
+                                <div>
+                                    <span class="inline-block button-circle text-align-center">-</span>
+                                    <input type="number" id="amount-1" name="amount-1" value="1" class="width-30 text-align-right">
+                                    <span class="inline-block button-circle text-align-center">+</span>
+                                </div>
+                            </div>
+                            <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
+                                <div>
+                                    <span class="inline-block" id="product-price-1">$20.00</span>
+                                </div>
+                            </div>
+                            <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
+                                <div>
+                                    <span class="inline-block" id="product-total-price-1">$20.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shopping-cart-item-container full-line border-bottom">
+                            <div class="flex-basis-55 flex"> 
+                                <img src="images/games/farmingSimulator.png" alt="Death Stranding" class="thumbnail"/>
+                                <div class="margin-10 flex flex-direction-col flex-content-center">
+                                    <span class="bold italics block">Farming Simulator 19</span>
+                                    <span class="block">Product Number: 54352346</span>
+                                </div>                                
+                            </div>
+                            <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
+                                <div>
+                                    <span class="inline-block button-circle text-align-center">-</span>
+                                    <input type="number" id="amount-2" name="amount-2" value="2" class="width-30 text-align-right">
+                                    <span class="inline-block button-circle text-align-center">+</span>
+                                </div>
+                            </div>
+                            <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
+                                <div>
+                                    <span class="inline-block" id="product-price-2">$11.00</span>
+                                </div>
+                            </div>
+                            <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
+                                <div>
+                                    <span class="inline-block" id="product-total-price-2">$22.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shopping-cart-item-container full-line  flex flex-direction-col">
+                            <div class="full-line flex flex-justify-content-end">
+                                <div class="flex-basis-60 flex"> 
+                                    <div class="flex-basis-30 bold">
+                                        Total
+                                    </div>                                
+                                    <div class="flex-basis-10 text-align-right italics">
+                                        <span id="products-amount" >3</span>
+                                    </div>                                
+                                    <div class="flex-basis-60 text-align-right italics">                                    
+                                        <span id="total-amount" >$42.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="full-line flex flex-justify-content-end">
+                                <div class="flex-basis-60 flex"> 
+                                    <div class="flex-basis-30 bold">
+                                        Discount
+                                    </div>                                
+                                    <div class="flex-basis-10 text-align-right italics">
+                                    </div>                                
+                                    <div class="flex-basis-60 text-align-right italics">                                    
+                                        <span id="discount" >$0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="full-line flex flex-justify-content-end">
+                                <div class="flex-basis-60 flex"> 
+                                    <div class="flex-basis-30 bold">
+                                        Total Amount
+                                    </div>                                
+                                    <div class="flex-basis-10 text-align-right italics">
+                                    </div>                                
+                                    <div class="flex-basis-60 text-align-right italics">                                    
+                                        <span id="total-amoθnt" >$42.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-end flex-justify-content-end">
+                            <a href="checkout.html" class="text-align-center">
+                                <div class="cta top-margin-40">CHEKOUT</div>
+                            </a>
+                        </div>
+    
+                        
+                    </section>
+                </section>
+
+            </section>
+        </main>
+         <!------------- FOOTER ------------------------------->
+        <footer>
+            <section id="social-payment-info">
+                <div>
+                    <a href="http://www.facebook.com" target="_blank">
+                        <img src="images/fb-btn.png" alt="Our Facebook Page"/>
+                    </a>
+                    <a href="http://www.twitter.com" target="_blank">
+                        <img src="images/twitter-btn.png" alt="Our Twitter Page"/>
+                    </a>                    
+                    <a href="http://www.youtube.com" target="_blank">
+                        <img src="images/youtube-btn.png" alt="Our Youtube Channel"/>
+                    </a>                    
+                    <a href="http://www.instagram.com" target="_blank">
+                        <img src="images/instagram.png" alt="Our Instagram Page"/>
+                    </a>
+                    <a href="http://www.linkedin.com" target="_blank">
+                        <img src="images/linkedin-btn.png" alt="Our LinkedIn Page"/>
+                    </a>                    
+                </div>
+                <div>
+                    <img src="images/visa.png" alt="We accept visa card"/>                    
+                    <img src="images/mastercard.png" alt="We accept mastercard"/>                    
+                    <img src="images/paypal.png" alt="We accept paypal"/>
+                    
+                </div>
+            </section>
+            <section id="footer-links">
+                <div id="footer-links-gamehub">
+                    <h2 class="title">GAME HUB</h2>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div id="footer-links-support">
+                    <h2 class="title">SUPPORT</h2>
+                    <ul>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        <li><a href="privacy.html">Privacy &amp; Policies</a></li>
+                    </ul>                    
+                </div>
+                <div id="footer-links-services">
+                    <h2 class="title">OUR SERVICES</h2>
+                    <ul>
+                        <li><a href="new-games.html">New Games</a></li>
+                        <li><a href="used-games.html">Used Games</a></li>
+                        <li><a href="pre-order-games.html">Pre-order Games</a></li>
+                        <li><a href="sell-games.html">Sell your Games</a></li>
+                    </ul>                    
+                </div>
+            </section>
+        </footer>               
+    </body>
+</html>

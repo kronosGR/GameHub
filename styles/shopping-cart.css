@@ -1,0 +1,21 @@
+.shoping-cart-heads{
+    display: flex;
+}
+
+.shoping-cart-heads > div {
+    font-weight: bold;
+    font-size: var(--font-size-game-link-15);
+}
+
+.shopping-cart-item-container {
+    display: flex;
+    padding: 20px 0;
+}
+
+.container-white{
+    border: var(--black) 1px solid;
+    background-color: white;
+    padding: 20px;
+}
+
+
