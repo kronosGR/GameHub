@@ -211,7 +211,10 @@ main{
     justify-content: space-evenly;
     color: var(--black);
     font-size: var(--font-size-game-text-1);
+}
 
+.long {
+    width:90%;
 }
 
 .preview-list-item > a > img {
