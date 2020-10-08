@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Game Hub - Shopping Cart</title>
+        <title>Game Hub - Checkout</title>
         <meta name="description" content="The universe of games. Buy or sell your games. Pre-order new games">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,14 +40,19 @@
         <main>
             <section class="preview-container">
                 <section class="preview--title">
-                    <h1 class="title">Shopping Cart</h1>
+                    <h1 class="green">Success</h1>
                 </section>
                 <hr>
-                <section class="main-content">       
-                    <hr>                                 
+                <section class="main-content">                      
+                    <section class="text-align-center">
+                        <h2>THANK YOU FOR YOUR ORDER</h2>
+                        <span class="block">You can always find your order's progress <a href="account-orders.html">here</a></span>
+                    </section>
+                    
+                    <hr class="top-margin-40">                              
                     <section class="shoping-cart-heads">
                         <div class="flex-basis-55">
-                            Products
+                            Ordered Products
                         </div>
                         <div class="flex-basis-15 text-align-right">
                             Amount
@@ -71,9 +76,7 @@
                             </div>
                             <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
                                 <div>
-                                    <span class="inline-block button-circle text-align-center">-</span>
-                                    <input type="number" id="amount-1" name="amount-1" value="1" class="width-30 text-align-right">
-                                    <span class="inline-block button-circle text-align-center">+</span>
+                                    <span id="amount-1" class="width-30 text-align-right">1</span>
                                 </div>
                             </div>
                             <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
@@ -97,9 +100,7 @@
                             </div>
                             <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
                                 <div>
-                                    <span class="inline-block button-circle text-align-center">-</span>
-                                    <input type="number" id="amount-2" name="amount-2" value="2" class="width-30 text-align-right">
-                                    <span class="inline-block button-circle text-align-center">+</span>
+                                    <span id="amount-2" class="width-30 text-align-right">2</span>
                                 </div>
                             </div>
                             <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
@@ -116,13 +117,13 @@
                         <div class="shopping-cart-item-container full-line  flex flex-direction-col">
                             <div class="full-line flex flex-justify-content-end">
                                 <div class="flex-basis-60 flex"> 
-                                    <div class="flex-basis-35 bold">
+                                    <div class="flex-basis-40 bold">
                                         Total
                                     </div>                                
                                     <div class="flex-basis-10 text-align-right italics">
                                         <span id="products-amount" >3</span>
                                     </div>                                
-                                    <div class="flex-basis-55 text-align-right italics">                                    
+                                    <div class="flex-basis-50 text-align-right italics">                                    
                                         <span id="total-amount" >$42.00</span>
                                     </div>
                                 </div>
@@ -130,36 +131,44 @@
                             <div class="full-line flex flex-justify-content-end">
                                 <div class="flex-basis-60 flex"> 
                                     <div class="flex-basis-30 bold">
-                                        Discount
+                                        Shipping
                                     </div>                                
                                     <div class="flex-basis-10 text-align-right italics">
                                     </div>                                
                                     <div class="flex-basis-60 text-align-right italics">                                    
-                                        <span id="discount" >$0.00</span>
+                                        <span id="discount" >$3.00</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="full-line flex flex-justify-content-end">
                                 <div class="flex-basis-60 flex"> 
-                                    <div class="flex-basis-30 bold">
-                                        Total Amount
+                                    <div class="flex-basis-30 bold height-2rem middle">
+                                        Paid with <span id="payment-type" class="height-2rem  middle">Visa <img src="images/visa.png" alt="paid with visa" class="middle"></span>
                                     </div>                                
                                     <div class="flex-basis-10 text-align-right italics">
                                     </div>                                
                                     <div class="flex-basis-60 text-align-right italics">                                    
-                                        <span id="total-amoθnt" >$42.00</span>
+                                        <span id="total-amoθnt" >$45.00</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="flex flex-end flex-justify-content-end">
-                            <a href="checkout.html" class="text-align-center">
-                                <div class="cta top-margin-40">CHEKOUT</div>
-                            </a>
-                        </div>
-    
-                        
+                        </div>                           
                     </section>
+                    
+                    <hr class="top-margin-40">
+                    <section class="shoping-cart-heads">
+                        <div>
+                            Shipping Details - Normal Delivery
+                        </div>                        
+                    </section>
+                    <hr>
+                    <span id="full-name" class="block">Georgios Katsanakis</span>
+                    <span id="address" class="block">Skippergata 82</span>
+                    <span id="city" class="block">Sandnes</span>
+                    <span id="postal-code" class="block">4328</span>
+                    <span id="country" class="block bottom-margin-40">Norway</span>
+
+                    
                 </section>
 
             </section>
