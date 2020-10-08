@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game Hub - Account - Email &amp; Password</title>
+        <meta name="description" content="The universe of games. Buy or sell your games. Pre-order new games">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/styles/style.css" rel="stylesheet">
+    </head>
+    <body>    
+        <!------------- HEADER ------------------------------->           
+        <header>
+            <div class="blur-logo-container"></div>
+            <a href="index.html"><img src="images/logo.png" alt="Game Hub logo" class="blur-logo-img"></a>
+            <div id="utilities">
+                <form id="search-form" action="search.html" method="POST">
+                    <label for="show-details" id="search"></label>
+                    <input type="checkbox" id="show-details">
+                    <input type="text" name="seachfor" id="searchfor" value="">
+                   <!-- <button type="submit" id="search-button"><span id="search"></span></button> -->
+                </form>
+
+                <a href="account.html">Georgios katsanakis</a>
+                <a href="index.html">LOG OUT</a>
+                <a href="shopping-cart.html">
+                    <span id="shopping-cart"></span>
+                </a>
+            </div>
+            <nav role="navigation">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="new-games.html">NEW GAMES</a></li>
+                    <li><a href="pre-order-games.html">PRE-ORDER</a></li>
+                    <li><a href="used-games.html">USED GAMES</a></li>
+                    <li><a href="sell-game.html">SELL GAMES</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!------------- MAIN ------------------------------->
+        <main>
+            <section class="preview-container">
+                <section class="preview--title">
+                    <h1 class="title">Email &amp; Password</h1>
+                </section>
+                <hr>
+
+                <section class="main-content game-list-grid">
+                    <section role="navigation" class="game-list-grid-item1">
+                        <h2>Settings</h2>
+                        <a href="account.html" class="a-black">Personal Information</a><br>
+                        <a href="account-email.html" class="a-black nav nav-selected">Email &amp; Password</a><br>
+                        <a href="account-notifications.html" class="a-black">Notifications</a><br>
+                        <hr>
+                        <h2>History</h2>                        
+                        <a href="account-orders.html" class="a-black">Orders</a><br>
+                        <a href="account-pre-orders.html" class="a-black">PRe-orders</a><br>
+                        <a href="account-sells.html" class="a-black">Sells</a>             
+                    </section>                    
+                    <form class="game-grid-item2 game-grid" action="account-email.html" method="POST">
+                        <div class="game-grid-item1">
+                             <label for="email" class="normal">Email</label>
+                        </div>
+                        <div class="game-grid-item2 full-line">                                    
+                             <input type="text" name="email" id="email" class="min-width-400 block tooltip-holder full-line" value="geo.elgeo@gmail.com">
+                             <div class="tooltip">Enter your email</div>                        
+                             <span class="error">Error: Please check your email</span>
+                        </div>
+                        <div class="game-grid-item1">
+                             <label for="old-password" class="normal">Old Password</label>
+                        </div>
+                        <div class="game-grid-item2 full-line">                                    
+                             <input type="password" name="old-password" id="old-password" class="min-width-400 block tooltip-holder full-line" value="password">
+                             <div class="tooltip">Enter your old password</div>                        
+                             <span class="error">Error: Please enter your old password</span>
+                        </div>
+                        <div class="game-grid-item1">
+                             <label for="new-password" class="normal">New Password</label>
+                        </div>
+                        <div class="game-grid-item2 full-line">                                    
+                             <input type="password" name="new-password" id="new-password" class="min-width-400 block tooltip-holder full-line" value="newpassword">
+                             <div class="tooltip">Enter your new password</div>                        
+                             <span class="error">Error: Please enter a valid new password</span>
+                        </div>
+                        <div class="game-grid-item1">
+                             <label for="newpassword2" class="normal">Re-type new Password</label>
+                        </div>
+                        <div class="game-grid-item2 full-line">                                    
+                             <input type="password" name="newpassword2" id="newpassword2" class="min-width-400 block tooltip-holder full-line" value="newpassword">
+                             <div class="tooltip">Re-type your new password</div>                        
+                             <span class="error">Error: Passwords do not match</span>
+                        </div>
+
+                        <div class="game-grid-item3">                            
+                            <button type="submit" class="button-grayBG top-margin-40">
+                                <div class="cta">UPDATE ACCOUNT</div>
+                            </button>
+                        </div>
+                                             
+                    </form>  
+                </section>
+
+            </section>
+        </main>
+         <!------------- FOOTER ------------------------------->
+        <footer>
+            <section id="social-payment-info">
+                <div>
+                    <a href="http://www.facebook.com" target="_blank">
+                        <img src="images/fb-btn.png" alt="Our Facebook Page"/>
+                    </a>
+                    <a href="http://www.twitter.com" target="_blank">
+                        <img src="images/twitter-btn.png" alt="Our Twitter Page"/>
+                    </a>                    
+                    <a href="http://www.youtube.com" target="_blank">
+                        <img src="images/youtube-btn.png" alt="Our Youtube Channel"/>
+                    </a>                    
+                    <a href="http://www.instagram.com" target="_blank">
+                        <img src="images/instagram.png" alt="Our Instagram Page"/>
+                    </a>
+                    <a href="http://www.linkedin.com" target="_blank">
+                        <img src="images/linkedin-btn.png" alt="Our LinkedIn Page"/>
+                    </a>                    
+                </div>
+                <div>
+                    <img src="images/visa.png" alt="We accept visa card"/>                    
+                    <img src="images/mastercard.png" alt="We accept mastercard"/>                    
+                    <img src="images/paypal.png" alt="We accept paypal"/>
+                    
+                </div>
+            </section>
+            <section id="footer-links">
+                <div id="footer-links-gamehub">
+                    <h2 class="title">GAME HUB</h2>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div id="footer-links-support">
+                    <h2 class="title">SUPPORT</h2>
+                    <ul>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        <li><a href="privacy.html">Privacy &amp; Policies</a></li>
+                    </ul>                    
+                </div>
+                <div id="footer-links-services">
+                    <h2 class="title">OUR SERVICES</h2>
+                    <ul>
+                        <li><a href="new-games.html">New Games</a></li>
+                        <li><a href="used-games.html">Used Games</a></li>
+                        <li><a href="pre-order-games.html">Pre-order Games</a></li>
+                        <li><a href="sell-games.html">Sell your Games</a></li>
+                    </ul>                    
+                </div>
+            </section>
+        </footer>               
+    </body>
+</html>
