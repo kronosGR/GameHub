@@ -3,6 +3,7 @@
     display: grid;
     grid-column-gap: 5px;
     text-align: left;
+    grid-template-columns: 300px auto;
 }
 
 .game-list-grid-item1{

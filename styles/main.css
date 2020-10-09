@@ -234,3 +234,7 @@ input{
 .thumbnail{
     width: 100px;
 }
+
+.font-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}

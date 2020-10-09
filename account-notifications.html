@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game Hub - Account - Notifications</title>
+        <meta name="description" content="The universe of games. Buy or sell your games. Pre-order new games">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/styles/style.css" rel="stylesheet">
+    </head>
+    <body>    
+        <!------------- HEADER ------------------------------->           
+        <header>
+            <div class="blur-logo-container"></div>
+            <a href="index.html"><img src="images/logo.png" alt="Game Hub logo" class="blur-logo-img"></a>
+            <div id="utilities">
+                <form id="search-form" action="search.html" method="POST">
+                    <label for="show-details" id="search"></label>
+                    <input type="checkbox" id="show-details">
+                    <input type="text" name="seachfor" id="searchfor" value="">
+                   <!-- <button type="submit" id="search-button"><span id="search"></span></button> -->
+                </form>
+
+                <a href="account.html">Georgios katsanakis</a>
+                <a href="index.html">LOG OUT</a>
+                <a href="shopping-cart.html">
+                    <span id="shopping-cart"></span>
+                </a>
+            </div>
+            <nav role="navigation">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="new-games.html">NEW GAMES</a></li>
+                    <li><a href="pre-order-games.html">PRE-ORDER</a></li>
+                    <li><a href="used-games.html">USED GAMES</a></li>
+                    <li><a href="sell-game.html">SELL GAMES</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!------------- MAIN ------------------------------->
+        <main>
+            <section class="preview-container">
+                <section class="preview--title">
+                    <h1 class="title">Notifications</h1>
+                </section>
+                <hr>
+
+                <section class="main-content game-list-grid">
+                    <section role="navigation" class="game-list-grid-item1">
+                        <h2>Settings</h2>
+                        <a href="account.html" class="a-black">Personal Information</a><br>
+                        <a href="account-email.html" class="a-black">Email &amp; Password</a><br>
+                        <a href="account-notifications.html" class="a-black nav nav-selected">Notifications</a><br>
+                        <hr>
+                        <h2>History</h2>                        
+                        <a href="account-orders.html" class="a-black">Orders</a><br>
+                        <a href="account-pre-orders.html" class="a-black">PRe-orders</a><br>
+                        <a href="account-sells.html" class="a-black">Sells</a>             
+                    </section>                    
+                    <form class="game-grid-item2 center font-montserrat font-size-1_3" action="account-notifications.html" method="POST">
+                        <div class="block">
+                            <input type="checkbox" name="new-arrivals" id="new-arrivals" class="height-2rem  middle" checked>
+                            <label for="new-arrivals" class="height-2rem  middle">Send me notifications for new arrivals</label>
+                        </div>
+                        <div class="block">
+                            <input type="checkbox" name="used-games" id="used-games" class="height-2rem  middle" checked>
+                            <label for="used-games" class="height-2rem  middle">Send me notifications for used games</label>
+                        </div>
+                        <div class="block bottom-margin-40">
+                            <input type="checkbox" name="sold-games" id="sold-games" class="height-2rem  middle" checked>
+                            <label for="sold-games" class="height-2rem  middle">Send me notifications for sold games</label>
+                        </div>
+                        <div class="block">
+                            <input type="checkbox" name="with-email" id="with-email" class="height-2rem  middle" checked>
+                            <label for="with-email" class="height-2rem  middle">Send me notifications with Email</label>
+                        </div>
+                        <div class="block">
+                            <input type="checkbox" name="with-sms" id="with-sms" class="height-2rem  middle" checked>
+                            <label for="with-sms" class="height-2rem  middle">Send me notifications with SMS</label>
+                        </div>
+                        <div class="top-margin-40">                            
+                            <button type="submit" class="button-grayBG center block">
+                                <div class="cta">UPDATE ACCOUNT</div>
+                            </button>
+                        </div>
+                                             
+                    </form>  
+                </section>
+
+            </section>
+        </main>
+         <!------------- FOOTER ------------------------------->
+        <footer>
+            <section id="social-payment-info">
+                <div>
+                    <a href="http://www.facebook.com" target="_blank">
+                        <img src="images/fb-btn.png" alt="Our Facebook Page"/>
+                    </a>
+                    <a href="http://www.twitter.com" target="_blank">
+                        <img src="images/twitter-btn.png" alt="Our Twitter Page"/>
+                    </a>                    
+                    <a href="http://www.youtube.com" target="_blank">
+                        <img src="images/youtube-btn.png" alt="Our Youtube Channel"/>
+                    </a>                    
+                    <a href="http://www.instagram.com" target="_blank">
+                        <img src="images/instagram.png" alt="Our Instagram Page"/>
+                    </a>
+                    <a href="http://www.linkedin.com" target="_blank">
+                        <img src="images/linkedin-btn.png" alt="Our LinkedIn Page"/>
+                    </a>                    
+                </div>
+                <div>
+                    <img src="images/visa.png" alt="We accept visa card"/>                    
+                    <img src="images/mastercard.png" alt="We accept mastercard"/>                    
+                    <img src="images/paypal.png" alt="We accept paypal"/>
+                    
+                </div>
+            </section>
+            <section id="footer-links">
+                <div id="footer-links-gamehub">
+                    <h2 class="title">GAME HUB</h2>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div id="footer-links-support">
+                    <h2 class="title">SUPPORT</h2>
+                    <ul>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                        <li><a href="privacy.html">Privacy &amp; Policies</a></li>
+                    </ul>                    
+                </div>
+                <div id="footer-links-services">
+                    <h2 class="title">OUR SERVICES</h2>
+                    <ul>
+                        <li><a href="new-games.html">New Games</a></li>
+                        <li><a href="used-games.html">Used Games</a></li>
+                        <li><a href="pre-order-games.html">Pre-order Games</a></li>
+                        <li><a href="sell-games.html">Sell your Games</a></li>
+                    </ul>                    
+                </div>
+            </section>
+        </footer>               
+    </body>
+</html>
