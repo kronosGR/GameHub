@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Game Hub - Account - Notifications</title>
+        <title>Game Hub - Account - Sells</title>
         <meta name="description" content="The universe of games. Buy or sell your games. Pre-order new games">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +40,7 @@
         <main>
             <section class="preview-container">
                 <section class="preview--title">
-                    <h1 class="title">Notifications</h1>
+                    <h1 class="title">Sells</h1>
                 </section>
                 <hr>
 
@@ -49,41 +49,43 @@
                         <h2>Settings</h2>
                         <a href="account.html" class="a-black">Personal Information</a><br>
                         <a href="account-email.html" class="a-black">Email &amp; Password</a><br>
-                        <a href="account-notifications.html" class="a-black nav-selected">Notifications</a><br>
+                        <a href="account-notifications.html" class="a-black">Notifications</a><br>
                         <hr>
                         <h2>History</h2>                        
                         <a href="account-orders.html" class="a-black">Orders</a><br>
                         <a href="account-pre-orders.html" class="a-black">Pre-orders</a><br>
-                        <a href="account-sells.html" class="a-black">Sells</a>             
+                        <a href="account-sells.html" class="a-black nav-selected">Sells</a>             
                     </section>                    
-                    <form class="game-grid-item2 center font-montserrat font-size-1_3" action="account-notifications.html" method="POST">
-                        <div class="block">
-                            <input type="checkbox" name="new-arrivals" id="new-arrivals" class="height-2rem  middle" checked>
-                            <label for="new-arrivals" class="height-2rem  middle">Send me notifications for new arrivals</label>
-                        </div>
-                        <div class="block">
-                            <input type="checkbox" name="used-games" id="used-games" class="height-2rem  middle" checked>
-                            <label for="used-games" class="height-2rem  middle">Send me notifications for used games</label>
-                        </div>
-                        <div class="block bottom-margin-40">
-                            <input type="checkbox" name="sold-games" id="sold-games" class="height-2rem  middle" checked>
-                            <label for="sold-games" class="height-2rem  middle">Send me notifications for sold games</label>
-                        </div>
-                        <div class="block">
-                            <input type="checkbox" name="with-email" id="with-email" class="height-2rem  middle" checked>
-                            <label for="with-email" class="height-2rem  middle">Send me notifications with Email</label>
-                        </div>
-                        <div class="block">
-                            <input type="checkbox" name="with-sms" id="with-sms" class="height-2rem  middle" checked>
-                            <label for="with-sms" class="height-2rem  middle">Send me notifications with SMS</label>
-                        </div>
-                        <div class="top-margin-40">                            
-                            <button type="submit" class="button-grayBG center block">
-                                <div class="cta">UPDATE ACCOUNT</div>
-                            </button>
-                        </div>
-                                             
-                    </form>  
+                    <section class="game-grid-item2 font-montserrat margin-10">
+                        <h2>Sells</h2>
+                        <section class="account-grid">
+                            <div class="italics">
+                               Date 
+                            </div>
+                            <div class="italics">
+                               Buyer's Email 
+                            </div>
+                            <div class="italics">
+                               Status
+                            </div>
+                            <div class="italics">
+                               Producs
+                            </div>
+                        </section>
+                        <hr>
+                        <section>
+                            <a href="account-order-details.html" class="account-grid">
+                                <span id="game-1-date">10-08-2020</span>
+                                <span id="game-1-ordernumber">geo.elgeo@gmail.com</span>
+                                <span id="game-1-status" class="green" >Sent</span>
+                                <div>
+                                    <ul class="top-margin-0 list-style-none">
+                                        <li>Death Stranding</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </section>
+                    </section>  
                 </section>
 
             </section>
