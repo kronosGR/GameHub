@@ -10,3 +10,11 @@
 .account-grid ul{
     padding-left: 0px;
 }
+
+.order-details-grid{
+    display: grid;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    text-align: left;
+    grid-template-columns: 20% 35% 20% 15%;
+}
