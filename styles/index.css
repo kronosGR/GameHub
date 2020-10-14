@@ -258,6 +258,7 @@ form > .game-grid-item1{
     margin: 10px;
     width: 130px;
     min-width: 130px;
+
 }
 
 .preview-list-item div{
@@ -268,7 +269,8 @@ form > .game-grid-item1{
 
 .preview-list-item--info{
     display: flex;
-    flex-flow: column;
+    flex-flow: column;    
+    justify-content: space-between;
 }
 
 .preview-list-item--bottom{
@@ -279,13 +281,12 @@ form > .game-grid-item1{
 
 .preview-list-item--bottom img{
     height:70px;
-    justify-self: flex-start;
     align-self: flex-end;
 }
 
 .preview-list-item--bottom .price-circle{
     align-self: flex-end;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     margin-left: 10px;
     flex-basis: 2%;
     text-align: center;
