@@ -1,0 +1,27 @@
+.game-list-grid{
+    display: grid;
+    grid-column-gap: 5px;
+    text-align: left;
+    grid-template-columns: 300px auto;
+}
+
+.game-list-grid-item1{
+    grid-column: 1;
+    border-right: var(--black) 1px solid;
+    padding-right: 20px;
+}
+
+.game-list-grid-item2{
+    grid-column: 2;
+}
+
+.game-list-grid-item1 input{
+    width: 70px;
+    font-size: var(--font-size-question-12);
+    font-style: italic;
+}
+
+.game-grid-item2 .preview-list-item{
+    width: 100%;
+    border-bottom: lightgrey 1px solid;
+}

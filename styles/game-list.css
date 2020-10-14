@@ -1,28 +1,39 @@
-
-.game-list-grid{
-    display: grid;
-    grid-column-gap: 5px;
-    text-align: left;
-    grid-template-columns: 300px auto;
+.game-container{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
 }
 
-.game-list-grid-item1{
-    grid-column: 1;
-    border-right: var(--black) 1px solid;
-    padding-right: 20px;
+#toggle-categories-label h2{
+    color: var(--orange);
 }
 
-.game-list-grid-item2{
-    grid-column: 2;
+#toggle-categories{
+    display: none;
 }
 
-.game-list-grid-item1 input{
-    width: 70px;
-    font-size: var(--font-size-question-12);
-    font-style: italic;
+#toggle-categories:checked ~ #game-categories{
+    display: none;
 }
 
-.game-grid-item2 .preview-list-item{
-    width: 100%;
-    border-bottom: lightgrey 1px solid;
+#game-categories{
+    display: block;
+    background-color: var(--gray);
+    color: var(--black);
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 0;
+    z-index: -1;
+}
+
+#game-categories ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+#game-categories input{
+    width: 25%;    
+    z-index: 0;
 }

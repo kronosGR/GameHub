@@ -1,3 +1,7 @@
+html, body{
+    height: 100vh;
+    width: 100%;
+}
 
 html{
     background:var(--black) url("../images/background.png") repeat top center;
@@ -5,11 +9,8 @@ html{
 
 body{
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
     color: var(--gray);
-    min-width: 960px;
-    width: 100%;
-    text-align: center;    
+    text-align: center; 
 }
 
 
@@ -44,6 +45,15 @@ a{
     font-style: italic;
 }
 
+.a-white{
+    color: var(--gr);
+    font-size: var(--font-size-CTA-14);
+    font-style: normal;
+}
+.a-white:hover{
+    color: var(--orange);
+    font-style: italic;
+}
 .invisible{
     display: none;
 }
@@ -129,14 +139,12 @@ input{
 }
 
 .main-content{
-    width: 90%;
     background-color: var(--gray);
     color: var(--black);
     text-align: left;
-    padding: 20px;
     margin: 0 auto;
     margin-top: 30px;
-    min-width: 800px;
+    padding: 10px;
 
 }
 
@@ -215,7 +223,7 @@ input{
     height: 154px;
     background-color: white;
     border-radius: 40%;
-    filter: blur(60px);
+    filter: blur(54px);
 }
 
 .blur-logo-img {

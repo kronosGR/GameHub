@@ -4,12 +4,18 @@
 
 .shoping-cart-heads > div {
     font-weight: bold;
-    font-size: var(--font-size-game-link-15);
+    font-size: var(--font-size-game-text-1);
 }
 
 .shopping-cart-item-container {
     display: flex;
     padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.shopping-cart-item-container img {
+    width: 80px;
 }
 
 .container-white{

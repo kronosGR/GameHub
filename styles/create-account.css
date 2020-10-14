@@ -1,8 +1,8 @@
 
 .blur-logo-container-big{
-    width: 600px;
-    height: 230px;
-    margin: 100px auto;
+    width: 300px;
+    height: 115px;
+    margin: 50px auto;
     background-color: white;
     border-radius: 40%;
     filter: blur(50px);
@@ -10,23 +10,21 @@
 
 .blur-logo-img-big {
     position: relative;
-    width: 338px;
-    height: 213px;
+    width: 200px;
+    height: 127px;
     margin: 0 auto;
-    top: -330px;
+    top: -180px;
     z-index: 2;
 }
 
 .black-container{
-    width: 40%;
-    min-width: 450px ;
-    margin: 0 auto;
+    margin: -150px auto 0 auto;
     color: var(--gray);
     text-align: left;
 }
 
 .black-main-content{
-    width: 90%;
+    width: 100%;
     margin:0 auto;
 }
 .black-main-content form{

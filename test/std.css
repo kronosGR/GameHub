@@ -1,0 +1,273 @@
+
+/* Borders
+--------------------------*/
+.border-bottom{
+    border-bottom: var(--gray) 1px solid;
+}
+
+/* Display
+-----------------------------*/
+.block{
+    display: block;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.flex{
+    display: flex;
+}
+
+/* Dimensions
+--------------------*/
+.full-line{
+    width: 100%;
+}
+
+.long {
+    width:90%;
+}
+
+.min-width-400{
+    min-width: 400px;
+}
+
+.min-width-600{
+    min-width: 600px;
+}
+
+.min-width-45per{
+    min-width: 45%;
+}
+
+.width-50{
+    width: 50px;
+}
+
+.width-40{
+    width: 40px;
+}
+
+.width-30{
+    width: 30px;
+}
+
+.width-20{
+    width: 20px;
+}
+
+.height-1rem{
+    height: 1rem;
+}
+
+.height-1_2rem{
+    height: 1.2rem;
+}
+
+.height-1_5rem{
+    height: 1.5rem;
+}
+
+.height-2rem{
+    height: 2rem;
+}
+
+/* margins
+---------------------*/
+.margin-0{
+    margin: 0;
+}
+
+.margin-10{
+    margin:10px;
+}
+
+.margin-20{
+    margin:20px;
+}
+
+
+.bottom-margin-40{
+    margin-bottom: 40px;
+}
+
+.top-margin-0{
+    margin-top: 0;
+}
+
+.top-margin-20{
+    margin-top: 20px;
+}
+
+.top-margin-40{
+    margin-top: 40px;
+}
+
+.left-margin-0{
+    margin-left: 0;
+}
+
+/* Flex
+-----------------*/
+.flex-basis-60{
+    flex-basis: 60%;
+}
+
+.flex-basis-55{
+    flex-basis: 55%;
+}
+
+.flex-basis-50{
+    flex-basis: 50%;
+}
+
+.flex-basis-45{
+    flex-basis: 45%;
+}
+
+.flex-basis-40{
+    flex-basis: 40%;
+}
+
+.flex-basis-35{
+    flex-basis: 35%;
+}
+
+.flex-basis-30{
+    flex-basis: 30%;
+}
+
+.flex-basis-25{
+    flex-basis: 25%;
+}
+
+.flex-basis-15{
+    flex-basis: 15%;
+}
+
+.flex-basis-10{
+    flex-basis: 10%;
+}
+
+
+.flex-direction-row{
+    flex-direction: row;
+}
+
+.flex-direction-col{
+    flex-direction: column;
+}
+
+.flex-content-center{
+    justify-content: center;
+}
+
+.flex-justify-content-end{
+    justify-content: flex-end;
+}
+
+.flex-align-self-center{
+    align-self: center;
+}
+
+/* aligns
+-------------*/
+.text-align-right{
+    text-align: right;
+}
+
+.text-align-left{
+    text-align: left;
+}
+.text-align-center{
+    text-align: center;
+}
+
+.center{
+    margin: auto;
+}
+
+.middle{
+    vertical-align: middle;
+}
+
+/* Positions
+------------------------------*/
+.position-absolute{
+    position: absolute;
+}
+
+.position-relative{
+    position: relative;
+}
+
+/* Fonts
+----------------------------*/
+.bold{
+    font-weight: bold;
+}
+
+.italics{
+    font-style: italic;
+}
+
+.normal{
+    font-weight: normal;
+}
+
+.font-size-1_1{
+    font-size: 1.1rem;
+}
+
+.font-size-1_2{
+    font-size: 1.2rem;
+}
+
+.font-size-1_3{
+    font-size: 1.3rem;
+}
+
+.font-size-1_4{
+    font-size: 1.4rem;
+}
+
+.font-size-1_5{
+    font-size: 1.5rem;
+}
+
+/* Colors
+---------------------*/
+.green{
+    color: green;
+}
+
+.red{
+    color: red;
+}
+
+.whie {
+    color: white;
+}
+
+/* List Items
+-------------------*/
+.list-style-none{
+    list-style-type: none;
+}
+
+.list-style-circle {
+    list-style-type: circle;
+}
+
+.list-style-square {
+    list-style-type: square;
+}
+
+.list-style-upper-roman {
+    list-style-type: upper-roman;
+}
+
+.list-style-lower-alpha {
+    list-style-type: lower-alpha;
+}

@@ -1,0 +1,20 @@
+.account-grid{
+    display: grid;
+    grid-column-gap: 5px;
+    text-align: left;
+    grid-template-columns: 15% 30% 15% 40%;
+    color: var(--black);
+    font-style: normal;
+}
+
+.account-grid ul{
+    padding-left: 0px;
+}
+
+.order-details-grid{
+    display: grid;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    text-align: left;
+    grid-template-columns: 20% 35% 20% 15%;
+}

@@ -20,9 +20,20 @@
     margin-top: 5px;
     margin-left: 10px;
     font-size: var(--font-size-question-12);
-    word-wrap: break-word;
-    
+    word-wrap: break-word;    
 }
+
+.about-bottom{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.about-bottom div {
+    min-width: 300px;
+    margin: 20px auto;
+}
+
 
 .question{
     display: block;

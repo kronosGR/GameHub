@@ -1,6 +1,5 @@
 
 .game-content{
-    width: 90%;
     background-color: var(--gray);
     color: var(--black);
     text-align: left;
@@ -8,17 +7,20 @@
     margin: 0 auto;
     margin-top: 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .game-content > div:nth-child(1){
+    order: 2;
     flex-grow: 1;
-    margin: 10px;
+    margin: 20px auto;
 }
 
 .game-content > div:nth-child(2){
+    order: 1;
     flex-grow: 6;
     margin: 10px;
+    padding-bottom: 60px;
 }
 
 .game-content h1{
