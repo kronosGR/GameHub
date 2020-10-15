@@ -16,7 +16,7 @@ header{
     width: 100%;
     background-color: var(--black);
     border-bottom: var(--gray) 2px solid;    
-    padding: 30px 20px 20px 20px;  
+    padding: 30px 20px 5px 20px;  
     z-index: 999;
 }
 
@@ -35,7 +35,7 @@ header{
 
 #mob-utilities a{
     font-family: 'Bebas Neue', cursive;
-    font-size: var(--font-size-nav-17);
+    font-size: var(--font-size-h1-2r);
     text-decoration: none;
     color: var(--gray);
     vertical-align: middle;
@@ -55,48 +55,52 @@ header{
     top: -4px;
 }
 
-#hamb-menu-win{    
+.hamb-menu-win{    
     display: none;
     position: fixed;
-    top: 101px;
-    left: -40px;
-    width: 350px;
-    height: auto;
+    top: 95px;
+    left: -2px;
+    width: 270px;
     border: var(--gray) 2px solid;
     background-color: var(--black);
     height: 450px;
 
 }
 
-#hamb-menu-win > .blur-logo-container{   
+.hamb-menu-win .blur-logo-container{   
     position: relative;
-    width: 150px;
-    height: 58px;
+    width: 210px;
+    height: 81px;
     left: 16px;
 }
 
-#hamb-menu-win .blur-logo-img{    
+.hamb-menu-win .blur-logo-img{   
+    position: relative;
     width: 150px;
     height: 94px;
-    left: 116px;
+    left: 52px;
+    top: -25px;
 }
 
-#hamb-menu-win section {
-    position: relative;
-    top: 110px;
-    left: 20px;
+.hamb-menu-win section {
     text-align: left;
-    padding: 10px 20px;
-    border-bottom: var(--gray) 2px solid;
-    margin: 0 30px;
+    flex-grow: 1;
 }
 
-#hamb-menu-win ul {
-    list-style: none;
+.hamb-menu-win ul {
+    list-style: none;    
+    margin-left: 20px;
 }
 
-#hamb-menu:checked ~ #hamb-menu-win{
-    display: block;
+#hamb-menu:checked ~ .hamb-menu-win{
+    display: flex;
+    flex-direction: column;
+}
+
+#logo-container {
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 
 #mob-shopping-cart{
@@ -177,6 +181,7 @@ main{
 
 .info-item img{
     height: 100px;
+    margin-bottom: 10px;
 }
 
 .info-item{   

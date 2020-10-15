@@ -14,3 +14,96 @@
 @import url("account.css");
 
 
+
+@media (min-width: 650px){
+    :root{
+        font-size: 18px;
+        }
+
+    #hamb-menu-win{
+        height: 500px;
+    }
+}
+
+@media (min-width: 960px){
+    #hamb-menu-label{
+        display: none;
+    }
+
+    #site-title{
+        display: none;
+    }
+
+    #nav-mobile{
+        border: none;
+    }
+
+    .hamb-menu-win {
+        display: block;
+        top: -10px;
+        width: 100%;
+        height: 265px;
+    }
+
+    .hamb-menu-win .blur-logo-container {
+        position: relative;
+        width: 400px;
+        height: 154px;
+        left: 16px;
+    }
+
+    .hamb-menu-win .blur-logo-img {
+        top:50px;
+        left:100px;
+        position: absolute;
+        width: 250px;
+        height: 158px;
+        z-index: 2;
+    }
+
+    #search-shopping-cart{
+        position: relative;
+        top: 32px;
+    }
+
+    #utilities-desktop{
+        position: fixed;
+        top: 17px;
+        right: 23px;
+        width: 260px;
+    }
+
+    #utilities-desktop ul{        
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+    }
+
+    #main-nav-desktop{
+        position: fixed;
+        top: 199px;
+        left: 0px;
+        width: 100%;
+        border-top: var(--gray) 2px solid;
+
+    }
+
+    #main-nav-desktop ul{        
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    #main-nav-desktop li{    
+        padding: 10px 20px;
+        border-right: var(--gray) 1px solid;
+    }
+
+    #main-nav-desktop li:last-child{
+        border-right: none;
+    }
+
+    main {
+        margin: 300px auto 0 auto;
+    }
+}
