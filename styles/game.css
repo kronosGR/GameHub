@@ -129,8 +129,8 @@
 
 @keyframes item_added_animation{
     to{
-        top:-900px;
-        left: 125%;
+        top:-400px;
+        left: 105%;
         opacity: 0;
     }
     

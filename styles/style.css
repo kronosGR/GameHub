@@ -26,6 +26,8 @@
 }
 
 @media (min-width: 960px){
+    /* navigation
+    -----------------------*/
     #hamb-menu-label{
         display: none;
     }
@@ -42,22 +44,24 @@
         display: block;
         top: -10px;
         width: 100%;
-        height: 265px;
+        height: 250px;
+        border: none;
+        background:var(--black) url("../images/background.png") repeat top center
     }
 
     .hamb-menu-win .blur-logo-container {
         position: relative;
-        width: 400px;
-        height: 154px;
+        width: 300px;
+        height: 115px;
         left: 16px;
     }
 
     .hamb-menu-win .blur-logo-img {
-        top:50px;
-        left:100px;
+        top: 65px;
+        left: 81px;
         position: absolute;
-        width: 250px;
-        height: 158px;
+        width: 180px;
+        height: 114px;
         z-index: 2;
     }
 
@@ -81,10 +85,11 @@
 
     #main-nav-desktop{
         position: fixed;
-        top: 199px;
+        top: 170px;
         left: 0px;
         width: 100%;
         border-top: var(--gray) 2px solid;
+        border-bottom: var(--gray) 2px solid;
 
     }
 
@@ -103,7 +108,45 @@
         border-right: none;
     }
 
+    /* index.html
+    ------------------*/
     main {
         margin: 300px auto 0 auto;
+    }
+
+    .info-item{
+        flex-basis: 40%;
+    }
+
+    .info-item p{
+        height: 70px;
+    }
+
+    .preview-list-item{
+        flex-basis: 45%;
+    }
+
+    #social-payment-info{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+       
+    #social-payment-info div {
+        margin: 0;    
+    }
+
+    #footer-links{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* game-*.html
+    -----------------------*/
+    .game-content{
+        flex-direction: row;
+    }
+
+    .game-content > div:nth-child(1){
+        order: 1;
     }
 }
