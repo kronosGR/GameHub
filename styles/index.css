@@ -20,20 +20,20 @@ header{
     z-index: 999;
 }
 
-#mob-utilities{
+.mob-utilities{
     display: flex;
     justify-content: space-between;
 }
 
-#mob-utilities > section{
+.mob-utilities > section{
     position: relative;
 }
 
-#mob-utilities h1{
+.mob-utilities h1{
     display: inline;
 }
 
-#mob-utilities a{
+.mob-utilities a{
     font-family: 'Bebas Neue', cursive;
     font-size: var(--font-size-h1-2r);
     text-decoration: none;
