@@ -214,5 +214,7 @@
 
     /* shopping-cart.html
     ------------------------*/
-    
+    .shopping-cart-item-container{
+        flex-direction: row;
+    }
 }
