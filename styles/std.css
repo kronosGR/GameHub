@@ -108,6 +108,14 @@
     margin-left: 0;
 }
 
+.right-margin-20{
+    margin-right: 20px;
+}
+
+.right-margin-40{
+    margin-right: 40px;
+}
+
 /* Flex
 -----------------*/
 .flex-basis-60{
@@ -171,6 +179,42 @@
     align-self: center;
 }
 
+.flex-align-items-start{
+    align-items: flex-start;
+}
+
+.flex-align-items-end{
+    align-items: flex-end;
+}
+
+.flex-grow-1{
+    flex-grow: 1;
+}
+
+.flex-grow-2{
+    flex-grow: ;
+}
+
+.flex-grow-3{
+    flex-grow: 3;
+}
+
+.flex-grow-4{
+    flex-grow: 5;
+}
+
+.flex-grow-5{
+    flex-grow: 5;
+}
+
+.flex-grow-6{
+    flex-grow: 6;
+}
+
+.flex-grow-7{
+    flex-grow: 7;
+}
+
 /* aligns
 -------------*/
 .text-align-right{
@@ -190,6 +234,10 @@
 
 .middle{
     vertical-align: middle;
+}
+
+.wrap-word{
+    word-break: break-all;
 }
 
 /* Positions

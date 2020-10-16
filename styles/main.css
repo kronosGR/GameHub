@@ -39,6 +39,7 @@ a{
     color: var(--black);
     font-size: var(--font-size-CTA-14);
     font-style: normal;
+    font-size: 1.1rem;
 }
 .a-black:hover{
     color: var(--orange);

@@ -26,6 +26,12 @@
 }
 
 @media (min-width: 960px){
+    
+    body{        
+        line-height: 1.2rem;
+    }
+    
+
     /* navigation
     -----------------------*/
     #hamb-menu-label{
@@ -71,9 +77,9 @@
     }
 
     #utilities-desktop{
-        position: fixed;
-        top: 17px;
-        right: 23px;
+        position: absolute;
+        top: 33px;
+        right: 20px;
         width: 260px;
     }
 
@@ -150,6 +156,11 @@
         order: 1;
     }
 
+    .game-grid-item1{
+        line-height: 1.4rem;
+        vertical-align: middle;
+    }
+
     /* game categories
     ---------------------*/
     ul .nav-selected {
@@ -217,4 +228,50 @@
     .shopping-cart-item-container{
         flex-direction: row;
     }
+
+    .container-white .shopping-cart-item-container:nth-last-child(1){
+        flex-direction: column;
+    }
+
+    .shopping-cart-item-container div:nth-child(1){
+        flex-direction: row;
+    }
+    
+    /* checkout.html
+    -----------------------*/
+    .main-content > form {
+        padding: 0 30px;
+        display: inline-block;
+        flex-basis: 60%;
+    }
+
+    /* account*.html
+    ---------------------*/
+    .account-flex{
+        flex-direction: row;
+    }
+    
+    .a-black{
+        font-size: 1.1rem;
+    }
+
+    .account-flex > section:nth-child(1){
+        flex-basis: 30%;
+        line-height: 1.4rem;
+        padding: 13px 10px;
+    }
+    
+    .account-flex > section:nth-child(2){
+        flex-basis: 60%;
+        line-height: 1.4rem;
+    }
+
+}
+
+@media (min-width: 1980px){
+    body, html{
+        max-width: 1900px;   
+        margin: 0 auto;
+    }
+
 }

@@ -2,9 +2,16 @@
     display: grid;
     grid-column-gap: 5px;
     text-align: left;
-    grid-template-columns: 15% 30% 15% 40%;
+    grid-template-columns: 19% 32% 14% 35%;
     color: var(--black);
-    font-style: normal;
+    font-style: normal;    
+    font-size: 0.9rem;
+    word-break: break-all;
+    margin-top: 10px;
+}
+
+.account-grid .italics{
+    font-size: 1.1rem;
 }
 
 .account-grid ul{
@@ -17,4 +24,13 @@
     grid-row-gap: 10px;
     text-align: left;
     grid-template-columns: 20% 35% 20% 15%;
+}
+
+.account-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.account-flex section:nth-child(1){    
+    padding-left: 15px;
 }
