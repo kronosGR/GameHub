@@ -23,6 +23,11 @@
     #hamb-menu-win{
         height: 500px;
     }
+
+    #toggle-btn{        
+        top: -36px;
+        left: 68px;
+    }
 }
 
 @media (min-width: 960px){

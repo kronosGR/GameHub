@@ -14,17 +14,35 @@
     display: none;
 }
 
+#toggle-btn{
+    color: var(--gray); 
+    position: relative;
+    top: -26px;
+    left: 52px;
+    font-weight: bold;
+    font-size: 2.1rem;
+}
+
+#toggle-btn:after{
+    content: '-';
+}
+
 #toggle-categories:checked ~ #game-categories{
     display: none;
 }
+
+#toggle-categories:checked + #toggle-btn:after{
+    content: '+';
+}
+
 
 #game-categories{
     display: block;
     background-color: var(--gray);
     color: var(--black);
     width: 35%;
-    margin: 0 auto;
-    padding: 20px 0;
+    margin: -21px auto 10px auto;
+    padding: 10px 0;
     z-index: -1;
 }
 
