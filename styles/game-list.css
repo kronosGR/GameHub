@@ -23,6 +23,10 @@
     font-size: 2.1rem;
 }
 
+#toggle-categories-label:hover{
+    font-style: italic;
+}
+
 #toggle-btn:after{
     content: '-';
 }

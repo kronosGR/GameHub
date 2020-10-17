@@ -28,6 +28,7 @@
         top: -36px;
         left: 68px;
     }
+
 }
 
 @media (min-width: 960px){
@@ -240,6 +241,12 @@
 
     .shopping-cart-item-container div:nth-child(1){
         flex-direction: row;
+    }
+
+    #shopping-cart-amount{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
     }
     
     /* checkout.html
