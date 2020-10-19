@@ -86,13 +86,17 @@
         position: absolute;
         top: 33px;
         right: 20px;
-        width: 260px;
+        width: 460px;
     }
 
     #utilities-desktop ul{        
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         margin-left: 0;
+    }
+
+    #utilities-desktop li{
+        margin-left: 20px;
     }
 
     #main-nav-desktop{
@@ -209,6 +213,9 @@
 
     /* create-account.html
     ------------------------*/
+    .utilities-desktop-account{
+        width: 350px;
+    }
     .black-container{
         margin-top: -500px;
         width: 65%;

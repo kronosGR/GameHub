@@ -99,6 +99,7 @@ input{
 
 .game-title{
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
     color: var(--black);
     font-size: var(--font-size-game-link-15) ;
     font-weight: bolder;
