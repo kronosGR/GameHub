@@ -124,6 +124,11 @@
         border-right: none;
     }
 
+    .mob-utilities a:hover{
+        color: var(--orange);
+        
+    }
+
     /* index.html
     ------------------*/
     main {
@@ -136,6 +141,7 @@
 
     .info-item p{
         height: 70px;
+        margin-top: 10px;
     }
 
     .preview-list-item{
@@ -188,12 +194,13 @@
 
     .game-container section:nth-child(2){
         flex-basis: 50%;
+        margin-top: 19px;
     }
 
     #toggle-categories-label h2 {
         font-size: var(--font-size-nav-17);
         color: var(--gray);
-        margin: 70px 0px 5px 25px;
+        margin: 25px 0px 5px 25px;
     }
 
     #game-categories{
@@ -234,6 +241,7 @@
 
     .preview-container{
         width: 80%;
+        margin-top:88px;
     }
 
     /* shopping-cart.html

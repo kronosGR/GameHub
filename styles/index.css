@@ -181,7 +181,7 @@ main{
 
 .info-item img{
     height: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .info-item{   
@@ -202,20 +202,17 @@ main{
     /* Preview Containers 
     -----------------------------*/
 .preview-container{
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 30px auto 0 auto;
     width: 95%;
 }
 
 .preview--title{  
     display: flex;
     justify-content: space-between;
-    line-height: calc(var(--font-size-h1-2r) + 1rem);
-    align-items: flex-end;
 }
 
-.link{
-    vertical-align: middle;
+.preview--title h2{
+    margin-bottom: -20px;
 }
 
 .link:hover{

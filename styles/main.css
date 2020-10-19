@@ -18,7 +18,7 @@ h1{
     font-family: 'Bebas Neue', cursive;
     color: var(--gray);
     font-size: var(--font-size-h1-2r);
-    margin-bottom: 0px;
+    margin-bottom: -11px;
     text-transform: uppercase;
 }
 
@@ -75,7 +75,7 @@ a{
 }
 
 .cta:hover{
-    background-color: var(--gray);
+    background-color: white;
 }
 
 input{    
@@ -106,11 +106,11 @@ input{
 }
 
 .price-circle{
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 50px;
-    max-height: 50px;
-    line-height: 50px;
+    min-width: calc(2.2* var(--font-size-game-link-15));
+    min-height: calc(2.2* var(--font-size-game-link-15));
+    max-width: calc(2.2* var(--font-size-game-link-15));
+    max-height: calc(2.2* var(--font-size-game-link-15));
+    line-height: calc(2.2* var(--font-size-game-link-15));
     border: var(--orange) solid 1px;
     color: white;
     font-weight: bolder;
