@@ -126,12 +126,3 @@
     animation: item_added_animation 3s;
     animation-fill-mode: forwards;
 }
-
-@keyframes item_added_animation{
-    to{
-        top:-400px;
-        left: 105%;
-        opacity: 0;
-    }
-    
-}

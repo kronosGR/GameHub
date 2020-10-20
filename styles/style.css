@@ -12,6 +12,7 @@
 @import url("create-account.css");
 @import url("shopping-cart.css");
 @import url("account.css");
+@import url("animations.css");
 
 
 
@@ -20,13 +21,20 @@
         font-size: 18px;
         }
 
-    #hamb-menu-win{
-        height: 500px;
+    .hamb-menu-win{
+        height: 515px;
     }
-
+    
     #toggle-btn{        
         top: -36px;
-        left: 68px;
+        left: 72px;
+    }
+
+    .preview-list-item > a > img {
+        margin: 10px;
+        width: 130px;
+        min-width: 130px;
+    
     }
 
 }
@@ -35,8 +43,7 @@
     
     body{        
         line-height: 1.2rem;
-    }
-    
+    }    
 
     /* navigation
     -----------------------*/
@@ -53,6 +60,8 @@
     }
 
     .hamb-menu-win {
+        animation-name: fade-in;
+        animation-duration: 1s;
         display: block;
         top: -10px;
         width: 100%;
@@ -193,7 +202,7 @@
     }
 
     .game-container section:nth-child(2){
-        flex-basis: 50%;
+        flex-basis: 100%;
         margin-top: 19px;
     }
 
@@ -261,7 +270,7 @@
     #shopping-cart-amount{
         display: flex;
         flex-direction: row;
-        align-items: flex-end;
+        align-items: center;
     }
     
     /* checkout.html
