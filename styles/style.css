@@ -281,6 +281,20 @@
         flex-basis: 60%;
     }
 
+    #logo-container-checkout{
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #logo-container-checkout .blur-logo-container{
+    }
+    
+    #logo-container-checkout .blur-logo-img{
+        position: relative;
+        top: -50px;
+        left: 20px;
+    }
+
     /* account*.html
     ---------------------*/
     .account-flex{
