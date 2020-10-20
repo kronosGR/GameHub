@@ -46,7 +46,7 @@
 
 #black-container-label-terms{
     font-size: var(--font-size-game-text-1);
-    display: inline-block;
+    display: block;
     position: relative;
     padding-left: 50px;
     line-height: var(--font-size-game-link-15);

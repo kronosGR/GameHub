@@ -33,4 +33,5 @@
 
 .account-flex section:nth-child(1){    
     padding-left: 15px;
+    text-align: center;
 }
