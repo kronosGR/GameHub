@@ -10,12 +10,17 @@
     margin-top: 10px;
 }
 
+.hover-overlay:hover{
+    background-color: rgba(255,255,255,0.3);    
+}
+
 .account-grid .italics{
     font-size: 1.1rem;
 }
 
 .account-grid ul{
     padding-left: 0px;
+    word-break: break-all;
 }
 
 .order-details-grid{

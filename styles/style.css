@@ -257,6 +257,10 @@
         margin-top:88px;
     }
 
+    .black-main-content label{
+        padding-bottom: 5px;;
+    }
+
     /* shopping-cart.html
     ------------------------*/
     .shopping-cart-item-container{
@@ -320,7 +324,7 @@
     }
     
     .account-flex > section:nth-child(2){
-        flex-basis: 60%;
+        flex-basis: 67%;
         line-height: 1.4rem;
     }
 
