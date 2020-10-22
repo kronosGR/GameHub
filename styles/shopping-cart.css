@@ -1,8 +1,8 @@
-.shoping-cart-heads{
+.shopping-cart-heads{
     display: flex;
 }
 
-.shoping-cart-heads > div {
+.shopping-cart-heads > div {
     font-weight: bold;
     font-size: var(--font-size-game-text-1);
 }
