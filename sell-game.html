@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Game Hub - Search Results - Sell Game</title>
         <meta name="description" content="List your used game for selling.">
@@ -62,7 +62,9 @@
                 <section class="main-content ">                                    
                     <section >
                         <div class="preview-list">
-                           <form action="account-sells.html" method="POST"  data-netlify="true">
+                            <!-- Use of enctype="multipart/form-data" because of image upload 
+                                 Use of data-netlify="true" so can receive the submissions -->
+                           <form action="account-sells.html" method="POST"  data-netlify="true" enctype="multipart/form-data">
                                <div>
                                     <label for="game-title" class="block">Game Title</label>
                                </div>
