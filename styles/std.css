@@ -116,6 +116,22 @@
     margin-right: 40px;
 }
 
+.bottom-margin-minus-20{
+    margin-bottom: -20px;
+}
+
+.bottom-margin-minus-40{
+    margin-bottom: -40px;
+}
+
+.bottom-margin-minus-60{
+    margin-bottom: -60px;
+}
+
+.top-margin-minus-20{
+    margin-top: -20px;
+}
+
 /* Flex
 -----------------*/
 .flex-basis-60{
