@@ -21,21 +21,21 @@
                 <div class="black-main-content">
                     <form action="account.html" method="POST" data-netlify="true" name="create-account">
                         <label for="email" >E-mail </label>
-                        <input type="email" name="email" id="email" placeholder="Enter your email address">
+                        <input type="email" name="email" id="email" placeholder="Enter your email address" required>
                         <span class="error">Error: Please enter a valid email</span>
 
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Enter your password">
+                        <input type="password" name="password" id="password" placeholder="Enter your password" required>
                         <span class="error">Error: The password should be 8 characters minimum</span>
                         
                         <label for="retype-password">Re-type Password</label>
-                        <input type="password" name="retype-password" id="retype-password" placeholder="Re-type your password">
+                        <input type="password" name="retype-password" id="retype-password" placeholder="Re-type your password" required>
                         <span class="error">Error: The passwords do not match</span>                        
                         
                         <label for="accept-terms" id="black-container-label-terms" class="bottom-margin-40">         
                             I accept  the <a href="terms.html" target="_blank">Terms &amp; Conditions</a> and acknowledge 
                             <a href="privacy.html" target="_blank">Privacy Policies</a>
-                            <input type="checkbox" name="accept-terms" id="accept-terms">                              
+                            <input type="checkbox" name="accept-terms" id="accept-terms"  required>                              
                         </label>
 
                         <button type="submit">
