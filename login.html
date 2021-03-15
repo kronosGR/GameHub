@@ -29,7 +29,7 @@
             <section class="black-container">                
                 <h1 class="text-align-center bottom-margin-minus-60" >Log in</h1>
                 <div class="black-main-content">
-                    <form action="account.html" method="POST" data-netlify="true" name="log-in" >
+                    <form id="login-form" action="account.html" method="GET" data-netlify="true" name="log-in" >
                         <label for="email" >E-mail </label>
                         <input type="email" name="email" id="email" placeholder="Enter your email address" required>
                        
@@ -40,12 +40,12 @@
                             Remember me
                             <input type="checkbox" name="accept-terms" id="accept-terms">                              
                         </label>
+                        <span id="error-login" class="none">Error: Log in error. Check your email and password</span>
 
                         <button type="submit">
                             <div class="cta">Log in</div>
                         </button>
                     </form>
-                    <p class="error">Error: Log in error</p>
                     <p>Not a member? - <a href="create-account.html"> Create an account</a></p>
                     
                     <p>
@@ -111,6 +111,8 @@
                     </ul>                    
                 </div>
             </section>
-        </footer>               
+        </footer>                       
+        <script src="/js/handleAccounts.js"></script>
+        <script src="/js/loginAccount.js"></script>
     </body>
 </html>

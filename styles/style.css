@@ -18,7 +18,7 @@
 
 @media (min-width: 650px){
     :root{
-        font-size: 18px;
+        font-size: 17px;
         }
 
     .hamb-menu-win{
@@ -237,7 +237,7 @@
         width: 350px;
     }
     .black-container{
-        margin-top: -500px;
+        margin-top: -400px;
         width: 65%;
     }
 

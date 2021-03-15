@@ -19,6 +19,10 @@
     display: flex;
 }
 
+.none{
+    display: none;
+}
+
 /* Dimensions
 --------------------*/
 .full-line{
@@ -245,7 +249,7 @@
 }
 
 .center{
-    margin: auto;
+    margin: 0 auto;
 }
 
 .middle{

@@ -52,10 +52,12 @@ a{
     font-size: var(--font-size-CTA-14);
     font-style: normal;
 }
+
 .a-white:hover{
     color: var(--orange);
     font-style: italic;
 }
+
 .invisible{
     display: none;
 }
@@ -92,7 +94,7 @@ input{
 
 .link{
     font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--orange);
     font-style: italic;
     font-size: var(--font-size-link-1);
@@ -205,6 +207,17 @@ input{
     font-style: italic;
     font-size: var(--font-size-game-requirements-08);
 }
+
+.error-login{
+    color: red;
+    font-style: italic;
+    font-size: var(--font-size-game-requirements-08);
+    display: block;
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+}
+
+
 
 .confirmation{
     color: green;

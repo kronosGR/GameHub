@@ -30,18 +30,18 @@
             <section class="black-container">
                 <h1 class="text-align-center bottom-margin-minus-60" >Create Account</h1>
                 <div class="black-main-content">
-                    <form action="account.html" method="POST" data-netlify="true" name="create-account">
+                    <form id="registration-form" action="account.html" method="GET" data-netlify="true" name="create-account">
                         <label for="email" >E-mail </label>
                         <input type="email" name="email" id="email" placeholder="Enter your email address" required>
-                        <span class="error">Error: Please enter a valid email</span>
+                        <span id="error-email" class="none">Error: Please enter a valid email</span>
 
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" placeholder="Enter your password" required>
-                        <span class="error">Error: The password should be 8 characters minimum</span>
+                        <span id="error-password" class="none">Error: The password should be 8 characters minimum</span>
                         
                         <label for="retype-password">Re-type Password</label>
                         <input type="password" name="retype-password" id="retype-password" placeholder="Re-type your password" required>
-                        <span class="error">Error: The passwords do not match</span>                        
+                        <span id="error-password-re" class="none">Error: The passwords do not match</span>                        
                         
                         <label for="accept-terms" id="black-container-label-terms" class="bottom-margin-40">         
                             I accept  the <a href="terms.html" target="_blank">Terms &amp; Conditions</a> and acknowledge 
@@ -118,6 +118,10 @@
                     </ul>                    
                 </div>
             </section>
-        </footer>               
+        </footer>   
+        
+        
+        <script src="/js/handleAccounts.js"></script>
+        <script src="/js/createAccount.js"></script>
     </body>
 </html>
