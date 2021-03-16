@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Game Hub - Log in</title>
-        <meta name="description" content="Log in to your account">
+        <title></title>
+        <meta name="description" content="">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/styles/style.css" rel="stylesheet">
@@ -19,42 +19,73 @@
         </script>
     </head>
     <body>    
-        <!------------- HEADER ------------------------------->           
-        <header>
-            <div class="blur-logo-container-big"></div>
-            <a href="index.html"><img src="images/logo.png" alt="Game Hub logo" class="blur-logo-img-big"></a>
-        </header>
+      <!------------- HEADER ------------------------------->
+      <header>
+        <nav id="nav-mobile">
+          <section class="mob-utilities">
+            <section>
+              <label for="hamb-menu" id="hamb-menu-label">
+                <img src="images/menu-btn.png" alt="menu button" />
+              </label>
+              <input type="checkbox" id="hamb-menu" />
+              <section class="hamb-menu-win">
+                <section id="logo-container">
+                  <div class="blur-logo-container"></div>
+                  <a href="index.html">
+                    <img
+                      src="images/logo.png"
+                      alt="Game Hub logo"
+                      class="blur-logo-img"
+                    />
+                  </a>
+                </section>
+                <section id="main-nav-desktop">
+                  <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="game-type.html?type=New Games">NEW GAMES</a></li>
+                    <li><a href="game-type.html?type=Pre-Order">PRE-ORDER</a></li>
+                    <li><a href="game-type.html?type=Used Games">USED GAMES</a></li>
+                    <li><a href="sell-game.html">SELL GAMES</a></li>
+                  </ul>
+                </section>
+                <section id="utilities-desktop">
+                  <ul>
+                    <li>
+                      <a href="create-account.html" id="a-account">
+                        CREATE ACCOUNT
+                      </a>
+                    </li>
+                    <li><a href="login.html" id="a-login">LOG IN</a></li>
+                  </ul>
+                </section>
+              </section>
+              <a href="index.html" id="site-title">Game Hub</a>
+            </section>
+            <section id="search-shopping-cart">
+              <form
+                id="mob-search-form"
+                action="search.html"
+                method="GET"
+                data-netlify="true"
+              >
+                <label for="mob-show-details" id="mob-search"></label>
+                <input type="checkbox" id="mob-show-details"  />
+                <input type="text" name="searchfor" id="mob-searchfor" placeholder="Press Enter to Search"/>
+              </form>
+              <a href="shopping-cart.html">
+                <span id="mob-shopping-cart">
+                    <div id="cart-circle"></div>
+                </span>
+              </a>
+            </section>
+          </section>
+        </nav>
+      </header>
         <!------------- MAIN ------------------------------->
         <main>
-            <section class="black-container">                
-                <h1 class="text-align-center bottom-margin-minus-60" >Log in</h1>
-                <div class="black-main-content">
-                    <form id="login-form" action="account.html" method="GET" data-netlify="true" name="log-in" >
-                        <label for="email" >E-mail </label>
-                        <input type="email" name="email" id="email" placeholder="Enter your email address" required>
-                       
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Enter your password" required>
-                        
-                        <label for="accept-terms" id="black-container-label-terms" class="bottom-margin-40">         
-                            Remember me
-                            <input type="checkbox" name="accept-terms" id="accept-terms">                              
-                        </label>
-                        <span id="error-login" class="none">Error: Log in error. Check your email and password</span>
-
-                        <button type="submit">
-                            <div class="cta">Log in</div>
-                        </button>
-                    </form>
-                    <p>Not a member? - <a href="create-account.html"> Create an account</a></p>
-                    
-                    <p>
-                        Connect with <br>
-                        <a href=""><img src="images/fb-btn.png" alt="facebook button"></a>
-                        <a href=""><img src="images/twitter-btn.png" alt="twitter-btn"></a>
-                    </p>
-                    
-                </div>
+            <section class="preview-container">                
+                <div class="game-content">
+                    <!--  -->
 
             </section>
         </main>
@@ -111,8 +142,10 @@
                    </ul>                    
                </div>
            </section>
-       </footer>                       
-        <script src="/js/handleAccounts.js"></script>
-        <script src="/js/loginAccount.js"></script>
+       </footer>         
+
+        <script src="/js/handle-accounts.js"></script>
+        <script src="js/utils-db.js"></script>
+        <script src="js/game-page.js"></script>       
     </body>
 </html>

@@ -27,34 +27,28 @@ regForm.addEventListener("submit", (evt) => {
 
 email.addEventListener("focusout", (evt) => {
   const error = document.querySelector("#error-email");
-  const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  if (reg.test(email.value)) {
-    error.classList.add("none");
-    error.classList.remove("error");
+  
+  if (regEmail.test(email.value)) {
+    hideError(error);
   } else {
-    error.classList.add("error");
-    error.classList.remove("none");
+    showError(error);
   }
 });
 
 password.addEventListener("focusout", (evt) => {
   const error = document.querySelector("#error-password");
   if (password.value.length < 8) {
-    error.classList.add("error");
-    error.classList.remove("none");
+    showError(error);
   } else {
-    error.classList.add("none");
-    error.classList.remove("error");
+    hideError(error);
   }
 });
 
 retypePassword.addEventListener("focusout", (evt) => {
   const error = document.querySelector("#error-password-re");
   if (password.value === retypePassword.value) {
-    error.classList.add("none");
-    error.classList.remove("error");
+    hideError(error);
   } else {
-    error.classList.add("error");
-    error.classList.remove("none");
+    showError(error);
   }
 });

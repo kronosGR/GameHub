@@ -3,6 +3,7 @@ const USERS_LOC = "users";
 
 const accountAnchor = document.querySelector("#a-account");
 const loginAnchor = document.querySelector("#a-login");
+const cartCircle = document.querySelector("#cart-circle");
 
 const storage = window.localStorage;
 let loggedInUser;
@@ -13,32 +14,37 @@ window.onload = function () {
   const params = new URLSearchParams(window.location.search);
   const logout = params.get("logout") || "false";
 
-  if (logout == "true"){
-    logoutUser()
+  if (logout == "true") {
+    logoutUser();
   }
 
   loggedInUser = getLoggedInUser();
 
-  
-
-  if (!url.includes('login') && !url.includes('create-account'))
-  {
+  if (!url.includes("login") && !url.includes("create-account")) {
     if (loggedInUser == null) {
       accountAnchor.innerHTML = "CREATE ACCOUNT";
       accountAnchor.href = "create-account.html";
       loginAnchor.innerHTML = "LOG IN";
       loginAnchor.href = "login.html";
-    }
-    else {
+    } else {
       accountAnchor.innerHTML = loggedInUser.firstName || "Account";
       accountAnchor.href = "account.html";
       loginAnchor.innerHTML = "LOG OUT";
       loginAnchor.href = "index.html?logout=true";
     }
   }
-    
-  console.log(loggedInUser);
+
+  // get the cart items and update the circle
+  updateCart();
 };
+
+/**
+ * update the cart circle with the cart items
+ */
+function updateCart(){
+  let cartItemsLength = getCart().length || 0;
+  cartCircle.innerHTML = cartItemsLength;
+}
 
 /**
  * stores to local storage the logged in user
@@ -48,7 +54,6 @@ function login(user) {
   storage.setItem(LOGGED_IN_USER_LOC, JSON.stringify(user));
   loggedInUser = user;
 }
-
 
 /**
  * get the logged in user
@@ -71,12 +76,12 @@ function logoutUser() {
  * @param {string} password
  * @return {object} user
  */
-function getUser(email, password){
+function getUser(email, password) {
   const users = JSON.parse(storage.getItem(USERS_LOC)) || null;
   if (users == null) return null;
 
-  for (let us of users){
-    if (us.email === email && us.password === password){
+  for (let us of users) {
+    if (us.email === email && us.password === password) {
       return us;
     }
   }

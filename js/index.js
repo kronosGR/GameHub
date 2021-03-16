@@ -25,22 +25,4 @@ for (let i = 0; i < previewLists.length; i++) {
   }   
 }
 
-/**
- * get PEGI img
- * @param {number} pegi
- * @return {string} pegi img address and filename
- */
-function getPegiImg(pegi){
-  switch(pegi){
-    case 3:
-      return "images/pegi3.png";
-    case 16:
-      return "images/pegi16.png";
-    case 18:
-      return "images/pegi18.png";
-    default:
-      return "images/pegi18.png";
-  }
-
-}
 

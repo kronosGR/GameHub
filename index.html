@@ -50,9 +50,11 @@
               <section id="main-nav-desktop">
                 <ul>
                   <li><a href="index.html">HOME</a></li>
-                  <li><a href="category.html?category=New-games">NEW GAMES</a></li>
-                  <li><a href="category.html?category=Pre-order">PRE-ORDER</a></li>
-                  <li><a href="category.html?category=Used-games">USED GAMES</a></li>
+                  <li><a href="game-type.html?type=New Games">NEW GAMES</a></li>
+                  <li><a href="game-type.html?type=Pre-Order">PRE-ORDER</a></li>
+                  <li>
+                    <a href="game-type.html?type=Used Games">USED GAMES</a>
+                  </li>
                   <li><a href="sell-game.html">SELL GAMES</a></li>
                 </ul>
               </section>
@@ -78,10 +80,17 @@
             >
               <label for="mob-show-details" id="mob-search"></label>
               <input type="checkbox" id="mob-show-details" />
-              <input type="text" name="searchfor" id="mob-searchfor" value="" />
+              <input
+                type="text"
+                name="searchfor"
+                id="mob-searchfor"
+                placeholder="Press Enter to Search"
+              />
             </form>
             <a href="shopping-cart.html">
-              <span id="mob-shopping-cart"></span>
+              <span id="mob-shopping-cart">
+                <div id="cart-circle"></div>
+              </span>
             </a>
           </section>
         </section>
@@ -99,7 +108,7 @@
           <h2>NEW GAMES</h2>
           <p>All the new titles for computer games with competitive prices</p>
 
-          <a href="new-games.html" class="block">
+          <a href="game-type.html?type=new games" class="block">
             <div class="cta">BROWSE NEW GAMES</div>
           </a>
         </div>
@@ -108,7 +117,7 @@
           <h2>PRE-ORDER GAMES</h2>
           <p>Pre-order the upcoming titles</p>
 
-          <a href="pre-order-games.html" class="block">
+          <a href="game-type.html?type=pre-order" class="block">
             <div class="cta">BROWSE AND PRE-ORDER</div>
           </a>
         </div>
@@ -119,7 +128,7 @@
             Buy a used game and save money. Hundreds of used games available.
           </p>
 
-          <a href="used-games.html" class="block">
+          <a href="game-type.html?type=used games" class="block">
             <div class="cta">BROWSE USED GAMES</div>
           </a>
         </div>
@@ -137,11 +146,10 @@
         </div>
       </section>
 
-      <!-- New Games List-->
       <section class="preview-container">
         <section class="preview--title">
           <h2 class="title">NEW GAMES</h2>
-          <a class="link" href="new-games.html">Browse all</a>
+          <a class="link" href="game-type.html?type=New Games">Browse all</a>
         </section>
         <hr />
 
@@ -151,7 +159,7 @@
       <section class="preview-container">
         <section class="preview--title">
           <h2 class="title">PRE-ORDER GAMES</h2>
-          <a class="link" href="pre-order-games.html">Browse all</a>
+          <a class="link" href="game-type.html?type=PRE-ORDER">Browse all</a>
         </section>
         <hr />
 
@@ -161,88 +169,70 @@
       <section class="preview-container">
         <section class="preview--title">
           <h2 class="title">USED GAMES</h2>
-          <a class="link" href="used-games.html">Browse all</a>
+          <a class="link" href="game-type.html?type=Used Games">Browse all</a>
         </section>
-        <hr />
 
-        <section class="preview-list">
-          <!-- <div class="preview-list-item">
-                        <a href="game-death_stranding.html">
-                            <img src="images/games/deathStranding.png" alt="Death Stranding"/>
-                        </a>
-                        <div class="preview-list-item--info">
-                            <span class="game-title">Death Stranding</span>
-                            <p>
-                                Walking simulator, Sci-fi, third-person, adventure
-                            </p>
-                            <div class="preview-list-item--bottom">
-                                <img src="images/pegi18.png" alt="pegi 18">
-                                <div class="price-circle">
-                                    $20
-                                </div>
-                                <a href="game-death_stranding.html" class="link-whitbg">Read More...</a>
-                            </div>
-                        </div>
-                    </div>-->
-        </section>
+        <hr />
+        <section class="preview-list"></section>
       </section>
     </main>
     <!------------- FOOTER ------------------------------->
-    <footer>
-      <section id="social-payment-info">
-        <div>
-          <a href="http://www.facebook.com" target="_blank">
-            <img src="images/fb-btn.png" alt="Our Facebook Page" />
-          </a>
-          <a href="http://www.twitter.com" target="_blank">
-            <img src="images/twitter-btn.png" alt="Our Twitter Page" />
-          </a>
-          <a href="http://www.youtube.com" target="_blank">
-            <img src="images/youtube-btn.png" alt="Our Youtube Channel" />
-          </a>
-          <a href="http://www.instagram.com" target="_blank">
-            <img src="images/instagram.png" alt="Our Instagram Page" />
-          </a>
-          <a href="http://www.linkedin.com" target="_blank">
-            <img src="images/linkedin-btn.png" alt="Our LinkedIn Page" />
-          </a>
-        </div>
-        <div>
-          <img src="images/visa.png" alt="We accept visa card" />
-          <img src="images/mastercard.png" alt="We accept mastercard" />
-          <img src="images/paypal.png" alt="We accept paypal" />
-        </div>
-      </section>
-      <section id="footer-links">
-        <div id="footer-links-gamehub">
-          <h2 class="title">GAME HUB</h2>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div id="footer-links-support">
-          <h2 class="title">SUPPORT</h2>
-          <ul>
-            <li><a href="faqs.html">FAQs</a></li>
-            <li><a href="terms.html">Terms &amp; Conditions</a></li>
-            <li><a href="privacy.html">Privacy &amp; Policies</a></li>
-          </ul>
-        </div>
-        <div id="footer-links-services">
-          <h2 class="title">OUR SERVICES</h2>
-          <ul>
-            <li><a href="new-games.html">New Games</a></li>
-            <li><a href="used-games.html">Used Games</a></li>
-            <li><a href="pre-order-games.html">Pre-order Games</a></li>
-            <li><a href="sell-game.html">Sell your Games</a></li>
-          </ul>
-        </div>
-      </section>
-    </footer>
+   <footer>
+       <section id="social-payment-info">
+           <div>
+               <a href="http://www.facebook.com" target="_blank">
+                   <img src="images/fb-btn.png" alt="Our Facebook Page"/>
+               </a>
+               <a href="http://www.twitter.com" target="_blank">
+                   <img src="images/twitter-btn.png" alt="Our Twitter Page"/>
+               </a>                    
+               <a href="http://www.youtube.com" target="_blank">
+                   <img src="images/youtube-btn.png" alt="Our Youtube Channel"/>
+               </a>                    
+               <a href="http://www.instagram.com" target="_blank">
+                   <img src="images/instagram.png" alt="Our Instagram Page"/>
+               </a>
+               <a href="http://www.linkedin.com" target="_blank">
+                   <img src="images/linkedin-btn.png" alt="Our LinkedIn Page"/>
+               </a>                    
+           </div>
+           <div>
+               <img src="images/visa.png" alt="We accept visa card"/>                    
+               <img src="images/mastercard.png" alt="We accept mastercard"/>                    
+               <img src="images/paypal.png" alt="We accept paypal"/>
+               
+           </div>
+       </section>
+       <section id="footer-links">
+           <div id="footer-links-gamehub">
+               <h2 class="title">GAME HUB</h2>
+               <ul>
+                   <li><a href="about.html">About</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+               </ul>
+           </div>
+           <div id="footer-links-support">
+               <h2 class="title">SUPPORT</h2>
+               <ul>
+                   <li><a href="faqs.html">FAQs</a></li>
+                   <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                   <li><a href="privacy.html">Privacy &amp; Policies</a></li>
+               </ul>                    
+           </div>
+           <div id="footer-links-services">
+               <h2 class="title">OUR SERVICES</h2>
+               <ul>
+                   <li><a href="game-type.html?type=New Games">New Games</a></li>
+                   <li><a href="game-type.html?type=PRE-ORDER">Used Games</a></li>
+                   <li><a href="game-type.html?type=Used Games">Pre-order Games</a></li>
+                   <li><a href="sell-game.html">Sell your Games</a></li>
+               </ul>                    
+           </div>
+       </section>
+   </footer>     
 
-    <script src="/js/handleAccounts.js"></script>
-    <script src="js/gameDB.js"></script>
+    <script src="/js/handle-accounts.js"></script>
+    <script src="js/utils-db.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

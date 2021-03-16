@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Game Hub - About Us</title>
-        <meta name="description" content="About Us. GAME HUB started in 2011. We are selling exclusively Computer Games.">
+        <title>Game Hub - New Games | Action</title>
+        <meta name="description" content="List of new games and category action">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/styles/style.css" rel="stylesheet">
@@ -82,47 +82,31 @@
           </nav>
         </header>
         <!------------- MAIN ------------------------------->
-        <main>
-            <section class="preview-container">
-                <section class="preview--title">
-                    <h1 class="title">About Us</h1>
+        <main>           
+            <section class="game-container">
+                <section>
+                    <label for="toggle-categories" id="toggle-categories-label"><h2>Categories</h2></label>
+                    <input type="checkbox" name="toggle-categories" id="toggle-categories">   
+                    <span id="toggle-btn"></span>               
+                    <section role="navigation" id="game-categories">
+                        <ul id="categories">
+                             <!-- Categories added with JS    -->
+                       </ul>
+                        <hr>
+                        <h2>Price</h2>
+                        <input type="number" id="price-from" value="0">
+                        - <input type="number" id="price-to" value="99">
+                    </section>
                 </section>
-                <hr>
-
-                <section class="main-content main-content-overflow">
-                    <p class="about--1stp">
-                        GAME HUB started in 2011. We are selling exclusively Computer Games. We have great success and we have consistent number of loyal customers due to competitively priced titles.
-                    </p>
-                        
-                    <div class="about--line">
-                        <img class="about--line-item" src="images/game-room.jpg" alt="Game hub game room">
-                        <p class="about--line-item">
-                            We are also gamers and we understand the needs of our customers. The picture on the left is one of our fun rooms.  At the breaks we relax.                          
-                        </p>
-                    </div>
-                    <div class="about--line">
-                        <p class="about--line-item">
-                            We are constantly monitoring our services and we are carefully listening
-                            to the feedback we get from our customers so we can continuously transform and improve our business. 
-                        </p>
-                        <img class="about--line-item" src="images/girl-playing.jpg" alt="Game hub girl playing">
-                    </div>
-                    <div class="about-bottom">
-                        <div class="">
-                            <p>For more questions please:</p>
-                            <a href="about.html">* Consult the FAQ page</a><br>
-                            <a href="contact.html">* Send us a message</a>
-                        </div>
-                        <div class="">
-                            <img src="images/phone-icon.png" alt="Phone icon"> <a href="tel:+47 41 20 57 32" class="about--span">+47 41 20 57 32</a><br>
-                            <img src="images/home-icon.png" alt="House icon"> <address class="about--span">Skippergata 82 Sandnes <br> Norway</address>
-                        </div>
-                    </div>
-
- 
-                   
+                <section>
+                    <section class="preview--title">
+                        <h1 class="title"></h1>
+                    </section>
+                    <hr>                       
+                    <section class="main-content">                                
+                      <!-- Game list with JS -->
+                    </section>
                 </section>
-
             </section>
         </main>
         <!------------- FOOTER ------------------------------->
@@ -178,9 +162,10 @@
                    </ul>                    
                </div>
            </section>
-       </footer>      
+       </footer>     
         
         <script src="/js/handle-accounts.js"></script>
-        <script src="js/utils-db.js"></script>           
+        <script src="js/utils-db.js"></script>
+        <script src="js/game-type.js"></script>
     </body>
 </html>

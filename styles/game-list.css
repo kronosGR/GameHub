@@ -60,3 +60,7 @@
     width: 25%;    
     z-index: 0;
 }
+
+#price-from, #price-to{
+    text-align: right;
+}

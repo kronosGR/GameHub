@@ -1,3 +1,74 @@
+const CART_LOC = "cart";
+const SELLS_LOC = "sells";
+
+/**
+ * hide the error message
+ * @param {Object} error element
+ */
+function hideError(error){
+  error.classList.add("none");
+  error.classList.remove("error");
+}
+
+
+/**
+ * show the error message
+ * @param {Object} error element
+ */
+function showError(error){
+  error.classList.add("error");
+  error.classList.remove("none");
+}
+
+
+/**
+ * Add to cart
+ * @param {Object} game
+ */
+function addToCart(game) {
+  const cart = getCart();
+  cart.push(game);
+  storage.setItem(CART_LOC, JSON.stringify(cart));
+}
+
+/**
+ * Get games from the cart
+ * @return {array} with game objects
+ */
+function getCart() {
+  return JSON.parse(storage.getItem(CART_LOC)) || [];
+}
+
+/**
+ * Get games by price range
+ * @param {number} from - starting price
+ * @param {number} to - ending price
+ * @return {array} array of game objects
+ */
+function getGamesByPriceRange(from, to){
+    const result = [];
+    for (let game of games){
+        if (game.price >= from && game.price <= to)
+            result.push(game);
+    }
+    return result;
+}
+
+
+/**
+ * Get a game by Id
+ * @param {number} id - game Id
+ * @return {object} game
+ */
+function getGameById(id) {
+  for (let game of games) {
+    if (game.id == id) {
+      return game;
+    }
+  }
+  return;
+}
+
 /**
  * description Search games by keyword
  * @param {string} keyword - the keyword
@@ -7,15 +78,53 @@ function searchGamesWithKeyword(keyword) {
   const result = [];
   for (let game of games) {
     if (
-      game.title.includes(keyword) ||
-      game.genre.includes(keyword) ||
-      game.about.includes(keyword)
+      game.title.toLowerCase().includes(keyword.toLowerCase()) ||
+      game.genre.join(",").toLowerCase().includes(keyword.toLowerCase()) ||
+      game.about.toLowerCase().includes(keyword.toLowerCase())
     ) {
       result.push(game);
     }
   }
   return result;
 }
+
+/**
+ * get PEGI img
+ * @param {number} pegi
+ * @return {string} pegi img address and filename
+ */
+function getPegiImg(pegi) {
+  switch (pegi) {
+    case 3:
+      return "images/pegi3.png";
+    case 16:
+      return "images/pegi16.png";
+    case 18:
+      return "images/pegi18.png";
+    default:
+      return "images/pegi18.png";
+  }
+}
+
+// html regex
+const regex = /(<([^>]+)>)/ig
+
+// email regex 
+const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+// list of all categories
+const categories = [
+    "Action",
+    "Adventure",
+    "Casual",
+    "Indie",
+    "Multiplayer",
+    "Racing",
+    "RPG",
+    "Simulation",
+    "Sports",
+    "Strategy",
+]
 
 // list of all the games
 const games = [
