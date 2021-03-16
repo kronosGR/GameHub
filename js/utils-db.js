@@ -5,21 +5,65 @@ const SELLS_LOC = "sells";
  * hide the error message
  * @param {Object} error element
  */
-function hideError(error){
+function hideError(error) {
   error.classList.add("none");
   error.classList.remove("error");
 }
-
 
 /**
  * show the error message
  * @param {Object} error element
  */
-function showError(error){
+function showError(error) {
   error.classList.add("error");
   error.classList.remove("none");
 }
 
+/**
+ * delete an item from the shopping car
+ * @param {number} id - game id
+ */
+function deleteItemFromCart(id){
+  const cart = getCart();
+  let cId = -1;
+
+  for (let index in cart){
+    if (cart[index]["game"]["id"] == id)
+      {
+        cId = index;
+        break;
+      }      
+  }
+  cart.splice(cId,1);
+  saveCart(cart);
+}
+
+/**
+ * save the shopping cart
+ * @param {Object} cart - the shopping cart
+ */
+function saveCart(cart){
+  storage.setItem(CART_LOC, JSON.stringify(cart));
+}
+
+/**
+ * Update the amount of a game
+ * @param {number} id - game ID to be updated
+ * @param {number} amount - the new amount
+ */
+function updateAmountInShoppingCart(id, amount){
+  const cart = getCart();
+  if (cart.length > 0){
+    for (let i in cart){
+      let item = cart[i];
+
+      if (item["game"]["id"] == id){
+        item["amount"] = amount;
+      }
+    }
+    saveCart(cart);
+  }
+}
 
 /**
  * Add to cart
@@ -27,8 +71,39 @@ function showError(error){
  */
 function addToCart(game) {
   const cart = getCart();
-  cart.push(game);
+  const shoppingCartItem = new ShoppingCartItem(game);
+
+  if (cart.length > 0) {
+    for (let i in cart) {
+      let item = cart[i]["game"];
+
+      if (item.title == game.title) {
+        shoppingCartItem.amount++;
+        cart.splice(i,1);
+      } 
+    }
+  } 
+  cart.push(shoppingCartItem);
+
+  //cart.push(shoppingCartItem);
   storage.setItem(CART_LOC, JSON.stringify(cart));
+}
+
+/**
+ * Returns the amount of total items
+ * @return {number} total items
+ */
+function getCartItemsAmount(){
+  const cart = getCart();
+  let total = 0;
+
+  if (cart.length > 0) {
+    for (let i in cart) {      
+      total += cart[i]["amount"];     
+    }
+  } 
+
+  return total;
 }
 
 /**
@@ -45,15 +120,13 @@ function getCart() {
  * @param {number} to - ending price
  * @return {array} array of game objects
  */
-function getGamesByPriceRange(from, to){
-    const result = [];
-    for (let game of games){
-        if (game.price >= from && game.price <= to)
-            result.push(game);
-    }
-    return result;
+function getGamesByPriceRange(from, to) {
+  const result = [];
+  for (let game of games) {
+    if (game.price >= from && game.price <= to) result.push(game);
+  }
+  return result;
 }
-
 
 /**
  * Get a game by Id
@@ -107,24 +180,24 @@ function getPegiImg(pegi) {
 }
 
 // html regex
-const regex = /(<([^>]+)>)/ig
+const regex = /(<([^>]+)>)/gi;
 
-// email regex 
+// email regex
 const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 // list of all categories
 const categories = [
-    "Action",
-    "Adventure",
-    "Casual",
-    "Indie",
-    "Multiplayer",
-    "Racing",
-    "RPG",
-    "Simulation",
-    "Sports",
-    "Strategy",
-]
+  "Action",
+  "Adventure",
+  "Casual",
+  "Indie",
+  "Multiplayer",
+  "Racing",
+  "RPG",
+  "Simulation",
+  "Sports",
+  "Strategy",
+];
 
 // list of all the games
 const games = [
@@ -169,6 +242,7 @@ const games = [
       Storage: 20 GB available space
       Additional Notes: INTERNET CONNECTION REQUIRED FOR THE ONLINE GAME`,
     pegi: 18,
+    productNumber: 23434624643,
   },
   {
     id: 1,
@@ -212,6 +286,7 @@ const games = [
         <b>Additional Notes:</b> INTERNET CONNECTION REQUIRED FOR THE ONLINE GAME<br/>
     </p>`,
     pegi: 3,
+    productNumber: 3465346242,
   },
   {
     id: 2,
@@ -262,6 +337,7 @@ const games = [
         <b>Additional Notes:</b> INTERNET CONNECTION REQUIRED FOR THE ONLINE GAME<br/>
     </p>`,
     pegi: 3,
+    productNumber: 483736373547,
   },
   {
     id: 3,
@@ -328,6 +404,7 @@ const games = [
         <b>Additional Notes:</b> INTERNET CONNECTION REQUIRED FOR THE ONLINE GAME<br/>
     </p>`,
     pegi: 18,
+    productNumber: 4624737357357,
   },
   {
     id: 4,
@@ -374,6 +451,7 @@ const games = [
         <b>Additional Notes:</b> INTERNET CONNECTION REQUIRED FOR THE ONLINE GAME<br/>
     </p>`,
     pegi: 3,
+    productNumber: 86573523636,
   },
   {
     id: 5,
@@ -438,5 +516,6 @@ const games = [
         <b>Additional Notes:</b> INTERNET CONNECTION REQUIRED FOR THE ONLINE GAME<br/>
     </p>`,
     pegi: 3,
+    productNumber: 23152545634,
   },
 ];

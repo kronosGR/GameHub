@@ -41,6 +41,11 @@
     padding: 20px;
 }
 
+#checkout-btn{
+    border: none;
+    background-color: Transparent;
+}
+
 #shopping-cart-amount{
     height: 100%;
     display: flex;

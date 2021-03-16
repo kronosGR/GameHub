@@ -113,103 +113,18 @@
                     </section>                   
                     <hr>
                     <section class="container-white">
-                        <div class="shopping-cart-item-container full-line border-bottom">
-                            <div class="flex-basis-55 flex"> 
-                                <img src="images/games/deathStranding.png" alt="Death Stranding" class="thumbnail"/>
-                                <div class="margin-10 flex flex-direction-col flex-content-center">
-                                    <span class="bold italics block">Death Stranding</span>
-                                    <span class="block">Product Number: 121241234</span>
-                                </div>                                
-                            </div>
-                            <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
-                                <div id="shopping-cart-amount1">
-                                    <span class="inline-block button-circle text-align-center">-</span>
-                                    <input type="number" id="amount-1" name="amount-1" value="1" class="width-30 text-align-right">
-                                    <span class="inline-block button-circle text-align-center">+</span>
-                                </div>
-                            </div>
-                            <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
-                                <div>
-                                    <span class="inline-block" id="product-price-1">$20.00</span>
-                                </div>
-                            </div>
-                            <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
-                                <div>
-                                    <span class="inline-block" id="product-total-price-1">$20.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shopping-cart-item-container full-line border-bottom">
-                            <div class="flex-basis-55 flex"> 
-                                <img src="images/games/farmingSimulator.png" alt="Death Stranding" class="thumbnail"/>
-                                <div class="margin-10 flex flex-direction-col flex-content-center">
-                                    <span class="bold italics block">Farming Simulator 19</span>
-                                    <span class="block">Product Number: 54352346</span>
-                                </div>                                
-                            </div>
-                            <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
-                                <div id="shopping-cart-amount2">
-                                    <span class="inline-block button-circle text-align-center">-</span>
-                                    <input type="number" id="amount-2" name="amount-2" value="2" class="width-30 text-align-right">
-                                    <span class="inline-block button-circle text-align-center">+</span>
-                                </div>
-                            </div>
-                            <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
-                                <div>
-                                    <span class="inline-block" id="product-price-2">$11.00</span>
-                                </div>
-                            </div>
-                            <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
-                                <div>
-                                    <span class="inline-block" id="product-total-price-2">$22.00</span>
-                                </div>
-                            </div>
-                        </div>
+                        <section>
+                            <!-- imported by JS -->
+                        </section>
+                        
                         <div class="shopping-cart-total">
-                            <div class="full-line flex flex-justify-content-end">
-                                <div class="flex-basis-60 flex"> 
-                                    <div class="flex-basis-35 bold">
-                                        Total
-                                    </div>                                
-                                    <div class="flex-basis-10 text-align-right italics">
-                                        <span id="products-amount" >3</span>
-                                    </div>                                
-                                    <div class="flex-basis-55 text-align-right italics">                                    
-                                        <span id="total-amount1" >$42.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="full-line flex flex-justify-content-end">
-                                <div class="flex-basis-60 flex"> 
-                                    <div class="flex-basis-30 bold">
-                                        Discount
-                                    </div>                                
-                                    <div class="flex-basis-10 text-align-right italics">
-                                    </div>                                
-                                    <div class="flex-basis-60 text-align-right italics">                                    
-                                        <span id="discount" >$0.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="full-line flex flex-justify-content-end">
-                                <div class="flex-basis-60 flex"> 
-                                    <div class="flex-basis-60 bold">
-                                        Total Amount
-                                    </div>                                
-                                    <div class="flex-basis-10 text-align-right italics">
-                                    </div>                                
-                                    <div class="flex-basis-30 text-align-right italics">                                    
-                                        <span id="total-amount2" >$42.00</span>
-                                    </div>
-                                </div>
-                            </div>
+                           <!-- Imported by JS -->
                         </div>
-                        <div class="flex flex-end flex-justify-content-end top-margin-20">
-                            <a href="checkout.html" class="text-align-center">
+                        <div id="checkout-div" class="flex flex-end flex-justify-content-end top-margin-20">
+                            <button class="text-align-center" id="checkout-btn">
                                 <div class="cta top-margin-40">CHECKOUT</div>
-                            </a>
-                        </div>
-    
+                            </button>
+                        </div>    
                         
                     </section>
                 </section>
@@ -274,6 +189,6 @@
         
         <script src="/js/handle-accounts.js"></script>
         <script src="js/utils-db.js"></script>
-        <script src="js/index.js"></script>
+        <script src="js/shopping-cart.js"></script>
     </body>
 </html>

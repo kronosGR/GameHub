@@ -32,17 +32,17 @@ window.onload = function () {
       loginAnchor.innerHTML = "LOG OUT";
       loginAnchor.href = "index.html?logout=true";
     }
+    // get the cart items and update the circle
+    updateCart();
   }
 
-  // get the cart items and update the circle
-  updateCart();
 };
 
 /**
  * update the cart circle with the cart items
  */
 function updateCart(){
-  let cartItemsLength = getCart().length || 0;
+  let cartItemsLength = getCartItemsAmount();
   cartCircle.innerHTML = cartItemsLength;
 }
 
@@ -87,6 +87,13 @@ function getUser(email, password) {
   }
 
   return null;
+}
+
+// shopping cart object
+
+function ShoppingCartItem(game, amount=1){
+  this.game = game;
+  this.amount = amount;
 }
 
 // User object

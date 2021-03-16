@@ -267,9 +267,9 @@
         flex-direction: row;
     }
 
-    .container-white .shopping-cart-item-container:nth-last-child(1){
+    /* .container-white .shopping-cart-item-container:nth-last-child(1){
         flex-direction: column;
-    }
+    } */
     
 /* 
     .shopping-cart-item-container > div:nth-child(2){
