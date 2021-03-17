@@ -262,3 +262,14 @@ input{
 .font-montserrat{
     font-family: 'Montserrat', sans-serif;
 }
+
+#update-account-label{
+    position: relative;
+    left: 29px;
+    top: 10px;
+}
+
+#update-account-label input{
+    position: absolute;
+    left: -30px;
+}

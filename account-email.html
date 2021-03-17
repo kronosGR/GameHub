@@ -19,48 +19,74 @@
         </script>
     </head>
     <body>    
-        <!------------- HEADER ------------------------------->          
-        <header>            
-            <nav id="nav-mobile">
-                <section class="mob-utilities">
-                    <section>
-                        <label for="hamb-menu" id="hamb-menu-label"><img src="images/menu-btn.png" alt="menu button"></label>
-                        <input type="checkbox" id="hamb-menu">
-                        <section class="hamb-menu-win">
-                            <section id="logo-container">
-                                <div class="blur-logo-container"></div>
-                                <a href="index.html"><img src="images/logo.png" alt="Game Hub logo" class="blur-logo-img"></a>    
-                            </section>
-                            <section id="main-nav-desktop">
-                                <ul>
-                                    <li><a href="index.html">HOME</a></li>
-                                    <li><a href="new-games.html">NEW GAMES</a></li>
-                                    <li><a href="pre-order-games.html">PRE-ORDER</a></li>
-                                    <li><a href="used-games.html">USED GAMES</a></li>
-                                    <li><a href="sell-game.html">SELL GAMES</a></li>
-                                </ul>
-                            </section>
-                            <section id="utilities-desktop">
-                                <ul>
-                                    <li><a href="account.html">Georgios Katsanakis</a></li>
-                                    <li><a href="index.html">LOG OUT</a></li>
-                                </ul>
-                            </section>
-                        </section>
-                        <a href="index.html" id="site-title">Game Hub</a>
-                    </section>
-                    <section id="search-shopping-cart">
-                        <form id="mob-search-form" action="search.html" method="POST"  data-netlify="true">
-                            <label for="mob-show-details" id="mob-search"></label>
-                            <input type="checkbox" id="mob-show-details">
-                            <input type="text" name="seachfor" id="mob-searchfor" value="">
-                        </form>   
-                        <a href="shopping-cart.html">
-                            <span id="mob-shopping-cart"></span>
+        <!------------- HEADER ------------------------------->
+        <header>
+          <nav id="nav-mobile">
+            <section class="mob-utilities">
+              <section>
+                <label for="hamb-menu" id="hamb-menu-label">
+                  <img src="images/menu-btn.png" alt="menu button" />
+                </label>
+                <input type="checkbox" id="hamb-menu" />
+                <section class="hamb-menu-win">
+                  <section id="logo-container">
+                    <div class="blur-logo-container"></div>
+                    <a href="index.html">
+                      <img
+                        src="images/logo.png"
+                        alt="Game Hub logo"
+                        class="blur-logo-img"
+                      />
+                    </a>
+                  </section>
+                  <section id="main-nav-desktop">
+                    <ul>
+                      <li><a href="index.html">HOME</a></li>
+                      <li><a href="game-type.html?type=New Games">NEW GAMES</a></li>
+                      <li><a href="game-type.html?type=Pre-Order">PRE-ORDER</a></li>
+                      <li>
+                        <a href="game-type.html?type=Used Games">USED GAMES</a>
+                      </li>
+                      <li><a href="sell-game.html">SELL GAMES</a></li>
+                    </ul>
+                  </section>
+                  <section id="utilities-desktop">
+                    <ul>
+                      <li>
+                        <a href="create-account.html" id="a-account">
+                          CREATE ACCOUNT
                         </a>
-                    </section>                    
+                      </li>
+                      <li><a href="login.html" id="a-login">LOG IN</a></li>
+                    </ul>
+                  </section>
                 </section>
-            </nav>
+                <a href="index.html" id="site-title">Game Hub</a>
+              </section>
+              <section id="search-shopping-cart">
+                <form
+                  id="mob-search-form"
+                  action="search.html"
+                  method="GET"
+                  data-netlify="true"
+                >
+                  <label for="mob-show-details" id="mob-search"></label>
+                  <input type="checkbox" id="mob-show-details" />
+                  <input
+                    type="text"
+                    name="searchfor"
+                    id="mob-searchfor"
+                    placeholder="Press Enter to Search"
+                  />
+                </form>
+                <a href="shopping-cart.html">
+                  <span id="mob-shopping-cart">
+                    <div id="cart-circle"></div>
+                  </span>
+                </a>
+              </section>
+            </section>
+          </nav>
         </header>
         <!------------- MAIN ------------------------------->
         <main>
@@ -88,35 +114,38 @@
                              <label for="email" class="normal">Email</label>
                         </div>
                         <div class="game-grid-item2 full-line">                                    
-                             <input type="text" name="email" id="email" class="block full-line" value="geo.elgeo@gmail.com" required>
-                              <span class="error">Error: Please check your email</span>
+                             <input type="text" name="email" id="email" class="block full-line" required>
+                              <span id="error-email" class="none">Please check your email</span>
                         </div>
                         <div class="game-grid-item1 top-margin-20">
                              <label for="old-password" class="normal">Old Password</label>
                         </div>
                         <div class="game-grid-item2 full-line">                                    
                              <input type="password" name="old-password" id="old-password" class="block full-line" required>
-                              <span class="error">Error: Please enter your old password</span>
+                              <span id="error-oldpass" class="none">Please enter your old password</span>
                         </div>
                         <div class="game-grid-item1 top-margin-20">
                              <label for="new-password" class="normal">New Password</label>
                         </div>
                         <div class="game-grid-item2 full-line">                                    
                              <input type="password" name="new-password" id="new-password" class="block full-line" required>
-                             <span class="error">Error: Please enter a valid new password</span>
+                             <span id="error-pass" class="none">Please enter a valid new password</span>
                         </div>
                         <div class="game-grid-item1 top-margin-20">
                              <label for="newpassword2" class="normal">Re-type new Password</label>
                         </div>
                         <div class="game-grid-item2 full-line">                                    
-                             <input type="password" name="newpassword2" id="newpassword2" class="block full-line" required>
-                             <span class="error">Error: Passwords do not match</span>
+                             <input type="password" name="newpassword2" id="new-password2" class="block full-line" required>
+                             <span id="error-passretype" class="none">Passwords do not match</span>
                         </div>
 
                         <div class="game-grid-item3">                            
-                            <button type="submit" class="button-grayBG top-margin-40">
+                            <button type="submit" class="button-grayBG top-margin-40" id="update-account">
                                 <div class="cta">UPDATE ACCOUNT</div>
                             </button>
+                        </div>
+                        <div id="updated-msg" class="game-grid-item3 none top-margin-40 bottom-margin-40 block">                            
+                            <p class="green">Account updated!</p>
                         </div>
                                              
                     </form>  
@@ -124,59 +153,63 @@
 
             </section>
         </main>
-         <!------------- FOOTER ------------------------------->
-        <footer>
-            <section id="social-payment-info">
-                <div>
-                    <a href="http://www.facebook.com" target="_blank">
-                        <img src="images/fb-btn.png" alt="Our Facebook Page"/>
-                    </a>
-                    <a href="http://www.twitter.com" target="_blank">
-                        <img src="images/twitter-btn.png" alt="Our Twitter Page"/>
-                    </a>                    
-                    <a href="http://www.youtube.com" target="_blank">
-                        <img src="images/youtube-btn.png" alt="Our Youtube Channel"/>
-                    </a>                    
-                    <a href="http://www.instagram.com" target="_blank">
-                        <img src="images/instagram.png" alt="Our Instagram Page"/>
-                    </a>
-                    <a href="http://www.linkedin.com" target="_blank">
-                        <img src="images/linkedin-btn.png" alt="Our LinkedIn Page"/>
-                    </a>                    
-                </div>
-                <div>
-                    <img src="images/visa.png" alt="We accept visa card"/>                    
-                    <img src="images/mastercard.png" alt="We accept mastercard"/>                    
-                    <img src="images/paypal.png" alt="We accept paypal"/>
-                    
-                </div>
-            </section>
-            <section id="footer-links">
-                <div id="footer-links-gamehub">
-                    <h2 class="title">GAME HUB</h2>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div id="footer-links-support">
-                    <h2 class="title">SUPPORT</h2>
-                    <ul>
-                        <li><a href="faqs.html">FAQs</a></li>
-                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
-                        <li><a href="privacy.html">Privacy &amp; Policies</a></li>
-                    </ul>                    
-                </div>
-                <div id="footer-links-services">
-                    <h2 class="title">OUR SERVICES</h2>
-                    <ul>
-                        <li><a href="new-games.html">New Games</a></li>
-                        <li><a href="used-games.html">Used Games</a></li>
-                        <li><a href="pre-order-games.html">Pre-order Games</a></li>
-                        <li><a href="sell-game.html">Sell your Games</a></li>
-                    </ul>                    
-                </div>
-            </section>
-        </footer>               
+        <!------------- FOOTER ------------------------------->
+       <footer>
+           <section id="social-payment-info">
+               <div>
+                   <a href="http://www.facebook.com" target="_blank">
+                       <img src="images/fb-btn.png" alt="Our Facebook Page"/>
+                   </a>
+                   <a href="http://www.twitter.com" target="_blank">
+                       <img src="images/twitter-btn.png" alt="Our Twitter Page"/>
+                   </a>                    
+                   <a href="http://www.youtube.com" target="_blank">
+                       <img src="images/youtube-btn.png" alt="Our Youtube Channel"/>
+                   </a>                    
+                   <a href="http://www.instagram.com" target="_blank">
+                       <img src="images/instagram.png" alt="Our Instagram Page"/>
+                   </a>
+                   <a href="http://www.linkedin.com" target="_blank">
+                       <img src="images/linkedin-btn.png" alt="Our LinkedIn Page"/>
+                   </a>                    
+               </div>
+               <div>
+                   <img src="images/visa.png" alt="We accept visa card"/>                    
+                   <img src="images/mastercard.png" alt="We accept mastercard"/>                    
+                   <img src="images/paypal.png" alt="We accept paypal"/>
+                   
+               </div>
+           </section>
+           <section id="footer-links">
+               <div id="footer-links-gamehub">
+                   <h2 class="title">GAME HUB</h2>
+                   <ul>
+                       <li><a href="about.html">About</a></li>
+                       <li><a href="contact.html">Contact</a></li>
+                   </ul>
+               </div>
+               <div id="footer-links-support">
+                   <h2 class="title">SUPPORT</h2>
+                   <ul>
+                       <li><a href="faqs.html">FAQs</a></li>
+                       <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                       <li><a href="privacy.html">Privacy &amp; Policies</a></li>
+                   </ul>                    
+               </div>
+               <div id="footer-links-services">
+                   <h2 class="title">OUR SERVICES</h2>
+                   <ul>
+                       <li><a href="game-type.html?type=New Games">New Games</a></li>
+                       <li><a href="game-type.html?type=PRE-ORDER">Used Games</a></li>
+                       <li><a href="game-type.html?type=Used Games">Pre-order Games</a></li>
+                       <li><a href="sell-game.html">Sell your Games</a></li>
+                   </ul>                    
+               </div>
+           </section>
+       </footer>     
+    
+        <script src="/js/handle-accounts.js"></script>
+        <script src="js/utils-db.js"></script>
+        <script src="js/account-email.js"></script>
     </body>
 </html>

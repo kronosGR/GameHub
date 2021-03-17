@@ -20,7 +20,7 @@ window.onload = function () {
 
   loggedInUser = getLoggedInUser();
 
-  if (!url.includes("login") && !url.includes("create-account")) {
+  if (!url.includes("login") && !url.includes("create-account") && !url.includes("checkout.html")) {
     if (loggedInUser == null) {
       accountAnchor.innerHTML = "CREATE ACCOUNT";
       accountAnchor.href = "create-account.html";
@@ -67,7 +67,36 @@ function getLoggedInUser() {
  * user logout
  */
 function logoutUser() {
-  storage.setItem(LOGGED_IN_USER_LOC, JSON.stringify(null));
+  storage.removeItem(LOGGED_IN_USER_LOC);
+}
+
+/**
+ * update a user key by email
+ * @param {string} emai - user with this email
+ * @param {string} key - key name to be updated
+ * @param {string} value - the new value
+ */
+function updateUserKey(email, key, value){
+  const users = JSON.parse(storage.getItem(USERS_LOC)) || null;
+  if (users == null) return null;
+  
+  let tmpUser;
+  for (let i in users){
+    tmpUser = users[i];
+    if (tmpUser.email == email){
+      tmpUser[key] = value;
+    }
+  }
+  saveUsers(users);
+  
+}
+
+/**
+ * save the users list
+ * @param {array} users - the list of users
+ */
+function saveUsers(users){
+  storage.setItem(USERS_LOC, JSON.stringify(users));
 }
 
 /**
@@ -87,13 +116,6 @@ function getUser(email, password) {
   }
 
   return null;
-}
-
-// shopping cart object
-
-function ShoppingCartItem(game, amount=1){
-  this.game = game;
-  this.amount = amount;
 }
 
 // User object

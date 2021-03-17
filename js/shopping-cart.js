@@ -56,7 +56,7 @@ function showShoppingCart(){
         </div>
       </div>
       `
-      totalItems += item['amount'];
+      totalItems += Number(item['amount']);
       totalPrice += (item['amount'] * item['game']['price']);
     }
     

@@ -18,49 +18,75 @@
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
         </script>
     </head>
-    <body>     
-        <!------------- HEADER ------------------------------->          
-        <header>            
-            <nav id="nav-mobile">
-                <section class="mob-utilities">
-                    <section>
-                        <label for="hamb-menu" id="hamb-menu-label"><img src="images/menu-btn.png" alt="menu button"></label>
-                        <input type="checkbox" id="hamb-menu">
-                        <section class="hamb-menu-win">
-                            <section id="logo-container">
-                                <div class="blur-logo-container"></div>
-                                <a href="index.html"><img src="images/logo.png" alt="Game Hub logo" class="blur-logo-img"></a>    
-                            </section>
-                            <section id="main-nav-desktop">
-                                <ul>
-                                    <li><a href="index.html">HOME</a></li>
-                                    <li><a href="new-games.html">NEW GAMES</a></li>
-                                    <li><a href="pre-order-games.html">PRE-ORDER</a></li>
-                                    <li><a href="used-games.html">USED GAMES</a></li>
-                                    <li><a href="sell-game.html">SELL GAMES</a></li>
-                                </ul>
-                            </section>
-                            <section id="utilities-desktop">
-                                <ul>
-                                    <li><a href="account.html">Georgios Katsanakis</a></li>
-                                    <li><a href="index.html">LOG OUT</a></li>
-                                </ul>
-                            </section>
-                        </section>
-                        <a href="index.html" id="site-title">Game Hub</a>
-                    </section>
-                    <section id="search-shopping-cart">
-                        <form id="mob-search-form" action="search.html" method="POST"  data-netlify="true">
-                            <label for="mob-show-details" id="mob-search"></label>
-                            <input type="checkbox" id="mob-show-details">
-                            <input type="text" name="seachfor" id="mob-searchfor" value="">
-                        </form>   
-                        <a href="shopping-cart.html">
-                            <span id="mob-shopping-cart"></span>
+    <body>    
+        <!------------- HEADER ------------------------------->
+        <header>
+          <nav id="nav-mobile">
+            <section class="mob-utilities">
+              <section>
+                <label for="hamb-menu" id="hamb-menu-label">
+                  <img src="images/menu-btn.png" alt="menu button" />
+                </label>
+                <input type="checkbox" id="hamb-menu" />
+                <section class="hamb-menu-win">
+                  <section id="logo-container">
+                    <div class="blur-logo-container"></div>
+                    <a href="index.html">
+                      <img
+                        src="images/logo.png"
+                        alt="Game Hub logo"
+                        class="blur-logo-img"
+                      />
+                    </a>
+                  </section>
+                  <section id="main-nav-desktop">
+                    <ul>
+                      <li><a href="index.html">HOME</a></li>
+                      <li><a href="game-type.html?type=New Games">NEW GAMES</a></li>
+                      <li><a href="game-type.html?type=Pre-Order">PRE-ORDER</a></li>
+                      <li>
+                        <a href="game-type.html?type=Used Games">USED GAMES</a>
+                      </li>
+                      <li><a href="sell-game.html">SELL GAMES</a></li>
+                    </ul>
+                  </section>
+                  <section id="utilities-desktop">
+                    <ul>
+                      <li>
+                        <a href="create-account.html" id="a-account">
+                          CREATE ACCOUNT
                         </a>
-                    </section>                    
+                      </li>
+                      <li><a href="login.html" id="a-login">LOG IN</a></li>
+                    </ul>
+                  </section>
                 </section>
-            </nav>
+                <a href="index.html" id="site-title">Game Hub</a>
+              </section>
+              <section id="search-shopping-cart">
+                <form
+                  id="mob-search-form"
+                  action="search.html"
+                  method="GET"
+                  data-netlify="true"
+                >
+                  <label for="mob-show-details" id="mob-search"></label>
+                  <input type="checkbox" id="mob-show-details" />
+                  <input
+                    type="text"
+                    name="searchfor"
+                    id="mob-searchfor"
+                    placeholder="Press Enter to Search"
+                  />
+                </form>
+                <a href="shopping-cart.html">
+                  <span id="mob-shopping-cart">
+                    <div id="cart-circle"></div>
+                  </span>
+                </a>
+              </section>
+            </section>
+          </nav>
         </header>
         <!------------- MAIN ------------------------------->
         <main>
@@ -87,299 +113,61 @@
                              <label for="first-name" class="normal">First Name</label>
                         </div>
                         <div class="full-line">                                    
-                             <input type="text" name="first-name" id="first-name" class=" block tooltip-holder full-line" value="Georgios">
-                            <span class="error">Error: Please enter your first Name</span>
+                             <input type="text" name="first-name" id="first-name" class=" block tooltip-holder full-line">
+                            <span class="none" id="error-firstname">Please enter your first Name</>
                         </div>
                         <div class="top-margin-20">
                              <label for="last-name" class="normal">Last Name</label>
                         </div>
                         <div class="full-line">                                    
-                             <input type="text" name="last-name" id="last-name" class=" block tooltip-holder full-line" value="Katsanakis">
-                             <span class="error">Error: Please enter your last Name</span>
+                             <input type="text" name="last-name" id="last-name" class=" block tooltip-holder full-line">
+                             <span class="none"id="error-lastname">Please enter your last Name</span>
                         </div>
                         <div class="top-margin-20">
                              <label for="address" class="normal">Address</label>
                         </div>
                         <div class="full-line">                                    
-                             <input type="text" name="address" id="address" class=" block tooltip-holder full-line" value="Skippergata 82">
-                              <span class="error">Error: Please enter your address</span>
+                             <input type="text" name="address" id="address" class=" block tooltip-holder full-line">
+                              <span class="none"id="error-address">Please enter your address</span>
                         </div>
                         <div class="top-margin-20">
                              <label for="phone" class="normal">Telephone</label>
                         </div>
                         <div class="full-line">                                    
-                             <input type="tel" name="phone" id="phone" class=" block tooltip-holder full-line" value="41205732">
-                              <span class="error">Error: Please enter a valid telephone</span>
+                             <input type="tel" name="phone" id="phone" class=" block tooltip-holder full-line">
+                              <span class="none"id="error-phone">Please enter a valid telephone</span>
                         </div>
                         <div class="top-margin-20">
                              <label for="city" class="normal">City</label>
                         </div>
                         <div class="full-line">                                    
-                             <input type="text" name="city" id="city" class=" block tooltip-holder full-line" value="Sandnes">
-                             <span class="error">Error: Please enter your city</span>
+                             <input type="text" name="city" id="city" class=" block tooltip-holder full-line">
+                             <span class="none"id="error-city">Please enter your city</span>
                         </div>
                         <div class="top-margin-20">
                              <label for="postal-code" class="normal">Postal Code</label>
                         </div>
                         <div class="full-line">                                    
-                             <input type="text" name="postal-code" id="postal-code" class="block tooltip-holder" value="4328">
-                              <span class="error">Error: Please enter your postal code</span>
+                             <input type="text" name="postal-code" id="postal-code" class="block tooltip-holder">
+                              <span class="none"id="error-postalcode">Please enter your postal code</span>
                         </div>
                         <div class="top-margin-20">
                              <label for="country" class="normal">Country</label>
                         </div>
                         <div>                                    
                             <select name="country" class="block" id="country"
-                                  placeholder="Select a country">
-                                <option value="  " selected>Select a country</option>
-                                <option value="--">Not Specified</option>
-                                <option value="AF">Afghanistan</option>
-                                <option value="AL">Albania</option>
-                                <option value="DZ">Algeria</option>
-                                <option value="AS">American Samoa</option>
-                                <option value="AD">Andorra</option>
-                                <option value="AO">Angola</option>
-                                <option value="AI">Anguilla</option>
-                                <option value="AQ">Antarctica</option>
-                                <option value="AG">Antigua and Barbuda</option>
-                                <option value="AR">Argentina</option>
-                                <option value="AM">Armenia</option>
-                                <option value="AW">Aruba</option>
-                                <option value="AU">Australia</option>
-                                <option value="AT">Austria</option>
-                                <option value="AZ">Azerbaijan</option>
-                                <option value="BS">Bahamas</option>
-                                <option value="BH">Bahrain</option>
-                                <option value="BD">Bangladesh</option>
-                                <option value="BB">Barbados</option>
-                                <option value="BY">Belarus</option>
-                                <option value="BE">Belgium</option>
-                                <option value="BZ">Belize</option>
-                                <option value="BJ">Benin</option>
-                                <option value="BM">Bermuda</option>
-                                <option value="BT">Bhutan</option>
-                                <option value="BO">Bolivia</option>
-                                <option value="BA">Bosnia and Herzegowina</option>
-                                <option value="BW">Botswana</option>
-                                <option value="BV">Bouvet Island</option>
-                                <option value="BR">Brazil</option>
-                                <option value="IO">British Indian Ocean Territory</option>
-                                <option value="BN">Brunei Darussalam</option>
-                                <option value="BG">Bulgaria</option>
-                                <option value="BF">Burkina Faso</option>
-                                <option value="BI">Burundi</option>
-                                <option value="KH">Cambodia</option>
-                                <option value="CM">Cameroon</option>
-                                <option value="CA">Canada</option>
-                                <option value="CV">Cape Verde</option>
-                                <option value="KY">Cayman Islands</option>
-                                <option value="CF">Central African Republic</option>
-                                <option value="TD">Chad</option>
-                                <option value="CL">Chile</option>
-                                <option value="CN">China</option>
-                                <option value="CX">Christmas Island</option>
-                                <option value="CC">Cocos (Keeling) Islands</option>
-                                <option value="CO">Colombia</option>
-                                <option value="KM">Comoros</option>
-                                <option value="CG">Congo</option>
-                                <option value="CD">Congo, the Democratic Republic of the</option>
-                                <option value="CK">Cook Islands</option>
-                                <option value="CR">Costa Rica</option>
-                                <option value="CI">Cote d'Ivoire</option>
-                                <option value="HR">Croatia (Hrvatska)</option>
-                                <option value="CU">Cuba</option>
-                                <option value="CY">Cyprus</option>
-                                <option value="CZ">Czech Republic</option>
-                                <option value="DK">Denmark</option>
-                                <option value="DJ">Djibouti</option>
-                                <option value="DM">Dominica</option>
-                                <option value="DO">Dominican Republic</option>
-                                <option value="TP">East Timor</option>
-                                <option value="EC">Ecuador</option>
-                                <option value="EG">Egypt</option>
-                                <option value="SV">El Salvador</option>
-                                <option value="GQ">Equatorial Guinea</option>
-                                <option value="ER">Eritrea</option>
-                                <option value="EE">Estonia</option>
-                                <option value="ET">Ethiopia</option>
-                                <option value="FK">Falkland Islands (Malvinas)</option>
-                                <option value="FO">Faroe Islands</option>
-                                <option value="FJ">Fiji</option>
-                                <option value="FI">Finland</option>
-                                <option value="FR">France</option>
-                                <option value="FX">France, Metropolitan</option>
-                                <option value="GF">French Guiana</option>
-                                <option value="PF">French Polynesia</option>
-                                <option value="TF">French Southern Territories</option>
-                                <option value="GA">Gabon</option>
-                                <option value="GM">Gambia</option>
-                                <option value="GE">Georgia</option>
-                                <option value="DE">Germany</option>
-                                <option value="GH">Ghana</option>
-                                <option value="GI">Gibraltar</option>
-                                <option value="GR">Greece</option>
-                                <option value="GL">Greenland</option>
-                                <option value="GD">Grenada</option>
-                                <option value="GP">Guadeloupe</option>
-                                <option value="GU">Guam</option>
-                                <option value="GT">Guatemala</option>
-                                <option value="GN">Guinea</option>
-                                <option value="GW">Guinea-Bissau</option>
-                                <option value="GY">Guyana</option>
-                                <option value="HT">Haiti</option>
-                                <option value="HM">Heard and Mc Donald Islands</option>
-                                <option value="VA">Holy See (Vatican City State)</option>
-                                <option value="HN">Honduras</option>
-                                <option value="HK">Hong Kong</option>
-                                <option value="HU">Hungary</option>
-                                <option value="IS">Iceland</option>
-                                <option value="IN">India</option>
-                                <option value="ID">Indonesia</option>
-                                <option value="IR">Iran (Islamic Republic of)</option>
-                                <option value="IQ">Iraq</option>
-                                <option value="IE">Ireland</option>
-                                <option value="IL">Israel</option>
-                                <option value="IT">Italy</option>
-                                <option value="JM">Jamaica</option>
-                                <option value="JP">Japan</option>
-                                <option value="JO">Jordan</option>
-                                <option value="KZ">Kazakhstan</option>
-                                <option value="KE">Kenya</option>
-                                <option value="KI">Kiribati</option>
-                                <option value="KP">Korea, Democratic People's Republic of</option>
-                                <option value="KR">Korea, Republic of</option>
-                                <option value="KW">Kuwait</option>
-                                <option value="KG">Kyrgyzstan</option>
-                                <option value="LA">Lao People's Democratic Republic</option>
-                                <option value="LV">Latvia</option>
-                                <option value="LB">Lebanon</option>
-                                <option value="LS">Lesotho</option>
-                                <option value="LR">Liberia</option>
-                                <option value="LY">Libyan Arab Jamahiriya</option>
-                                <option value="LI">Liechtenstein</option>
-                                <option value="LT">Lithuania</option>
-                                <option value="LU">Luxembourg</option>
-                                <option value="MO">Macau</option>
-                                <option value="MG">Madagascar</option>
-                                <option value="MW">Malawi</option>
-                                <option value="MY">Malaysia</option>
-                                <option value="MV">Maldives</option>
-                                <option value="ML">Mali</option>
-                                <option value="MT">Malta</option>
-                                <option value="MH">Marshall Islands</option>
-                                <option value="MQ">Martinique</option>
-                                <option value="MR">Mauritania</option>
-                                <option value="MU">Mauritius</option>
-                                <option value="YT">Mayotte</option>
-                                <option value="MX">Mexico</option>
-                                <option value="FM">Micronesia, Federated States of</option>
-                                <option value="MD">Moldova, Republic of</option>
-                                <option value="MC">Monaco</option>
-                                <option value="MN">Mongolia</option>
-                                <option value="MS">Montserrat</option>
-                                <option value="MA">Morocco</option>
-                                <option value="MZ">Mozambique</option>
-                                <option value="MM">Myanmar</option>
-                                <option value="NA">Namibia</option>
-                                <option value="NR">Nauru</option>
-                                <option value="NP">Nepal</option>
-                                <option value="NL">Netherlands</option>
-                                <option value="AN">Netherlands Antilles</option>
-                                <option value="NC">New Caledonia</option>
-                                <option value="NZ">New Zealand</option>
-                                <option value="NI">Nicaragua</option>
-                                <option value="NE">Niger</option>
-                                <option value="NG">Nigeria</option>
-                                <option value="NU">Niue</option>
-                                <option value="NF">Norfolk Island</option>
-                                <option value="MK">North Macedonia</option>
-                                <option value="MP">Northern Mariana Islands</option>
-                                <option value="NO">Norway</option>
-                                <option value="OM">Oman</option>
-                                <option value="PK">Pakistan</option>
-                                <option value="PW">Palau</option>
-                                <option value="PA">Panama</option>
-                                <option value="PG">Papua New Guinea</option>
-                                <option value="PY">Paraguay</option>
-                                <option value="PE">Peru</option>
-                                <option value="PH">Philippines</option>
-                                <option value="PN">Pitcairn</option>
-                                <option value="PL">Poland</option>
-                                <option value="PT">Portugal</option>
-                                <option value="PR">Puerto Rico</option>
-                                <option value="QA">Qatar</option>
-                                <option value="RE">Reunion</option>
-                                <option value="RO">Romania</option>
-                                <option value="RU">Russian Federation</option>
-                                <option value="RW">Rwanda</option>
-                                <option value="KN">Saint Kitts and Nevis</option> 
-                                <option value="LC">Saint LUCIA</option>
-                                <option value="VC">Saint Vincent and the Grenadines</option>
-                                <option value="WS">Samoa</option>
-                                <option value="SM">San Marino</option>
-                                <option value="ST">Sao Tome and Principe</option> 
-                                <option value="SA">Saudi Arabia</option>
-                                <option value="SN">Senegal</option>
-                                <option value="SC">Seychelles</option>
-                                <option value="SL">Sierra Leone</option>
-                                <option value="SG">Singapore</option>
-                                <option value="SK">Slovakia (Slovak Republic)</option>
-                                <option value="SI">Slovenia</option>
-                                <option value="SB">Solomon Islands</option>
-                                <option value="SO">Somalia</option>
-                                <option value="ZA">South Africa</option>
-                                <option value="GS">South Georgia and the South Sandwich Islands</option>
-                                <option value="ES">Spain</option>
-                                <option value="LK">Sri Lanka</option>
-                                <option value="SH">St. Helena</option>
-                                <option value="PM">St. Pierre and Miquelon</option>
-                                <option value="SD">Sudan</option>
-                                <option value="SR">Suriname</option>
-                                <option value="SJ">Svalbard and Jan Mayen Islands</option>
-                                <option value="SZ">Swaziland</option>
-                                <option value="SE">Sweden</option>
-                                <option value="CH">Switzerland</option>
-                                <option value="SY">Syrian Arab Republic</option>
-                                <option value="TW">Taiwan, Province of China</option>
-                                <option value="TJ">Tajikistan</option>
-                                <option value="TZ">Tanzania, United Republic of</option>
-                                <option value="TH">Thailand</option>
-                                <option value="TG">Togo</option>
-                                <option value="TK">Tokelau</option>
-                                <option value="TO">Tonga</option>
-                                <option value="TT">Trinidad and Tobago</option>
-                                <option value="TN">Tunisia</option>
-                                <option value="TR">Turkey</option>
-                                <option value="TM">Turkmenistan</option>
-                                <option value="TC">Turks and Caicos Islands</option>
-                                <option value="TV">Tuvalu</option>
-                                <option value="UG">Uganda</option>
-                                <option value="UA">Ukraine</option>
-                                <option value="AE">United Arab Emirates</option>
-                                <option value="GB">United Kingdom</option>
-                                <option value="US">United States</option>
-                                <option value="UM">United States Minor Outlying Islands</option>
-                                <option value="UY">Uruguay</option>
-                                <option value="UZ">Uzbekistan</option>
-                                <option value="VU">Vanuatu</option>
-                                <option value="VE">Venezuela</option>
-                                <option value="VN">Viet Nam</option>
-                                <option value="VG">Virgin Islands (British)</option>
-                                <option value="VI">Virgin Islands (U.S.)</option>
-                                <option value="WF">Wallis and Futuna Islands</option>
-                                <option value="EH">Western Sahara</option>
-                                <option value="YE">Yemen</option>
-                                <option value="YU">Yugoslavia</option>
-                                <option value="ZM">Zambia</option>
-                                <option value="ZW">Zimbabwe</option>
+                                  placeholder="Select a country">                               
                             </select>
                              <div class="tooltip">Enter your country</div>                        
-                             <span class="error">Error: Please enter your country</span>
+                             <span class="none" id="error-country">Please enter your country</span>
                         </div>
                         <div class="game-grid-item3">                            
-                            <button type="submit" class="button-grayBG top-margin-40">
+                            <button id="update-account" type="submit" class="button-grayBG top-margin-40">
                                 <div class="cta">UPDATE ACCOUNT</div>
                             </button>
+                        </div>
+                        <div id="updated-msg" class="game-grid-item3 none top-margin-40 bottom-margin-40 block">                            
+                            <p class="green">Account updated!</p>
                         </div>
                                              
                     </form>  
@@ -387,59 +175,63 @@
 
             </section>
         </main>
-         <!------------- FOOTER ------------------------------->
-        <footer>
-            <section id="social-payment-info">
-                <div>
-                    <a href="http://www.facebook.com" target="_blank">
-                        <img src="images/fb-btn.png" alt="Our Facebook Page"/>
-                    </a>
-                    <a href="http://www.twitter.com" target="_blank">
-                        <img src="images/twitter-btn.png" alt="Our Twitter Page"/>
-                    </a>                    
-                    <a href="http://www.youtube.com" target="_blank">
-                        <img src="images/youtube-btn.png" alt="Our Youtube Channel"/>
-                    </a>                    
-                    <a href="http://www.instagram.com" target="_blank">
-                        <img src="images/instagram.png" alt="Our Instagram Page"/>
-                    </a>
-                    <a href="http://www.linkedin.com" target="_blank">
-                        <img src="images/linkedin-btn.png" alt="Our LinkedIn Page"/>
-                    </a>                    
-                </div>
-                <div>
-                    <img src="images/visa.png" alt="We accept visa card"/>                    
-                    <img src="images/mastercard.png" alt="We accept mastercard"/>                    
-                    <img src="images/paypal.png" alt="We accept paypal"/>
-                    
-                </div>
-            </section>
-            <section id="footer-links">
-                <div id="footer-links-gamehub">
-                    <h2 class="title">GAME HUB</h2>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div id="footer-links-support">
-                    <h2 class="title">SUPPORT</h2>
-                    <ul>
-                        <li><a href="faqs.html">FAQs</a></li>
-                        <li><a href="terms.html">Terms &amp; Conditions</a></li>
-                        <li><a href="privacy.html">Privacy &amp; Policies</a></li>
-                    </ul>                    
-                </div>
-                <div id="footer-links-services">
-                    <h2 class="title">OUR SERVICES</h2>
-                    <ul>
-                        <li><a href="new-games.html">New Games</a></li>
-                        <li><a href="used-games.html">Used Games</a></li>
-                        <li><a href="pre-order-games.html">Pre-order Games</a></li>
-                        <li><a href="sell-game.html">Sell your Games</a></li>
-                    </ul>                    
-                </div>
-            </section>
-        </footer>               
+        <!------------- FOOTER ------------------------------->
+       <footer>
+           <section id="social-payment-info">
+               <div>
+                   <a href="http://www.facebook.com" target="_blank">
+                       <img src="images/fb-btn.png" alt="Our Facebook Page"/>
+                   </a>
+                   <a href="http://www.twitter.com" target="_blank">
+                       <img src="images/twitter-btn.png" alt="Our Twitter Page"/>
+                   </a>                    
+                   <a href="http://www.youtube.com" target="_blank">
+                       <img src="images/youtube-btn.png" alt="Our Youtube Channel"/>
+                   </a>                    
+                   <a href="http://www.instagram.com" target="_blank">
+                       <img src="images/instagram.png" alt="Our Instagram Page"/>
+                   </a>
+                   <a href="http://www.linkedin.com" target="_blank">
+                       <img src="images/linkedin-btn.png" alt="Our LinkedIn Page"/>
+                   </a>                    
+               </div>
+               <div>
+                   <img src="images/visa.png" alt="We accept visa card"/>                    
+                   <img src="images/mastercard.png" alt="We accept mastercard"/>                    
+                   <img src="images/paypal.png" alt="We accept paypal"/>
+                   
+               </div>
+           </section>
+           <section id="footer-links">
+               <div id="footer-links-gamehub">
+                   <h2 class="title">GAME HUB</h2>
+                   <ul>
+                       <li><a href="about.html">About</a></li>
+                       <li><a href="contact.html">Contact</a></li>
+                   </ul>
+               </div>
+               <div id="footer-links-support">
+                   <h2 class="title">SUPPORT</h2>
+                   <ul>
+                       <li><a href="faqs.html">FAQs</a></li>
+                       <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                       <li><a href="privacy.html">Privacy &amp; Policies</a></li>
+                   </ul>                    
+               </div>
+               <div id="footer-links-services">
+                   <h2 class="title">OUR SERVICES</h2>
+                   <ul>
+                       <li><a href="game-type.html?type=New Games">New Games</a></li>
+                       <li><a href="game-type.html?type=PRE-ORDER">Used Games</a></li>
+                       <li><a href="game-type.html?type=Used Games">Pre-order Games</a></li>
+                       <li><a href="sell-game.html">Sell your Games</a></li>
+                   </ul>                    
+               </div>
+           </section>
+       </footer>     
+    
+        <script src="/js/handle-accounts.js"></script>
+        <script src="js/utils-db.js"></script>
+        <script src="js/account.js"></script>       
     </body>
 </html>
