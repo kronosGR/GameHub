@@ -1,3 +1,10 @@
 {
-  "prettier.htmlWhitespaceSensitivity": "ignore"
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "editor.defaultFormatter": "HookyQR.beautify",
+  "html.format.enable": false,
+  "prettier.printWidth": 120,
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  
 }

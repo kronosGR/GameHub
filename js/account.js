@@ -6,7 +6,7 @@ const postalCode = document.querySelector("#postal-code");
 const country = document.querySelector("#country");
 const phone = document.querySelector("#phone");
 const shipping = document.getElementsByName("shipping");
-const updateBtn = document.querySelector("#update-account");
+const form = document.querySelector("#account-form");
 const updatedMsg = document.querySelector("#updated-msg");
 
 let user = getLoggedInUser();
@@ -60,38 +60,30 @@ if (user == undefined) {
     else hideError(error);
   });
 
-  updateBtn.addEventListener("click", (evt) => {
+  form.addEventListener("submit", (evt) => {
     evt.preventDefault();
-    if (
-      firstName.value.length > 1 &&
-      lastName.value.length > 1 &&
-      address.value.length > 1 &&
-      city.value.length > 1 &&
-      postalCode.value.length > 1 &&
-      phone.value.length > 1 
-    ) {
-      // update the user info
-     
-      user.firstName = firstName.value;
-      user.lastName = lastName.value;
-      user.address = address.value;
-      user.city = city.value;
-      user.postalCode = postalCode.value;
-      user.country = country.value;
-      user.phone = phone.value;
 
-      updateUserKey(user.email, "firstName", firstName.value);
-      updateUserKey(user.email, "lastName", lastName.value);
-      updateUserKey(user.email, "address", address.value);
-      updateUserKey(user.email, "city", city.value);
-      updateUserKey(user.email, "postal", city.value);
-      updateUserKey(user.email, "postalCode", postalCode.value);
-      updateUserKey(user.email, "country", country.value);
-      updateUserKey(user.email, "phone", phone.value);
-      logoutUser();
-      login(user);    
+    // update the user info
 
-      showError(updatedMsg);
-    }
+    user.firstName = firstName.value;
+    user.lastName = lastName.value;
+    user.address = address.value;
+    user.city = city.value;
+    user.postalCode = postalCode.value;
+    user.country = country.value;
+    user.phone = phone.value;
+
+    updateUserKey(user.email, "firstName", firstName.value);
+    updateUserKey(user.email, "lastName", lastName.value);
+    updateUserKey(user.email, "address", address.value);
+    updateUserKey(user.email, "city", city.value);
+    updateUserKey(user.email, "postal", city.value);
+    updateUserKey(user.email, "postalCode", postalCode.value);
+    updateUserKey(user.email, "country", country.value);
+    updateUserKey(user.email, "phone", phone.value);
+    logoutUser();
+    login(user);
+
+    showError(updatedMsg);
   });
 }

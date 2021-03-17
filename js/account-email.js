@@ -2,7 +2,7 @@ const email = document.querySelector("#email");
 const oldPassword = document.querySelector("#old-password");
 const password = document.querySelector("#new-password");
 const passwordRetype = document.querySelector("#new-password2");
-const updateBtn = document.querySelector("#update-account");
+const form = document.querySelector(".game-grid-item2");
 const updatedMsg = document.querySelector("#updated-msg");
 
 let user = getLoggedInUser();
@@ -20,20 +20,34 @@ if (user == undefined) {
   });
 
   oldPassword.addEventListener("blur", () => {
-    const error = document.querySelector("#error-lastname");
-    if (lastName.value.length < 2) showError(error);
+    const error = document.querySelector("#error-oldpass");
+    if (oldPassword.value != user.password) showError(error);
     else hideError(error);
   });
 
   password.addEventListener("blur", () => {
-    const error = document.querySelector("#error-address");
-    if (address.value.length < 2) showError(error);
+    const error = document.querySelector("#error-pass");
+    if (password.value.length < 8) showError(error);
     else hideError(error);
   });
 
   passwordRetype.addEventListener("blur", () => {
-    const error = document.querySelector("#error-city");
-    if (city.value.length < 2) showError(error);
+    const error = document.querySelector("#error-passretype");
+    if (passwordRetype.value != password.value) showError(error);
     else hideError(error);
+  });
+
+  form.addEventListener("submit", (evt) => {
+    evt.preventDefault();
+    user.email = email.value;
+    user.password = password.value;
+
+    updateUserKey(user.email, "email", email.value);
+    updateUserKey(user.email, "password", password.value);
+    logoutUser();
+    login(user);
+
+    updatedMsg.innerHTML = "Account updated!";
+    showMsg(updatedMsg);
   });
 }

@@ -108,54 +108,54 @@
                         <a href="account-sells.html" class="a-black">Sells</a>          
                         <hr>   
                     </section>                    
-                    <form action="account.html" method="POST"  data-netlify="true">
+                    <form action="account.html" method="POST"  data-netlify="true" id="account-form">
                         <div >
                              <label for="first-name" class="normal">First Name</label>
                         </div>
                         <div class="full-line">                                    
-                             <input type="text" name="first-name" id="first-name" class=" block tooltip-holder full-line">
+                             <input required type="text" name="first-name" id="first-name" class=" block tooltip-holder full-line">
                             <span class="none" id="error-firstname">Please enter your first Name</>
                         </div>
                         <div class="top-margin-20">
                              <label for="last-name" class="normal">Last Name</label>
                         </div>
                         <div class="full-line">                                    
-                             <input type="text" name="last-name" id="last-name" class=" block tooltip-holder full-line">
+                             <input required type="text" name="last-name" id="last-name" class=" block tooltip-holder full-line">
                              <span class="none"id="error-lastname">Please enter your last Name</span>
                         </div>
                         <div class="top-margin-20">
                              <label for="address" class="normal">Address</label>
                         </div>
                         <div class="full-line">                                    
-                             <input type="text" name="address" id="address" class=" block tooltip-holder full-line">
+                             <input required type="text" name="address" id="address" class=" block tooltip-holder full-line">
                               <span class="none"id="error-address">Please enter your address</span>
                         </div>
                         <div class="top-margin-20">
                              <label for="phone" class="normal">Telephone</label>
                         </div>
                         <div class="full-line">                                    
-                             <input type="tel" name="phone" id="phone" class=" block tooltip-holder full-line">
+                             <input required type="tel" name="phone" id="phone" class=" block tooltip-holder full-line">
                               <span class="none"id="error-phone">Please enter a valid telephone</span>
                         </div>
                         <div class="top-margin-20">
                              <label for="city" class="normal">City</label>
                         </div>
                         <div class="full-line">                                    
-                             <input type="text" name="city" id="city" class=" block tooltip-holder full-line">
+                             <input required type="text" name="city" id="city" class=" block tooltip-holder full-line">
                              <span class="none"id="error-city">Please enter your city</span>
                         </div>
                         <div class="top-margin-20">
                              <label for="postal-code" class="normal">Postal Code</label>
                         </div>
                         <div class="full-line">                                    
-                             <input type="text" name="postal-code" id="postal-code" class="block tooltip-holder">
+                             <input required type="text" name="postal-code" id="postal-code" class="block tooltip-holder">
                               <span class="none"id="error-postalcode">Please enter your postal code</span>
                         </div>
                         <div class="top-margin-20">
                              <label for="country" class="normal">Country</label>
                         </div>
                         <div>                                    
-                            <select name="country" class="block" id="country"
+                            <select required  name="country" class="block" id="country"
                                   placeholder="Select a country">                               
                             </select>
                              <div class="tooltip">Enter your country</div>                        
