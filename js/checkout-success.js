@@ -77,7 +77,7 @@ function showShoppingCart() {
     user.firstName + " " + user.lastName;
     document.querySelector("#address").innerHTML = user.address;
     document.querySelector("#city").innerHTML = user.city;
-    document.querySelector("#postal-code").innerHTML = user.postCode;
+    document.querySelector("#postal-code").innerHTML = user.postalCode;
     document.querySelector("#country").innerHTML = user.country;
 
 }

@@ -101,7 +101,7 @@ function updateAmountInShoppingCart(id, amount) {
       let item = cart[i];
 
       if (item["game"]["id"] == id) {
-        item["amount"] = amount;
+        item["amount"] = Number(amount);
       }
     }
     saveCart(cart);

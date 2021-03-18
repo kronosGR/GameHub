@@ -28,6 +28,10 @@ if (user == undefined) {
   main.style.height = "100px";
   main.style.textAlign = "center";
   main.style.padding = "30px";
+
+  main.innerHTML += "<br><a href='login.html'>Login</a>";
+  main.innerHTML += "<br> If you do not have an account then ";
+  main.innerHTML += "<a href='create-account.html'>Create one</a>";
 } else {
   firstName.value = user.firstName || "";
   lastName.value = user.lastName || "";
@@ -94,14 +98,10 @@ if (user == undefined) {
       cartContainer.innerHTML += `
       <div class="shopping-cart-item-container full-line border-bottom">
         <div class="flex-basis-55 flex"> 
-            <img src="${item["game"]["thumb"]}" alt="${
-        item["game"]["title"]
-      }" class="thumbnail"/>
+            <img src="${item["game"]["thumb"]}" alt="${item["game"]["title"]}" class="thumbnail"/>
             <div class="margin-10 flex flex-direction-col flex-content-center">
                 <span class="bold italics block">${item["game"]["title"]}</span>
-                <span class="block">Product Number: ${
-                  item["game"]["productNumber"]
-                }</span>
+                <span class="block">Product Number: ${item["game"]["productNumber"]}</span>
             </div>                                
         </div>
         <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
@@ -111,16 +111,14 @@ if (user == undefined) {
         </div>
         <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
             <div>
-                <span class="inline-block" id="product-price-${
-                  item["game"]["id"]
-                }">$${item["game"]["price"]}</span>
+                <span class="inline-block" id="product-price-${item["game"]["id"]}">$${item["game"]["price"]}</span>
             </div>
         </div>
         <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
             <div>
-                <span class="inline-block" id="product-total-price-${
-                  item["game"]["id"]
-                }">$${item["game"]["price"] * item["amount"]}</span>
+                <span class="inline-block" id="product-total-price-${item["game"]["id"]}">$${
+        item["game"]["price"] * item["amount"]
+      }</span>
             </div>
         </div>
       </div>

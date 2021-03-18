@@ -41,7 +41,7 @@ function showShoppingCart(){
         <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
             <div id="shopping-cart-amount1">
               <input type="number" data-id="${item['game']['id']}" id="amount-${item['game']['id']}" value="${item['amount']}" class="width-40 text-align-right">
-              <button data-id="${item['game']['id']}" id="delete-${item['game']['id']}" class="red">X</button>
+              <button data-id="${item['game']['id']}" data-type="delete" id="delete-${item['game']['id']}" class="red">X</button>
             </div>
         </div>
         <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
@@ -75,11 +75,13 @@ function showShoppingCart(){
         const itemPrice = document.querySelector(`#product-price-${id}`);
         itemTotal.innerHTML = "$" + (value * (itemPrice.innerHTML.replace("$","")));
         updateTotal();
+        updateAmountInShoppingCart(id, value);
+        updateCart();
       })
     }
 
     // get all delete buttons and add eventlistener
-    const deleteBtns = document.querySelectorAll('button[id~="delete');
+    const deleteBtns = document.querySelectorAll('button[data-type="delete"');
     for (let btn of deleteBtns){
       const id = btn.getAttribute("data-id");
       btn.addEventListener("click", (evt) => {

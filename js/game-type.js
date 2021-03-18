@@ -103,11 +103,11 @@ function showGame() {
 function showNavigation(){
   navigation.innerHTML = `
   <li><a href="index.html">HOME</a></li>
-  <li><a class="${type == 'New Games' ? 'nav-selected': ''} "
+  <li><a class="${type.toLowerCase() == 'New Games'.toLowerCase() ? 'nav-selected': ''} "
         href="game-type.html?type=New Games">NEW GAMES</a></li>
-  <li><a class="${type == 'Pre-Order' ? 'nav-selected': ''}"
+  <li><a class="${type.toLowerCase() == 'Pre-Order'.toLowerCase() ? 'nav-selected': ''}"
         href="game-type.html?type=Pre-Order">PRE-ORDER</a></li>
-  <li><a class="${type == 'Used Games' ? 'nav-selected': ''}"
+  <li><a class="${type.toLowerCase() == 'Used Games'.toLowerCase() ? 'nav-selected': ''}"
         href="game-type.html?type=Used Games">USED GAMES</a></li>
   <li><a href="sell-game.html">SELL GAMES</a></li>
   
