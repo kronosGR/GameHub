@@ -3,6 +3,7 @@ const mainContent = document.querySelector(".main-content");
 const categoriesList = document.querySelector("#categories");
 const priceFrom = document.querySelector("#price-from");
 const priceTo = document.querySelector("#price-to");
+const navigation = document.querySelector("#navigation");
 
 const params = new URLSearchParams(window.location.search);
 let type = params.get("type");
@@ -20,6 +21,7 @@ priceTo.addEventListener("input", () => {
   showGame();
 });
 
+showNavigation();
 showCategories();
 
 if (type) {
@@ -74,7 +76,7 @@ function showGame() {
     for (let game of resultGames) {
       mainContent.style.height = "auto";
       mainContent.innerHTML += `
-      <a href="game.html?id=${game.id}" class="preview-list-item">     
+      <a href="game.html?id=${game.id}&type=${type}&category=${category}" class="preview-list-item">     
         <img src="${game.thumb}" alt="${game.title}"/>
         <div class="preview-list-item--info">
           <span class="game-title">${game.title}</span>
@@ -93,4 +95,21 @@ function showGame() {
       `;
     }
   }
+}
+
+/**
+ * show navigation
+ */
+function showNavigation(){
+  navigation.innerHTML = `
+  <li><a href="index.html">HOME</a></li>
+  <li><a class="${type == 'New Games' ? 'nav-selected': ''} "
+        href="game-type.html?type=New Games">NEW GAMES</a></li>
+  <li><a class="${type == 'Pre-Order' ? 'nav-selected': ''}"
+        href="game-type.html?type=Pre-Order">PRE-ORDER</a></li>
+  <li><a class="${type == 'Used Games' ? 'nav-selected': ''}"
+        href="game-type.html?type=Used Games">USED GAMES</a></li>
+  <li><a href="sell-game.html">SELL GAMES</a></li>
+  
+  `
 }

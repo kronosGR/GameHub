@@ -10,17 +10,28 @@ if (orders.length<1){
   header.style.textAlign = "center";
   header.style.padding = "30px";
 } else {
+  ordersCon.innerHTML = "";
   for (let order of orders){
     const dato = order["date"];
     const id = order["id"];
     const cart = order["cart"]
-    let titles;
+    let titles = "";
     
     for (let item of cart){
-      console.log(item["game"])
-      titles += item["game"]["title"];
+      let title = item["game"]["title"] 
+      titles += title +"<br>";
       
     }
-    ordersCon.innerHTML += titles;
+    ordersCon.innerHTML += `
+    <a href="#" class="account-grid hover-overlay">
+      <span id="odernumber">${id}</span>
+      <span id="date">${dato.substring(0,15)}</span>
+      <span id="status" class="green" >Sent</span>
+      <div id="games">
+        ${titles}
+      </div>
+    </a>
+
+    `
   }
 }

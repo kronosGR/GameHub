@@ -64,3 +64,18 @@
 #price-from, #price-to{
     text-align: right;
 }
+
+.breadcrumb--link{
+    color: var(--orange);
+    font-size: var(--font-size-CTA-14);
+    font-weight: bold;   
+}
+
+.breadcrumb--link:hover{
+    color: white;
+}
+
+.breadcrumb--gt{
+    font-size: var(--font-size-CTA-14);
+    font-weight: bold;   
+}

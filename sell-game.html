@@ -1,197 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Game Hub - Search Results - Sell Game</title>
-        <meta name="description" content="List your used game for selling.">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/styles/style.css" rel="stylesheet">
-        <!-- Hotjar Tracking Code for https://gamehubkronos.netlify.app/ -->
-        <script>
-            (function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:2269020,hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-        </script>
-    </head>
-    <body>    
-        <!------------- HEADER ------------------------------->
-        <header>
-          <nav id="nav-mobile">
-            <section class="mob-utilities">
-              <section>
-                <label for="hamb-menu" id="hamb-menu-label">
-                  <img src="images/menu-btn.png" alt="menu button" />
-                </label>
-                <input type="checkbox" id="hamb-menu" />
-                <section class="hamb-menu-win">
-                  <section id="logo-container">
-                    <div class="blur-logo-container"></div>
-                    <a href="index.html">
-                      <img
-                        src="images/logo.png"
-                        alt="Game Hub logo"
-                        class="blur-logo-img"
-                      />
-                    </a>
-                  </section>
-                  <section id="main-nav-desktop">
-                    <ul>
-                      <li><a href="index.html">HOME</a></li>
-                      <li><a href="game-type.html?type=New Games">NEW GAMES</a></li>
-                      <li><a href="game-type.html?type=Pre-Order">PRE-ORDER</a></li>
-                      <li><a href="game-type.html?type=Used Games">USED GAMES</a></li>
-                      <li><a href="sell-game.html">SELL GAMES</a></li>
-                    </ul>
-                  </section>
-                  <section id="utilities-desktop">
-                    <ul>
-                      <li>
-                        <a href="create-account.html" id="a-account">
-                          CREATE ACCOUNT
-                        </a>
-                      </li>
-                      <li><a href="login.html" id="a-login">LOG IN</a></li>
-                    </ul>
-                  </section>
-                </section>
-                <a href="index.html" id="site-title">Game Hub</a>
-              </section>
-              <section id="search-shopping-cart">
-                <form
-                  id="mob-search-form"
-                  action="search.html"
-                  method="GET"
-                  data-netlify="true"
-                >
-                  <label for="mob-show-details" id="mob-search"></label>
-                  <input type="checkbox" id="mob-show-details"  />
-                  <input type="text" name="searchfor" id="mob-searchfor" placeholder="Press Enter to Search"/>
-                </form>
-                <a href="shopping-cart.html">
-                  <span id="mob-shopping-cart">
-                      <div id="cart-circle"></div>
-                  </span>
-                </a>
-              </section>
-            </section>
-          </nav>
-        </header>
-        <!------------- MAIN ------------------------------->
-        <main>
-            <section class="preview-container">
-                <section class="preview--title">
-                    <h1 class="title">Sell Game</h1>
-                </section>
-                <hr>
 
-                <section class="main-content ">                                    
-                    <section >
-                        <div class="preview-list">
-                            <!-- Use of enctype="multipart/form-data" because of image upload 
+<head>
+  <title>Game Hub - Search Results - Sell Game</title>
+  <meta name="description" content="List your used game for selling.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/styles/style.css" rel="stylesheet">
+  <!-- Hotjar Tracking Code for https://gamehubkronos.netlify.app/ -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {
+        hjid: 2269020,
+        hjsv: 6
+      };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+</head>
+
+<body>
+  <!------------- HEADER ------------------------------->
+  <header>
+    <nav id="nav-mobile">
+      <section class="mob-utilities">
+        <section>
+          <label for="hamb-menu" id="hamb-menu-label">
+            <img src="images/menu-btn.png" alt="menu button" />
+          </label>
+          <input type="checkbox" id="hamb-menu" />
+          <section class="hamb-menu-win">
+            <section id="logo-container">
+              <div class="blur-logo-container"></div>
+              <a href="index.html">
+                <img src="images/logo.png" alt="Game Hub logo" class="blur-logo-img" />
+              </a>
+            </section>
+            <section id="main-nav-desktop">
+              <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="game-type.html?type=New Games">NEW GAMES</a></li>
+                <li><a href="game-type.html?type=Pre-Order">PRE-ORDER</a></li>
+                <li>
+                  <a href="game-type.html?type=Used Games">USED GAMES</a>
+                </li>
+                <li><a href="sell-game.html" class="nav-selected">SELL GAMES</a></li>
+              </ul>
+            </section>
+            <section id="utilities-desktop">
+              <ul>
+                <li>
+                  <a href="create-account.html" id="a-account">CREATE ACCOUNT</a>
+                </li>
+                <li><a href="login.html" id="a-login">LOG IN</a></li>
+              </ul>
+            </section>
+          </section>
+          <a href="index.html" id="site-title">Game Hub</a>
+        </section>
+        <section id="search-shopping-cart">
+          <form id="mob-search-form" action="search.html" method="GET" data-netlify="true">
+            <label for="mob-show-details" id="mob-search"></label>
+            <input type="checkbox" id="mob-show-details" />
+            <input type="text" name="searchfor" id="mob-searchfor" placeholder="Press Enter to Search" />
+          </form>
+          <a href="shopping-cart.html">
+            <span id="mob-shopping-cart">
+              <div id="cart-circle"></div>
+            </span>
+          </a>
+        </section>
+      </section>
+    </nav>
+  </header>
+  <!------------- MAIN ------------------------------->
+  <main>
+    <section class="preview-container">
+      <section class="preview--title">
+        <h1 class="title">Sell Game</h1>
+      </section>
+      <hr>
+
+      <section class="main-content ">
+        <section>
+          <div class="preview-list">
+            <!-- Use of enctype="multipart/form-data" because of image upload 
                                  Use of data-netlify="true" so can receive the submissions -->
-                           <form action="account-sells.html" method="POST"  data-netlify="true" enctype="multipart/form-data">
-                               <div>
-                                    <label for="game-title" class="block">Game Title</label>
-                               </div>
-                               <div >                                    
-                                    <input type="text" name="game-title" id="game-title" class="block tooltip-holder full-line">                  
-                                    <span class="error">Error: Please enter a valid game title</span>
-                               </div>
-                               <div class="top-margin-20">                                   
-                                    <label for="purchase-date" class="block">Purchase Date</label>
-                               </div>
-                               <div>                                    
-                                    <input type="date" name="purchase-date" id="purchase-date" class="block tooltip-holder full-line">
-                                     <span class="error">Error: Please choose purchase date</span>
-                               </div>
-                               <div class="top-margin-20">                                   
-                                    <label for="upload-photo" class="block">Upload Photo</label>
-                               </div>
-                               <div>                                    
-                                    <input type="file" name="upload-photo" id="upload-photo" class="min-width-400 block tooltip-holder full-line">
-                                    <span class="error">Error: Please choose a game photo</span>
-                               </div>
-                               <div class="top-margin-20">                                   
-                                    <label for="imp-info" class="block">Important Information</label>
-                               </div>
-                               <div>                                    
-                                    <textarea name="imp-info" id="imp-info" class="full-line" rows="20">
-                                    </textarea>
-                               </div>
-                               <div class="top-margin-20 text-align-center">
-                                    <button type="submit" class="button-grayBG">
-                                        <div class="cta">SELL</div>
-                                    </button>
-                               </div>
-                           </form>
-                        </div>
-                    </section>
-                </section>
+            <form id="sell-form" action="account-sells.html" method="GET" data-netlify="true" enctype="multipart/form-data">
+              <div>
+                <label for="game-title" class="block">Game Title</label>
+              </div>
+              <div>
+                <input type="text" name="game-title" id="game-title" class="block tooltip-holder full-line" required>
+                <span id="error-title" class="none">Please enter a game title, minimum 4 characters</span>
+              </div>
+              <div class="top-margin-20">
+                <label for="purchase-date" class="block">Purchase Date</label>
+              </div>
+              <div>
+                <input type="date" name="purchase-date" id="purchase-date" class="block tooltip-holder full-line"
+                  required>
+                <span id="error-date" class="none">Please choose purchase date</span>
+              </div>
+              <div class="top-margin-20">
+                <label for="upload-photo" class="block">Upload Photo</label>
+              </div>
+              <div>
+                <input type="file" name="upload-photo" id="upload-photo" accept="image/*"
+                  class="min-width-400 block tooltip-holder full-line" required>
+                <span id="error-photo" class="none">Please choose a game photo</span>
+              </div>
+              <div class="top-margin-20">
+                <label for="imp-info" class="block">Important Information</label>
+              </div>
+              <div>
+                <textarea name="imp-info" id="imp-info" class="full-line" rows="20" required>
+                </textarea>
+              </div>
+              <div class="top-margin-20 text-align-center">
+                <button type="submit" class="button-grayBG">
+                  <div class="cta">SELL</div>
+                </button>
+              </div>
+              <div id="updated-msg" class="game-grid-item3 none top-margin-40 bottom-margin-40 block">
+                <p class="green">Thank you. Site adminstrators will check the game for aproval</p>
+              </div>
+            </form>
+          </div>
+        </section>
+      </section>
 
-            </section>
-        </main>
-        <!------------- FOOTER ------------------------------->
-       <footer>
-           <section id="social-payment-info">
-               <div>
-                   <a href="http://www.facebook.com" target="_blank">
-                       <img src="images/fb-btn.png" alt="Our Facebook Page"/>
-                   </a>
-                   <a href="http://www.twitter.com" target="_blank">
-                       <img src="images/twitter-btn.png" alt="Our Twitter Page"/>
-                   </a>                    
-                   <a href="http://www.youtube.com" target="_blank">
-                       <img src="images/youtube-btn.png" alt="Our Youtube Channel"/>
-                   </a>                    
-                   <a href="http://www.instagram.com" target="_blank">
-                       <img src="images/instagram.png" alt="Our Instagram Page"/>
-                   </a>
-                   <a href="http://www.linkedin.com" target="_blank">
-                       <img src="images/linkedin-btn.png" alt="Our LinkedIn Page"/>
-                   </a>                    
-               </div>
-               <div>
-                   <img src="images/visa.png" alt="We accept visa card"/>                    
-                   <img src="images/mastercard.png" alt="We accept mastercard"/>                    
-                   <img src="images/paypal.png" alt="We accept paypal"/>
-                   
-               </div>
-           </section>
-           <section id="footer-links">
-               <div id="footer-links-gamehub">
-                   <h2 class="title">GAME HUB</h2>
-                   <ul>
-                       <li><a href="about.html">About</a></li>
-                       <li><a href="contact.html">Contact</a></li>
-                   </ul>
-               </div>
-               <div id="footer-links-support">
-                   <h2 class="title">SUPPORT</h2>
-                   <ul>
-                       <li><a href="faqs.html">FAQs</a></li>
-                       <li><a href="terms.html">Terms &amp; Conditions</a></li>
-                       <li><a href="privacy.html">Privacy &amp; Policies</a></li>
-                   </ul>                    
-               </div>
-               <div id="footer-links-services">
-                   <h2 class="title">OUR SERVICES</h2>
-                   <ul>
-                       <li><a href="game-type.html?type=New Games">New Games</a></li>
-                       <li><a href="game-type.html?type=PRE-ORDER">Used Games</a></li>
-                       <li><a href="game-type.html?type=Used Games">Pre-order Games</a></li>
-                       <li><a href="sell-game.html">Sell your Games</a></li>
-                   </ul>                    
-               </div>
-           </section>
-       </footer>     
+    </section>
+  </main>
+  <!------------- FOOTER ------------------------------->
+  <footer>
+    <section id="social-payment-info">
+      <div>
+        <a href="http://www.facebook.com" target="_blank">
+          <img src="images/fb-btn.png" alt="Our Facebook Page" />
+        </a>
+        <a href="http://www.twitter.com" target="_blank">
+          <img src="images/twitter-btn.png" alt="Our Twitter Page" />
+        </a>
+        <a href="http://www.youtube.com" target="_blank">
+          <img src="images/youtube-btn.png" alt="Our Youtube Channel" />
+        </a>
+        <a href="http://www.instagram.com" target="_blank">
+          <img src="images/instagram.png" alt="Our Instagram Page" />
+        </a>
+        <a href="http://www.linkedin.com" target="_blank">
+          <img src="images/linkedin-btn.png" alt="Our LinkedIn Page" />
+        </a>
+      </div>
+      <div>
+        <img src="images/visa.png" alt="We accept visa card" />
+        <img src="images/mastercard.png" alt="We accept mastercard" />
+        <img src="images/paypal.png" alt="We accept paypal" />
+      </div>
+    </section>
+    <section id="footer-links">
+      <div id="footer-links-gamehub">
+        <h2 class="title">GAME HUB</h2>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div id="footer-links-support">
+        <h2 class="title">SUPPORT</h2>
+        <ul>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="privacy.html">Privacy &amp; Policies</a></li>
+        </ul>
+      </div>
+      <div id="footer-links-services">
+        <h2 class="title">OUR SERVICES</h2>
+        <ul>
+          <li><a href="game-type.html?type=New Games">New Games</a></li>
+          <li><a href="game-type.html?type=PRE-ORDER">Used Games</a></li>
+          <li><a href="game-type.html?type=Used Games">Pre-order Games</a></li>
+          <li><a href="sell-game.html">Sell your Games</a></li>
+        </ul>
+      </div>
+    </section>
+  </footer>
 
-        <script src="/js/handle-accounts.js"></script>
-        <script src="js/utils-db.js"></script>
-        <script src="js/sell-game.js"></script>           
-    </body>
+  <script src="/js/handle-accounts.js"></script>
+  <script src="js/utils-db.js"></script>
+  <script src="js/sell-games.js"></script>
+</body>
+
 </html>
