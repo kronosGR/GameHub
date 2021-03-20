@@ -1,6 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
-const type = params.get("type");
+const type = params.get("type") || "";
 const category = params.get("category");
 
 const gameContainer = document.querySelector(".game-content");
@@ -106,6 +106,6 @@ function showBreadcrumbs() {
     <a href="game-type.html?type=${type}" class="breadcrumb--link">${type.toUpperCase()}</a>`;
   if (category != null && category.length >0)
     title.innerHTML += `<span class="breadcrumb--gt"> &gt; </span> <a href="game-type.html?type=${type}&category=${category}" class="breadcrumb--link">${category.toUpperCase()}</a>`;
-  if (type != null || category != null)
+  if ((type != null && type != "") || category != null)
     title.innerHTML += `<span class="breadcrumb--gt"> &gt; </span> <span class="breadcrumb--gt"> ${game.title} </span>`
 }
