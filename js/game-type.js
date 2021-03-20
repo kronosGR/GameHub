@@ -26,7 +26,7 @@ showCategories();
 
 if (type) {
   type = type.charAt(0).toUpperCase() + type.slice(1);
-  title.innerHTML = type;
+  title.innerHTML = `<a href="game-type.html?type=${type}">${type}</a>`;
   document.title = type;
   let description = "List of " + type;
 
