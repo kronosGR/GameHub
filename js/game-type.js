@@ -62,10 +62,10 @@ function showCategories() {
 /**
  * print games to the HTML file
  */
-function showGame() {
+async function showGame() {
   mainContent.innerHTML = "";
-  let resultGames = getGamesByPriceRange(pFrom, pTo);
-
+  let resultGames = await getGamesByPriceRange(pFrom, pTo);  
+  
   if (resultGames.length == 0) {
     mainContent.innerHTML =
       "<h2>No Games Found</h2>";
@@ -73,27 +73,33 @@ function showGame() {
     mainContent.style.textAlign = "center";
     mainContent.style.padding = "30px";
   } else {
-    for (let game of resultGames) {
+    resultGames.forEach(game => {
+      let categories = [];
+
+      game.categories.forEach((cat) => {
+        categories.push(cat.name);
+      });
+
       mainContent.style.height = "auto";
       mainContent.innerHTML += `
       <a href="game.html?id=${game.id}&type=${type}&category=${category}" class="preview-list-item">     
-        <img src="${game.thumb}" alt="${game.title}"/>
+        <img src="${game.images[0].thumbnail}" alt="${game.name}"/>
         <div class="preview-list-item--info">
-          <span class="game-title">${game.title}</span>
+          <span class="game-title">${game.name}</span>
           <p>
-            ${game.genre.join(", ")}
+            ${categories.join(", ")}
           </p>
           <div class="preview-list-item--bottom">
-              <img src='${getPegiImg(game.pegi)}' alt='pegi ${game.pegi}'>
               <div class="price-circle">
-                  $${game.price}
+                  $${game.prices.price}
               </div>
             <span>Read More...</span>
           </div>
         </div>      
       </a>
       `;
-    }
+    })
+    
   }
 }
 

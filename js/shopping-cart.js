@@ -26,16 +26,17 @@ checkoutBtn.addEventListener("click", (evt) => {
 
 function showShoppingCart(){
   const items = getCart();
+  console.log(items);
   itemsContainer.innerHTML = "";
   if (items.length > 0){
     for(let item of items){
       itemsContainer.innerHTML += `
       <div class="shopping-cart-item-container full-line border-bottom">
         <div class="flex-basis-55 flex"> 
-            <img src="${item['game']['thumb']}" alt="${item['game']['title']}" class="thumbnail"/>
+            <img src="${item['game']['images'][0].thumbnail}" alt="${item['game']['name']}" class="thumbnail"/>
             <div class="margin-10 flex flex-direction-col flex-content-center">
-                <span class="bold italics block">${item['game']['title']}</span>
-                <span class="block">Product Number: ${item['game']['productNumber']}</span>
+                <span class="bold italics block">${item['game']['name']}</span>
+                <span class="block">Product Number: ${item['game']['sku']}</span>
             </div>                                
         </div>
         <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
@@ -46,18 +47,18 @@ function showShoppingCart(){
         </div>
         <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
             <div>
-                <span class="inline-block" id="product-price-${item['game']['id']}">$${item['game']['price']}</span>
+                <span class="inline-block" id="product-price-${item['game']['id']}">$${item['game']['prices'].price}</span>
             </div>
         </div>
         <div class="flex-basis-15 text-align-right flex flex-direction-col flex-content-center"> 
             <div>
-                <span class="inline-block" id="product-total-price-${item['game']['id']}">$${item['game']['price'] * item['amount']}</span>
+                <span class="inline-block" id="product-total-price-${item['game']['id']}">$${item['game']['prices'].price * item['amount']}</span>
             </div>
         </div>
       </div>
       `
       totalItems += Number(item['amount']);
-      totalPrice += (item['amount'] * item['game']['price']);
+      totalPrice += (item['amount'] * item['game']['prices'].price);
     }
     
     // get all the input boxes and add eventlistener
