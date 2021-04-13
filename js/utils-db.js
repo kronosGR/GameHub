@@ -5,10 +5,11 @@ const CORS_MODE = "no-cors";
 const API_URL = "https://gh.kandz.me/wp-json/";
 const API_GAMES = "wc/store/products";
 const API_GAME = "wc/store/products/";
+const API_SEARCH = "wp/v2/search?search=";
 
 // keys for just reading
-const KEY = "ck_b1cab60dcc09b2a5b6bc0b975940b7b849268c40";
-const SECRET = "cs_1facec39dd4ab76b7118754f5ca74f373d64cacf";
+// const KEY = "ck_b1cab60dcc09b2a5b6bc0b975940b7b849268c40";
+// const SECRET = "cs_1facec39dd4ab76b7118754f5ca74f373d64cacf";
 
 /**
  *@return {array} an array with the games
@@ -26,6 +27,33 @@ async function getGames() {
 }
 
 /**
+ * description Search games by keyword
+ * @param {string} keyword - the keyword
+ * @return {array} list of games
+ */
+function searchGamesWithKeyword(keyword) {
+  return fetch(API_URL + API_SEARCH + keyword)
+    .then((res) => {
+      if (res.status === 200) {
+        return res.json();
+      }
+      throw new Error("Not Found");
+    })
+    .then((data) => {
+      // after 2 hours of research finally i got it with promise.all and 
+      // how to use it.
+      // it executes an array of promises!!!
+      let results = data.map((game) => {
+        return getGameById(game.id).then(gam => {return gam})
+      });
+      return Promise.all(results)
+    })
+    .catch((err) => {
+      return err;
+    });
+}
+
+/**
  * Get a game by Id
  * @param {number} id - game Id
  * @return {object} game
@@ -33,17 +61,16 @@ async function getGames() {
 function getGameById(id) {
   return fetch(API_URL + API_GAME + id)
     .then((res) => {
-      console.log(res.status)
       if (res.status === 200) {
         return res.json();
-      }      
+      }
       throw new Error("Not Found");
     })
     .then((data) => {
       return data;
     })
     .catch((err) => {
-      return err
+      return err;
     });
 }
 
@@ -160,7 +187,7 @@ function updateAmountInShoppingCart(id, amount) {
 function addToCart(game) {
   const cart = getCart();
   const shoppingCartItem = new ShoppingCartItem(game);
-  console.log(shoppingCartItem)
+  console.log(shoppingCartItem);
 
   if (cart.length > 0) {
     for (let i in cart) {
@@ -219,25 +246,6 @@ function getCart() {
 async function getGamesByPriceRange(from, to) {
   const games = await getGames();
   return games.filter((game) => game.prices.price >= from && game.prices.price <= to);
-}
-
-/**
- * description Search games by keyword
- * @param {string} keyword - the keyword
- * @return {array} list of games
- */
-function searchGamesWithKeyword(keyword) {
-  const result = [];
-  for (let game of games) {
-    if (
-      game.title.toLowerCase().includes(keyword.toLowerCase()) ||
-      game.genre.join(",").toLowerCase().includes(keyword.toLowerCase()) ||
-      game.about.toLowerCase().includes(keyword.toLowerCase())
-    ) {
-      result.push(game);
-    }
-  }
-  return result;
 }
 
 /**
