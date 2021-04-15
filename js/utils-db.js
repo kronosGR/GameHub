@@ -6,10 +6,50 @@ const API_URL = "https://gh.kandz.me/wp-json/";
 const API_GAMES = "wc/store/products";
 const API_GAME = "wc/store/products/";
 const API_SEARCH = "wp/v2/search?search=";
+const API_CATEGORIES = "wc/store/products/categories";
 
-// keys for just reading
-// const KEY = "ck_b1cab60dcc09b2a5b6bc0b975940b7b849268c40";
-// const SECRET = "cs_1facec39dd4ab76b7118754f5ca74f373d64cacf";
+/**
+ * get the list of categories
+ * @returns list of categories
+ */
+async function getCategories() {
+  let result = await fetch(API_URL + API_CATEGORIES);
+  if (result.status == 200) {
+    let json = await result.json();
+
+    return json;
+  }
+
+  return [];
+}
+
+/**
+ * get games in category with price range
+ * @param {*} from lowest price
+ * @param {*} to highest price
+ * @param {*} catID category id
+ * @returns array with the games
+ */
+async function getGamesByPriceRangeAndCategory(from, to, catID) {
+  let result = await fetch(API_URL + API_GAMES + "?category=" + catID);
+  if (result.status == 200) {
+    let json = await result.json();
+    return json.filter((game) => game.prices.price >= from && game.prices.price <= to);
+  }
+  
+  return [];
+}
+
+/**
+ * Get games by price range
+ * @param {number} from - starting price
+ * @param {number} to - ending price
+ * @return {array} array of game objects
+ */
+async function getGamesByPriceRange(from, to) {
+  const games = await getGames();
+  return games.filter((game) => game.prices.price >= from && game.prices.price <= to);
+}
 
 /**
  *@return {array} an array with the games
@@ -22,8 +62,7 @@ async function getGames() {
     return json;
   }
 
-  // if status different than 200 then problems mr
-  throw new Error(res.status);
+  return [];
 }
 
 /**
@@ -40,13 +79,15 @@ function searchGamesWithKeyword(keyword) {
       throw new Error("Not Found");
     })
     .then((data) => {
-      // after 2 hours of research finally i got it with promise.all and 
+      // after 2 hours of research finally i got it with promise.all and
       // how to use it.
       // it executes an array of promises!!!
       let results = data.map((game) => {
-        return getGameById(game.id).then(gam => {return gam})
+        return getGameById(game.id).then((gam) => {
+          return gam;
+        });
       });
-      return Promise.all(results)
+      return Promise.all(results);
     })
     .catch((err) => {
       return err;
@@ -238,17 +279,6 @@ function getCart() {
 }
 
 /**
- * Get games by price range
- * @param {number} from - starting price
- * @param {number} to - ending price
- * @return {array} array of game objects
- */
-async function getGamesByPriceRange(from, to) {
-  const games = await getGames();
-  return games.filter((game) => game.prices.price >= from && game.prices.price <= to);
-}
-
-/**
  * get PEGI img
  * @param {number} pegi
  * @return {string} pegi img address and filename
@@ -290,20 +320,6 @@ const regex = /(<([^>]+)>)/gi;
 
 // email regex
 const regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-// list of all categories
-const categories = [
-  "Action",
-  "Adventure",
-  "Casual",
-  "Indie",
-  "Multiplayer",
-  "Racing",
-  "RPG",
-  "Simulation",
-  "Sports",
-  "Strategy",
-];
 
 // list of countries
 const countries = {
