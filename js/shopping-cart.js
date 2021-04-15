@@ -13,8 +13,6 @@ showShoppingCart();
 checkoutBtn.addEventListener("click", (evt) => {
   evt.preventDefault();
 
-  // TODO update the shopping cart of each item in the html
-
   const inputs = document.querySelectorAll("input[type='number'");
   for(let input of inputs){
     const id = input.getAttribute("data-id");

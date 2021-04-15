@@ -17,9 +17,7 @@ const showGames = async (list) => {
           <img src="${game.images[0].thumbnail}" alt="${game.name}"/>
           <div class="preview-list-item--info">
             <span class="game-title">${game.name}</span>
-            <p>
-              ${categories.join(", ")}
-            </p>
+            
             <div class="preview-list-item--bottom">
                 
                 <div class="price-circle">

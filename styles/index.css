@@ -265,6 +265,7 @@ form > .game-grid-item1 {
 }
 
 .preview-list-item > img {
+  object-fit: cover;
   margin: 10px;
   width: 95px;
   min-width: 95px;

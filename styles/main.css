@@ -107,6 +107,7 @@ input{
     color: var(--black);
     font-size: var(--font-size-game-link-15) ;
     font-weight: bolder;
+    padding: 10px 0px;
 }
 
 .price-circle{
