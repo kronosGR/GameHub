@@ -12,6 +12,8 @@ let catId = params.get("catid");
 let pFrom = priceFrom.value;
 let pTo = priceTo.value;
 
+let ready = true;
+
 priceFrom.addEventListener("input", () => {
   pFrom = priceFrom.value;
   showGame();
@@ -64,9 +66,12 @@ async function showCategories() {
  * print games to the HTML file
  */
 async function showGame() {
+  if (!ready) return;
+
+  ready = false;
   mainContent.innerHTML = "";
   if (catId) {
-    let resultGames = await getGamesByPriceRangeAndCategory(pFrom, pTo, catId);
+    let resultGames = await getGamesByPriceRangeAndCategory(Number(pFrom), Number(pTo), catId);
 
     if (resultGames.length == 0) {
       mainContent.innerHTML = "<h2>No Games Found</h2>";
@@ -94,7 +99,7 @@ async function showGame() {
       });
     }
   } else {
-    let resultGames = await getGamesByPriceRange(pFrom, pTo);
+    let resultGames = await getGamesByPriceRange(Number(pFrom), Number(pTo));
 
     if (resultGames.length == 0) {
       mainContent.innerHTML = "<h2>No Games Found</h2>";
@@ -122,6 +127,7 @@ async function showGame() {
       });
     }
   }
+  ready = true;
 }
 
 /**

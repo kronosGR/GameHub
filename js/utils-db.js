@@ -34,9 +34,11 @@ async function getGamesByPriceRangeAndCategory(from, to, catID) {
   let result = await fetch(API_URL + API_GAMES + "?category=" + catID);
   if (result.status == 200) {
     let json = await result.json();
-    return json.filter((game) => game.prices.price >= from && game.prices.price <= to);
+    return json.filter((game) => {
+      if (game.prices.price >= from && game.prices.price <= to) return game;
+    });
   }
-  
+
   return [];
 }
 
@@ -48,7 +50,10 @@ async function getGamesByPriceRangeAndCategory(from, to, catID) {
  */
 async function getGamesByPriceRange(from, to) {
   const games = await getGames();
-  return games.filter((game) => game.prices.price >= from && game.prices.price <= to);
+  return games.filter((game) => {
+    if (game.prices.price >= from && game.prices.price <= to)
+      return game;
+  });
 }
 
 /**
