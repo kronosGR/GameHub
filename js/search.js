@@ -22,20 +22,13 @@ if (!search) {
       section.style.padding = "30px";
     } else {
       for (let game of results) {
-        let categories = [];
-
-        game.categories.forEach((cat) => {
-          categories.push(cat.name);
-        });
-
+       
         section.innerHTML += `
         <a href="game.html?id=${game.id}" class="preview-list-item ">     
           <img src="${game.images[0].thumbnail}" alt="${game.name}"/>
           <div class="preview-list-item--info">
             <span class="game-title">${game.name}</span>
-            <p>
-              ${game.categories.join(", ")}
-            </p>
+            
             <div class="preview-list-item--bottom">                
                 <div class="price-circle">
                     $${game.prices.price}
