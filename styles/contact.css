@@ -43,6 +43,12 @@
     margin: 20px auto;
 }
 
+.contact-main-content button:disabled > div{
+    cursor: not-allowed;
+    background-color: gray;
+    color: black;
+}
+
 .contact-main-content .cta{
     margin-top: 0px;
 }
