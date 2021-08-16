@@ -1,5 +1,5 @@
 
-const API_CONTACT = "https://kronos.kandz.me/wp/wp-json/contact-form-7/v1/contact-forms/5/feedback";
+const API_CONTACT = "https://kronosgr.net/wp/wp-json/contact-form-7/v1/contact-forms/5/feedback";
 
 const form = document.querySelector(".contact-main-content form");
 const email = document.querySelector("#email");

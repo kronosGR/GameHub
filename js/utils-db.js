@@ -2,7 +2,7 @@ const CART_LOC = "cart";
 const SELLS_LOC = "sells";
 const ORDERS_LOC = "orders";
 const CORS_MODE = "no-cors";
-const API_URL = "https://gh.kandz.me/wp-json/";
+const API_URL = "https://gh.kronosgr.net/wp-json/";
 const API_GAMES = "wc/store/products";
 const API_GAME = "wc/store/products/";
 const API_SEARCH = "wp/v2/search?search=";
